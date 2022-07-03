@@ -1,0 +1,372 @@
+@font-face {
+    font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/DaysOne-Regular.ttf")
+}
+.preloader {
+    background: url(../imgs/preloader.gif) center no-repeat;
+    background-color: #181818;
+    position: fixed;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: visible;
+    transition: 1s all;
+}
+.preloader.done {
+    visibility: hidden;
+    opacity: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    color: #FFFFFF;
+    background: url('../imgs/wiki-map/wiki-bg.png') center center / cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 1250px;
+    height: 100%;
+    font-family: "Days One", sans-serif;
+    scroll-behavior: smooth;
+}
+.bg-hovered {
+    background: url('../imgs/wiki-map/wiki-bg-hover.png') center center / cover;
+}
+.bg-hovered .wiki-content>p {
+    display: inline;
+}
+.bg-hovered .wiki-content .grand-escape-desc {
+    visibility: visible;
+}
+.bg-mouseout {
+    background: url('../imgs/wiki-map/wiki-bg.png') center center / cover !important;
+}
+.bg-mouseout .wiki-content>p {
+    display: none !important;
+}
+.bg-mouseout .wiki-content .grand-escape-desc {
+    visibility: hidden !important;
+}
+.wiki-content>p {
+    display: none;
+    font-family: 'Days One';
+    font-size: 36px;
+    position: absolute;
+    top: 453px;
+    left: 128px;
+    display: none;
+    text-align: center;
+    line-height: 140%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+header {
+    flex: 0 0 auto;
+}
+.content {
+    flex: 1 0 auto;
+}
+.header-content {
+    box-sizing: border-box;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+}
+header .logo-link {
+    margin-right: 19px;
+}
+header .menu {
+    display: flex;
+    align-items: center;
+}
+header .menu a {
+    box-sizing: border-box;
+    width: 120px;
+    padding: 19px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+header .menu .current {
+    font-size: 13px;
+    position: relative;
+}
+.line {
+    border-top: 2px solid #C34375;
+    position: absolute;
+    top: 36px;
+}
+.current.wiki .line {
+    width: 51px;
+    left: 34px;
+}
+header .menu a:hover {
+    color:#C34375;
+}
+header .login {
+    text-align: right;
+    margin-left: 28px;
+}
+header .login p {
+    font-size: 12px;
+}
+header .login a {
+    font-size: 16px;
+}
+header .login a:hover {
+    color: #C34375;
+}
+.wiki-content {
+    position: relative;
+}
+.wiki-content a {
+    position: absolute;
+}
+.wiki-content .undefined-island {
+    right: 47px;
+    top: 161px;
+}
+.wiki-content .undefined-island>p {
+    display: none;
+    font-family: 'Days One';
+    font-size: 48px;
+    position: absolute;
+    top: 418px;
+    left: 333px;
+}
+.wiki-content .hladberin-island {
+    left: 149px;
+    top: 378px;
+}
+.wiki-content .hladberin-island>p {
+    display: none;
+    font-family: 'Days One';
+    font-size: 20px;
+    position: absolute;
+    top: -31px;
+    left: -50px;
+}
+.wiki-content .dango-island {
+    left: 142px;
+    top: 194px;
+}
+.wiki-content .dango-island>p {
+    display: none;
+    width: 185px;
+    font-family: 'Days One';
+    font-size: 24px;
+    position: absolute;
+    top: -28px;
+    left: -44px;
+}
+.wiki-content p.hovered {
+    display: inline;
+}
+.wiki-content h1 {
+    display: none;
+    opacity: 0;
+    width: 900px;
+    position: fixed;
+    font-family: 'Days One';
+    font-size: 100px;
+    color: #DEDEDE;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+.wiki-content .appear { 
+    display: block;
+    animation-name: appear;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.wiki-content .island-desc {
+    position: absolute;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 140%;
+    font-size: 24px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.wiki-content .island-desc span {
+    color: #FF75AB;
+}
+.wiki-content .island-desc.active {
+    visibility: visible;
+}
+.wiki-content .izmerenie-desc {
+    width: 864px;
+    height: 131px;
+    margin-left: -432px;
+}
+.wiki-content .grand-escape-desc {
+    width: 864px;
+    height: 89px;
+    margin-left: -432px;
+}
+.wiki-content .undefined-desc {
+    width: 864px;
+    height: 65px;
+    margin-left: -432px;
+}
+.wiki-content .hladberin-desc {
+    width: 864px;
+    height: 95px;
+    margin-left: -432px;
+}
+.wiki-content .dango-desc {
+    width: 864px;
+    height: 101px;
+    margin-left: -432px;
+}
+.wiki-content .shpil-desc {
+    width: 778px;
+    height: 121px;
+    margin-left: -389px;
+}
+.wiki-content .di-town-desc {
+    width: 692px;
+    height: 87px;
+    margin-left: -346px;
+}
+.wiki-content .avantcity-desc {
+    width: 778px;
+    height: 85px;
+    margin-left: -389px;
+}
+.wiki-content .valvurion-desc {
+    width: 778px;
+    height: 101px;
+    margin-left: -389px;
+}
+.wiki-content .vanderland-desc {
+    width: 778px;
+    height: 101px;
+    margin-left: -389px;
+}
+.wiki-content .taytan-desc {
+    width: 746px;
+    height: 61px;
+    margin-left: -373px;
+}
+.wiki-content .dango-island-main {
+    position: absolute;
+    left: 132px;
+    top: 131px;
+}
+.wiki-content .dango-island-main>a {
+    z-index: 2;
+}
+.wiki-content .island-text {
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+.wiki-content .island-text.active {
+    display: block;
+}
+.wiki-content .vanderland-island {
+    position: absolute;
+    right: 24px;
+    top: 0;
+}
+.wiki-content .vanderland-text {
+    top: 47px;
+    right: 64px;
+}
+.wiki-content .vanderland-island:hover+.vanderland-text {
+    display: block;
+}
+.wiki-content .avantcity-island {
+    position: absolute;
+    left: 394px;
+    top: 232px;
+}
+.wiki-content .avantcity-text {
+    top: 282px;
+    left: 451px;
+}
+.wiki-content .avantcity-island:hover+.avantcity-text {
+    display: block;
+}
+.wiki-content .valvurion-island {
+    position: absolute;
+    right: 150px;
+    top: 370px;
+}
+.wiki-content .valvurion-text {
+    top: 304px;
+    right: -12px;
+}
+.wiki-content .valvurion-island:hover+.valvurion-text {
+    display: block;
+}
+.wiki-content .di-town-island {
+    position: absolute;
+    left: 421px;
+    bottom: 219px;
+}
+.wiki-content .di-town-text {
+    bottom: 261px;
+    right: 333px;
+}
+.wiki-content .di-town-island:hover+.di-town-text {
+    display: block;
+}
+.wiki-content .shpil-island {
+    position: absolute;
+    left: 177px;
+    top: 353px;
+}
+.wiki-content .shpil-text {
+    top: 313px;
+    left: 226px;
+}
+.wiki-content .shpil-island:hover+.shpil-text {
+    display: block;
+}
+.wiki-content .taytan-island {
+    position: absolute;
+    right: 283px;
+    top: 144px;
+}
+.wiki-content .taytan-text {
+    top: 198px;
+    right: 83px;
+}
+.wiki-content .taytan-island:hover+.taytan-text {
+    display: block;
+}

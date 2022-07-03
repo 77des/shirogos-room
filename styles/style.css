@@ -1,0 +1,474 @@
+@font-face {
+    font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/DaysOne-Regular.ttf")
+}
+
+/* .preloader {
+    background: url(../imgs/preloader.gif) center no-repeat;
+    background-color: #181818;
+    position: fixed;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: visible;
+    transition: 1s all;
+}
+.preloader.done {
+    visibility: hidden;
+    opacity: 0;
+} */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    color: #FFFFFF;
+    background: #181818;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Days One", sans-serif;
+    scroll-behavior: smooth;
+}
+.preloader {
+    background: url(../imgs/preloader.gif) center no-repeat;
+    background-color: #181818;
+    position: fixed;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: visible;
+    transition: 1s all;
+}
+.preloader.done {
+    visibility: hidden;
+    opacity: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+header {
+    background: #323232;
+    flex: 0 0 auto;
+}
+.content {
+    flex: 1 0 auto;
+}
+.header-content {
+    box-sizing: border-box;
+    width: 1200px;
+    background: #181818;
+    border: 1px solid #323232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+}
+header .logo-link {
+    margin-left: 3px;
+}
+header .menu {
+    display: flex;
+    align-items: center;
+}
+header .menu a {
+    box-sizing: border-box;
+    width: 120px;
+    padding: 18px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+header .menu .current {
+    font-size: 13px;
+    position: relative;
+}
+header .menu a:hover {
+    border: 3px solid #C34375;
+}
+.line {
+    border-top: 2px solid #C34375;
+    position: absolute;
+    top: 36px;
+}
+.current.butik .line {
+    width: 57px;
+    left: 31.5px;
+}
+.current.butik:hover .line {
+    left: 28.5px;
+}
+.current.wiki .line {
+    width: 51px;
+    left: 34px;
+}
+.current.wiki:hover .line {
+    left: 31px;
+}
+.current.dangoteka .line {
+    width: 99px;
+    left: 10px;
+}
+.current.dangoteka:hover .line {
+    left: 7px;
+}
+header .login {
+    margin-right: 10px;
+    text-align: right;
+}
+header .login p {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 1px;
+}
+header .login a {
+    font-size: 16px;
+    line-height: 20px;
+}
+header .login a:hover {
+    color: #C34375;
+}
+/* header .socials {
+    display: flex;
+}
+header .socials img {
+    width: 30px;
+    height: 30px;
+}
+header .socials a {
+    margin-right: 10px;
+}
+header .socials a:last-child {
+    margin-right: 0;
+}
+.vk-button, .inst-button, .tiktok-button, .discord-button, .youtube-button {
+    position: relative;
+    transition: transform 0.5s ease 0s;
+}
+.vk-fill, .inst-fill, .tiktok-fill, .discord-fill, .youtube-fill {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    border-radius: 50%;
+    transition: transform 0.5s ease 0s;
+}
+.vk-fill {
+    background: #2A82BB;
+}
+.inst-fill {
+    background: linear-gradient(180deg, #FFB648 0%, #FF4241 24.25%, #F02182 50.58%, #BF2AB6 71.08%, #5840DB 100%);
+}
+.tiktok-fill {
+    background: #000000;
+}
+.discord-fill {
+    background: #6689C2;
+}
+.youtube-fill {
+    background: #FF0001;
+}
+.vk-button:hover .vk-fill, .inst-button:hover .inst-fill, .tiktok-button:hover .tiktok-fill, .discord-button:hover .discord-fill, .youtube-button:hover .youtube-fill {
+    transform: scale(1.5);
+}
+.vk-button:hover, .inst-button:hover, .tiktok-button:hover, .discord-button:hover, .youtube-button:hover {
+    transform: scale(1);
+} */
+h1, h2 {
+    font-size: 54px;
+    text-align: center;
+    color: #C34375;
+    margin-top: 50px;
+}
+.manga-content, .stories-content {
+    display: flex;
+    flex-direction: column;
+}
+.stories {
+    background: #DEDEDE;
+}
+.manga-list, .stories-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 72px;
+}
+.stories-list {
+    margin-bottom: 100px;
+}
+.stories h3, .stories .stories-content p{
+    color: #181818;
+}
+.manga .forlowers, .manga .dandeathside, .manga .hi-story, .stories .iceflame, .stories .mutiny {
+    width: 450px;
+}
+.manga .manga-list>div:nth-child(odd), .stories .stories-list>div:nth-child(odd) {
+    margin-right: 112px;
+    margin-left: 119px;
+}
+.manga-list h3, .stories-list h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 64px;
+}
+.manga-list .dandeathside h3 {
+    font-size: 19px;
+}
+.manga .manga-content .manga-list .hi-story {
+    margin-right: 0;
+    margin-left: 400px;
+}
+.hi-story h3 {
+    margin-top: 70px;
+}
+.manga-list p, .stories-list p {
+    text-align: center;
+    font-size: 15px;
+    color: #DEDEDE;
+    margin-top: 21px;
+    line-height: 19px;
+    height: 114px;
+    margin-bottom: 21px;
+}
+.stories-list p {
+    height: 76px;
+}
+.manga-list .hi-story p {
+    height: 58px;
+}
+.butik .about, .butik .howtoget {
+    display: flex;
+}
+.butik .about {
+    width: 849px;
+    margin-top: 21px;
+    margin-left: 171px;
+}
+.butik .howtoget {
+    width: 884px;
+    margin-left: 171px;
+}
+.butik .about p {
+    margin-top: 33px;
+    margin-left: 62px;
+    width: 530px;
+}
+.butik .howtoget p {
+    margin-top: 50px;
+    margin-right: 80px;
+    width: 569px;
+}
+.butik p {
+    font-size: 20px;
+    line-height: 25px;
+}
+.content>hr {
+    color: #323232; /*для IE */
+    background-color:#323232; /*для Firefox, Opera, Safari*/
+    border:0px none;
+    height: 1px; /* высота 1px IE, Firefox, Opera, Safari */
+    margin-top: 28px;
+}
+.services {
+    padding-bottom: 90px;
+}
+.services h2 {
+    color: #D9D9D9;
+}
+.services .services-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.services .services-types {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 660px;
+}
+.services .services-types>div {
+    width: 432px;
+    height: 84px;
+    background: #C34375;
+    border-top-left-radius: 21px;
+    border-bottom-left-radius: 21px;
+    position: relative;
+    display: flex;
+}
+.services .services-types>div .price {
+    z-index: 2;
+    cursor: pointer;
+    width: 158px;
+    height: 62px;
+    background: #181818;
+    border-top-left-radius: 21px;
+    border-bottom-left-radius: 21px;
+    margin-top: 11px;
+    margin-left: 11px;
+}
+.services .services-types>div .price p {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 41px;
+}
+.services .services-types>div .title {
+    cursor: pointer;
+    position: absolute;
+    left: 169px;
+    width: 285px;
+    height: 58px;
+    background: #C34375;
+    border-top-right-radius: 21px;
+    border-bottom-right-radius: 21px;
+    border: 2px solid #181818;
+    border-left: none;
+    margin-top: 11px;
+}
+.services .services-types>div .title p {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 17px;
+}
+.services .services-types>div .price:hover+.title {
+    background: #FF75AB;
+}
+.services .services-types>div .title:hover {
+    background: #FF75AB;
+}
+.services .profile-info {
+    display: flex;
+    align-items: center;
+    height: 71px;
+    margin-left: 105px;
+    margin-top: 589px;
+}
+.services .profile-info .nickname {
+    margin-right: 10px;
+}
+.services .profile-info .dango-count {
+    margin-left: 10px;
+}
+.services .profile-info .nickname p:first-child, .services .profile-info .dango-count p:first-child {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+}
+.services .profile-info .nickname p:last-child, .services .profile-info .dango-count p:last-child {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+}
+.services .profile-info .dango-count p:first-child {
+    text-align: left;
+}
+.services .profile-info .dango-count p:last-child {
+    text-align: left;
+}
+.services .order-bttn {
+    margin-left: 21px;
+}
+.services .order-bttn button {
+    cursor: pointer;
+    width: 295px;
+    height: 71px;
+    margin-top: 589px;
+    font-family: 'Days One';
+    font-size: 36px;
+    color: #C34375;
+    border: 4px solid #C34375;
+    background: #181818;
+    outline: none;
+    padding: 0;
+}
+.services .services-info>div {
+    display: none;
+    position: absolute;
+    right: 172px;
+    top: 0;
+    width: 381px;
+}
+.services .services-info>div h3 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 18px;
+}
+.services .services-info>div hr {
+    color: #FF75AB; /*для IE */
+    background-color:#FF75AB; /*для Firefox, Opera, Safari*/
+    border:0px none;
+    height: 5px; /* высота 1px IE, Firefox, Opera, Safari */
+}
+.services .services-info>div p {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 25px;
+}
+.services .services-info>div p.rules {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.services .services-info>div ol {
+    list-style: decimal;
+    margin-left: 23px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.services .services-types>div.active .price {
+    width: 182px;
+}
+.services .services-types>div.active .title {
+    left: 193px;
+    background: #FF75AB;
+}
+.services .services-info>div.active {
+    display: block;
+}
+.services .order-bttn button.active {
+    color: #FFFFFF;
+}
+footer {
+    background: #323232;
+    flex: 0 0 auto;
+}
+.footer-content {
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .entert {
+    font-size: 36px;
+    font-family: 'Cabin';
+    margin-right: 76px;
+}
+footer .copyright {
+    color: #C4C4C4;
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    text-align: center;
+}
+footer .copyright a {
+    color: #C4C4C4;
+}
+footer .copyright p:first-child {
+    margin-bottom: 5px;
+}

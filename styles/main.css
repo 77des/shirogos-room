@@ -1,0 +1,872 @@
+@font-face {
+    font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/DaysOne-Regular.ttf")
+}
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Days One", sans-serif;
+    scroll-behavior: smooth;
+}
+.preloader {
+    background: url(../imgs/preloader.gif) center no-repeat;
+    background-color: #181818;
+    position: fixed;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: visible;
+    transition: 1s all;
+}
+.preloader.done {
+    visibility: hidden;
+    opacity: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+.header {
+    background: url('../imgs/header-bg.png') no-repeat center center;
+    background-size: cover; 
+    height: 100vh;
+    width: 100%;
+}
+.header .socials-account {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 110px;
+}
+.header .socials {
+    margin-right: 33px;
+    margin-left: 563px;
+}
+.socials a {
+    display: block;
+}
+.socials-flex {
+    display: flex;
+    margin-top: 11px;
+    margin-left: 22px;
+}
+.socials-flex a {
+    margin-right: 10px;
+}
+.vk-button, .inst-button, .tiktok-button, .discord-button, .youtube-button {
+    position: relative;
+    transition: transform 0.5s ease 0s;
+}
+.vk-fill, .inst-fill, .tiktok-fill, .discord-fill, .youtube-fill {
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
+    width: 45px;
+    height: 45px;
+    z-index: -1;
+    border-radius: 50%;
+    transition: transform 0.5s ease 0s;
+}
+.vk-fill {
+    background: #2A82BB;
+}
+.inst-fill {
+    background: linear-gradient(180deg, #FFB648 0%, #FF4241 24.25%, #F02182 50.58%, #BF2AB6 71.08%, #5840DB 100%);
+}
+.tiktok-fill {
+    background: #000000;
+}
+.discord-fill {
+    background: #6689C2;
+}
+.youtube-fill {
+    background: #FF0001;
+}
+.vk-button:hover .vk-fill, .inst-button:hover .inst-fill, .tiktok-button:hover .tiktok-fill, .discord-button:hover .discord-fill, .youtube-button:hover .youtube-fill {
+    transform: scale(1.32);
+}
+.vk-button:hover, .inst-button:hover, .tiktok-button:hover, .discord-button:hover, .youtube-button:hover {
+    transform: scale(1);
+}
+.header .account {
+    display: flex;
+}
+.header .account .login {
+    margin-top: 31px;
+    margin-right: 11px;
+}
+.header .account .login a {
+    padding: 31px 5px 30px 6px;
+    background: #C34375;
+    border-radius: 9px;
+    font-size: 20px;
+    line-height: 25px;
+}
+.header .account .login a:hover {
+    background: #FF75AB;
+}
+.header .account .profile p {
+    font-size: 12px;
+    line-height: 15px;
+    color: #242424;
+    text-align: right;
+}
+.header .account .profile p.profile-nick {
+    font-size: 16px;
+    line-height: 20px;
+    color: #C34375;
+}
+.header .account .profile img {
+    width: 61px;
+    height: 50px;
+}
+.header h1 {
+    font-size: 128px;
+    color: #C34375;
+    line-height: 122px;
+    -webkit-text-stroke: 2px #DEDEDE;
+    margin-left: 563px;
+    margin-bottom: 75px;
+    font-family: 'Russo One', sans-serif;
+}
+.header-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    width: 220px;
+    height: 110px;
+    background: rgba(24, 24, 24, 0.8);
+    margin-right: 11px;
+}
+.header-menu a.header-arrow {
+    width: 85px;
+    height: 110px;
+    border-radius: 17px;
+    margin-left: 147px;
+    margin-right: 0;
+}
+.header-menu a:hover {
+    background: rgba(195, 67, 117, 0.8);
+}
+.header-menu a:nth-child(3) {
+    margin-right: 0;
+}
+.header-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 106px;
+}
+.header-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rating {
+    background: #181818;
+}
+.rating-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+.rating h2 {
+    font-size: 54px;
+    text-align: center;
+    color: #C34375;
+    -webkit-text-stroke: 1px #000000;
+    margin-bottom: 25px;
+}
+.rating p {
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+}
+.rating p.criteria {
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 10px;
+}
+.rating .rating-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 955px;
+    height: 526px;
+    margin: 0 auto;
+    border: 2px solid #817C7E;
+    margin-top: 25px;
+}
+.rating .rating-table .top-arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: 9px;
+}
+.rating .rating-table .top-arrow img {
+    cursor: pointer;
+}
+.rating .rating-table .bottom-arrow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 9px;
+}
+.rating .rating-table .bottom-arrow img {
+    cursor: pointer;
+}
+.rating .rating-table .bottom-arrow img.disabled, .rating .rating-table .top-arrow img.disabled {
+    cursor: default;
+}
+.preloader {
+    background: url(../imgs/preloader.gif) center no-repeat;
+    background-color: #181818;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: visible;
+}
+.preloader.done {
+    visibility: hidden;
+    opacity: 0;
+}
+.rating .rating-table table {
+    margin: 0 auto;
+    width: 939px;
+    height: 454px;
+}
+.rating .rating-table table th {
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #C34375;
+    border: 2px solid #DEDEDE;
+    border-right: none;
+    height: 36px;
+    padding-top: 8px;
+    position: relative;
+}
+.rating .rating-table table th img {
+    position: absolute;
+    top: 20px;
+    display: none;
+}
+.rating .rating-table table th:hover img {
+    display: block;
+}
+.rating .rating-table table td {
+    font-size: 10px;
+    text-align: center;
+    padding-top: 10px;
+    border: 2px solid #DEDEDE;
+    border-right: none;
+    height: 22.5px;
+}
+.rating .rating-table table td:first-child {
+    border-right: 2px solid #C34375;
+}
+.rating .rating-table table td:nth-child(2) {
+    font-size: 12px;
+    border: 2px solid #C34375;
+    border-left: none;
+}
+.rating .rating-table table td:nth-child(10) {
+    border-right: 2px solid #DEDEDE;
+}
+.rating .rating-table table th:first-child {
+    color: #FFFFFF;
+    width: 38px;
+    font-size: 16px;
+    border-right: 2px solid #C34375;
+}
+.rating .rating-table table th:nth-child(2) {
+    width: 150px;
+    font-size: 16px;
+    border: 2px solid #C34375;
+    border-left: none;
+}
+.rating .rating-table table th:nth-child(3) {
+    width: 96px;
+}
+.rating .rating-table table th:nth-child(4) {
+    width: 107px;
+}
+.rating .rating-table table th:nth-child(5) {
+    width: 88px;
+}
+.rating .rating-table table th:nth-child(6) {
+    width: 101px;
+}
+.rating .rating-table table th:nth-child(7) {
+    width: 67px;
+}
+.rating .rating-table table th:nth-child(8) {
+    width: 67px;
+}
+.rating .rating-table table th:nth-child(9) {
+    width: 134px;
+}
+.rating .rating-table table th:nth-child(10) {
+    width: 91px;
+    border-right: 2px solid #DEDEDE;
+}
+.rating .rating-table table {
+    display: none;
+}
+.rating .rating-table table.active {
+    display: block;
+}
+.formats {
+    background: #DEDEDE;
+}
+.formats-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+.formats h2 {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 13px;
+    color: #C34375;
+}
+.formats p {
+    font-size: 24px;
+    color: #242424;
+    margin-bottom: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formats p a {
+    color: #242424;
+    margin-left: 7px;
+}
+.format-buttons {
+    display: flex;
+    justify-content: center;
+}
+.formats .first-button, .formats .second-button, .formats .third-button {
+    position: relative;
+    width: 350px;
+    height: 520px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.first-format, .second-format, .third-format, .fourth-format, .fifth-format {
+    width: 350px;
+    height: 520px;
+    transition: opacity 0.5s ease 0s;
+}
+.first-format, .second-format, .third-format, .fourth-format, .fifth-format {
+    position: absolute;
+    top: 0;
+}
+.formats .dan-button {
+    position: absolute;
+    top: -25px;
+    left: 150px;
+    z-index: 2;
+    cursor: pointer;
+}
+.lists {
+    background: #181818;
+}
+.lists-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.lists button {
+    margin-bottom: 85px;
+    width: 955px;
+    height: 96px;
+    background: #181818;
+    border: 4px solid #DEDEDE;
+    outline: none;
+    cursor: pointer;
+}
+.lists button:hover {
+    background: #323232;
+}
+.lists .faction-tournament-bttn {
+    margin-bottom: 0;
+}
+.top-donaters-bttn p, .first-donaters-bttn p {
+    font-size: 40px;
+    font-family: 'Days One';
+    color: #EBE984;
+}
+.content-chronicles-bttn p, .faction-tournament-bttn p {
+    font-size: 40px;
+    font-family: 'Days One';
+    color: #C34375;
+}
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    transition: .3s all;
+}
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    width: 1000px;
+    height: 684px;
+    position: fixed;
+    z-index: 30; 
+    background: #242424;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s all;
+}
+.modal__title {
+    font-size: 40px;
+    margin-top: 31px;
+    color: #EBE984;
+}
+.top-donaters .modal__title {
+    margin-bottom: 26px;
+}
+.modal__cross {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    cursor: pointer;
+}
+.modal.active,
+.overlay.active{
+   opacity: 1;
+   visibility: visible;
+}
+.top-donaters ol {
+    box-sizing: border-box;
+    width: 895px;
+    height: 529px;
+    background: #323232;
+    border: 4px solid #DEDEDE;
+    border-radius: 20px;
+    margin-left: 22px;
+    padding: 17px 0;
+    text-align: left;
+    list-style-type: decimal;
+}
+.top-donaters li {
+    font-size: 20px;
+    color: #D9D9D9;
+    line-height: 25px;
+    padding-left: 19px;
+    margin-left: 70px;
+}
+.top-donaters li::marker {
+    color: #EBE984;
+}
+.top-donaters .simplebar-track.simplebar-vertical {
+    width: 30px;
+    right: -66px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    pointer-events: all;
+}
+.top-donaters .simplebar-track.simplebar-vertical .simplebar-scrollbar::before  {
+    top: 4px;
+    bottom: 6px;
+    right: 0;
+    left: 5px;
+    opacity: 1;
+    background: #C34375;
+    border-radius: 20px;
+    width: 20px;
+}
+.top-donaters .simplebar-track.simplebar-vertical .simplebar-scrollbar:hover::before {
+    background: #FF75AB;
+}
+.top-donaters .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
+.top-donaters .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+}
+.first-donaters .slider-imgs {
+    width: 30px;
+    height: 320px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+.first-donaters .slider-imgs button {
+    width: 20px;
+    height: 30px;
+    border: 3px solid #C34375;
+    border-radius: 20px;
+    background: #D9D9D9;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.first-donaters .slider-imgs button:hover {
+    background: #C34375;
+}
+.first-donaters .slider-imgs button.active {
+    background: #C34375;
+}
+.first-donaters .slider-imgs button:first-child {
+    margin-top: 12px;
+}
+.first-donaters .slider-imgs button:last-child {
+    margin-bottom: 12px;
+}
+.first-donaters .slider-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+}
+.first-donaters .donaters-imgs {
+    max-width: 643px;
+    max-height: 553px;
+    position: relative;
+}
+.first-donaters .donaters-imgs img {
+    border-radius: 32px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease 0s;
+}
+.first-donaters .donaters-imgs img.active {
+    opacity: 1;
+}
+.first-donaters .donaters-imgs .first-type {
+    width: 643px;
+    height: 482px;
+    margin-top: 49px;
+    margin-left: 148px;
+}
+.first-donaters .donaters-imgs .second-type {
+    width: 415px;
+    height: 553px;
+    margin-top: 18px;
+    margin-left: 293px;
+}
+.content-chronicles .modal__title, .faction-tournament .modal__title {
+    color: #C34375;
+}
+.content-chronicles .content-bttns {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+.content-chronicles .content-bttns .active {
+    background: #323232;
+}
+.content-chronicles .content-bttns button {
+    font-family: 'Days One';
+    font-size: 20px;
+    color: #D9D9D9;
+    margin-bottom: 0;
+}
+.content-chronicles .content-bttns .films-bttn {
+    width: 297px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 4px solid #DEDEDE;
+    border-right: none;
+}
+.content-chronicles .content-bttns .serials-bttn {
+    width: 300px;
+    height: 40px;
+    border-left: 2px solid #DEDEDE;
+    border-right: 2px solid #DEDEDE;
+    border-top: 4px solid #DEDEDE;
+    border-bottom: 4px solid #DEDEDE;
+}
+.content-chronicles .content-bttns .games-bttn {
+    width: 297px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 4px solid #DEDEDE;
+    border-left: none;
+}
+.content-chronicles .films-info, .content-chronicles .serials-info, .content-chronicles .games-info {
+    width: 860px;
+    height: 385px;
+    border: 4px solid #DEDEDE;
+    border-radius: 20px;
+    margin-left: 53px;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+}
+.content-chronicles .active {
+    display: block;
+}
+.content-chronicles .films-info h3, .content-chronicles .serials-info h3, .content-chronicles .games-info h3 {
+    font-family: 'Days One';
+    font-size: 20px;
+    color: #C34375;
+    margin: 10px 0;
+    text-align: center;
+}
+.content-chronicles .films-info ul, .content-chronicles .serials-info ul, .content-chronicles .games-info ul {
+    margin-left: 52px;
+}
+.content-chronicles .films-info li, .content-chronicles .serials-info li, .content-chronicles .games-info li {
+    font-family: 'Days One';
+    font-size: 15px;
+    color: #DEDEDE;
+    text-align: left;
+    line-height: 19px;
+    padding-bottom: 10px;
+}
+.content-chronicles .simplebar-track.simplebar-vertical {
+    width: 14px;
+    right: -39px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    pointer-events: all;
+}
+.content-chronicles .simplebar-track.simplebar-vertical .simplebar-scrollbar::before  {
+    top: 2px;
+    bottom: 4px;
+    right: 0;
+    left: 2px;
+    opacity: 1;
+    background: #C34375;
+    border-radius: 20px;
+    width: 10px;
+}
+.content-chronicles .simplebar-track.simplebar-vertical .simplebar-scrollbar:hover::before {
+    background: #FF75AB;
+}
+.content-chronicles .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+}
+.faction-tournament .select-bttns {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+}
+.faction-tournament .select-bttns button {
+    font-family: 'Days One';
+    height: 50px;
+    margin-bottom: 0;
+    font-family: 'Days One';
+    font-size: 20px;
+    color: #D9D9D9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #242424;
+}
+.faction-tournament .select-bttns button:first-child {
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: #D9D9D9;
+    width: 320px;
+    border: 4px solid #DEDEDE;
+    margin-right: 17px;
+}
+.faction-tournament .select-bttns button:last-child {
+    width: 286px;
+    background: url(../imgs/week-menu.png);
+    border: none;
+    outline: none;
+}
+.faction-tournament .select-bttns button .arrow-bottom {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 15px solid #C34375;
+    margin-right: 15px;
+}
+.faction-tournament .select-bttns button:first-child .arrow-bottom {
+    margin-left: 33px;
+}
+.faction-tournament .select-bttns button:last-child .arrow-bottom {
+    margin-left: 48px;
+    border-top: 15px solid #D9D9D9;
+}
+.faction-tournament .first-tour>div, .faction-tournament .second-tour>div {
+    margin-top: 28px;
+    display: none;
+}
+.faction-tournament .first-tour>div.active, .faction-tournament .second-tour>div.active {
+    display: flex;
+}
+.faction-tournament .left-bttns {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    width: 290px;
+}
+.faction-tournament .left-bttns a {
+    font-size: 24px;
+    font-family: 'Days One';
+    color: #FFFFFF;
+    margin-bottom: 35px;
+    line-height: 31px;
+}
+.faction-tournament .left-bttns a.active {
+    color: #C34375;
+}
+.faction-tournament .left-bttns .result-bttn {
+    margin-bottom: 0;
+    margin-top: 178px;
+}
+.faction-tournament .right-content {
+    margin-left: 80px;
+    text-align: left;
+    display: none;
+    position: absolute;
+    left: 350px;
+    height: 475px;
+}
+.faction-tournament .right-content.active {
+    display: block;
+}
+.faction-tournament .right-content h3 {
+    font-size: 20px;
+    line-height: 25px;
+    color: #C34375;
+}
+.faction-tournament .right-content ul {
+    margin-bottom: 25px;
+}
+.faction-tournament .right-content ul:last-child {
+    margin-bottom: 0;
+}
+.faction-tournament .right-content li {
+    font-size: 20px;
+    line-height: 25px;
+}
+.faction-tournament .right-content p {
+    margin-bottom: 20px;
+}
+.faction-tournament .right-content.crocodile {
+    width: 530px;
+}
+.faction-tournament .simplebar-track.simplebar-vertical {
+    width: 14px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    pointer-events: all;
+}
+.faction-tournament .simplebar-track.simplebar-vertical .simplebar-scrollbar::before  {
+    top: 4px;
+    bottom: 4px;
+    right: 0;
+    left: 2px;
+    opacity: 1;
+    background: #C34375;
+    border-radius: 20px;
+    width: 10px;
+}
+.faction-tournament .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+}
+.faction-tournament .right-content.result li {
+    margin-bottom: 20px;
+}
+.week-dropdown, .tournament-dropdown {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    background: #242424;
+    width: 230px;
+    z-index: 1;
+    margin-left: 563px;
+}
+.week-dropdown.active, .tournament-dropdown.active {
+    display: block;
+}
+.week-dropdown a, .tournament-dropdown a {
+    color: #D9D9D9;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    padding: 12px 0;
+    border: 3px solid #181818;
+    border-bottom: none;
+}
+.week-dropdown a:last-child, .tournament-dropdown a:last-child {
+    border-bottom: 3px solid #181818;
+}
+.week-dropdown a:hover, .tournament-dropdown a:hover {
+    background: #323232;
+}
+.week-dropdown a.active, .tournament-dropdown a.active {
+    display: none;
+}
+.tournament-dropdown {
+    width: 282px;
+    margin-left: 208px;
+}
+.faction-tournament .second-week .left-bttns .result-bttn {
+    margin-top: 112px;
+}
+.faction-tournament .sixth-week .right-content.darksouls {
+    width: 530px;
+}
+.faction-tournament .sixth-week .right-content.result {
+    width: 530px;
+}
+.faction-tournament .sixth-week .right-content.result img {
+    width: 450px;
+    margin-bottom: 50px;
+}
+.faction-tournament .sixth-week .right-content.result img:last-child {
+    margin-bottom: 0;
+}
+.faction-tournament .result-week .right-content.result {
+    width: 530px;
+}
+.faction-tournament .third-week .right-content.darksouls {
+    width: 530px;
+}
+.faction-tournament .fourth-week .left-bttns .result-bttn, .faction-tournament .sixth-week .left-bttns .result-bttn {
+    margin-top: 244px;
+}
+.faction-tournament .fifth-week .left-bttns .result-bttn {
+    margin-top: 182px;
+}
+.faction-tournament .main-content>div {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.faction-tournament .main-content>div.active {
+    display: block;
+}
+.faction-tournament .second-tour .first-week .left-bttns .result-bttn {
+    margin-top: 46px;
+}

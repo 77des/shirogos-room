@@ -1,0 +1,231 @@
+@font-face {
+    font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/DaysOne-Regular.ttf")
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: #181818;
+    color: #FFFFFF;
+    font-family: "Days One", sans-serif;
+    scroll-behavior: smooth;
+}
+.content {
+    padding: 30px 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: #323232;
+}
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+}
+.header-content>p {
+    font-size: 32px;
+    padding: 20px 0;
+    padding-left: 40px;
+    line-height: 41px;
+}
+.header-content .back-bttn {
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 37px;
+    height: 82px;
+}
+.header-content .back-bttn p {
+    margin-top: 7px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #DEDEDE;
+}
+.header-content .back-bttn:hover p {
+    color: #FFFFFF;
+}
+.characters-content {
+    padding-top: 34px;
+}
+.characters-content>div {
+    padding-bottom: 96px;
+}
+.characters-content>div:last-child {
+    padding-bottom: 0;
+}
+.list-title {
+    width: 1120px;
+    height: 48px;
+    background: #181818;
+    margin: 0 auto;
+    margin-bottom: 39px;
+}
+.list-title h2 {
+    font-size: 30px;
+    color: #C34375;
+    text-align: center;
+    line-height: 38px;
+    padding-top: 5px;
+}
+.list-title span {
+    font-size: 20px;
+    line-height: 25px;
+}
+.list {
+    width: 1120px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+.list .character {
+    margin-right: 44px;
+    display: flex;
+    flex-direction: column;
+}
+.list .character:nth-child(6n + 6) {
+    margin-right: 0;
+    margin-bottom: 39px;
+}
+.list .character:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+.list .character a:first-child {
+    width: 150px;
+    height: 200px;
+}
+.list .character a:last-child {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
+    text-align: center;
+    width: 150px;
+    position: absolute;
+    top: 200px;
+}
+.list .character a:last-child:hover {
+    color: #C34375;
+}
+.list .character a>div{
+    box-sizing: border-box;
+    width: 150px;
+    height: 200px;
+}
+.list .character .blue-block {
+    border: 4px solid #60FFF5;
+}
+.list .character .yellow-block {
+    border: 4px solid #FFE500;
+}
+.list .character .green-block {
+    border: 4px solid #59F769;
+}
+.list .character .orange-block {
+    border: 4px solid #AF6338;
+}
+.list .character .white-block {
+    border: 4px solid #FFFFFF;
+}
+.footer-content {
+    padding-top: 99px;
+    padding-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content .prev-bttn a, .footer-content .next-bttn a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #DEDEDE;
+}
+.footer-content .prev-bttn {
+    margin-left: 40px;
+}
+.footer-content .prev-bttn:hover p {
+    color: #FFFFFF;
+}
+.footer-content .next-bttn {
+    margin-right: 40px;
+    text-align: right;
+}
+.footer-content .next-bttn:hover p {
+    color: #FFFFFF;
+}
+.footer-content .prev-bttn p {
+    margin-left: 8px;
+}
+.footer-content .next-bttn p {
+    margin-right: 8px;
+}
+.character {
+    position: relative;
+}
+.characters-content .dangers-content {
+    padding-bottom: 76px;
+}
+.d-island-2-footer {
+    padding-top: 130px;
+    padding-bottom: 25px;
+}
+.hladberin-header .title {
+    padding: 50px 0;
+    padding-left: 40px;
+}
+.hladberin-header .title p:first-child {
+    font-size: 32px;
+    line-height: 40px;
+}
+.hladberin-header .title p:last-child{
+    font-size: 20px;
+    line-height: 25px;
+}
+.events-list .character:nth-child(6n + 6) {
+    margin-right: 0;
+    margin-bottom: 72px;
+}
+.events-list .character:last-child {
+    margin-bottom: 0;
+}
+.hladberin-footer {
+    padding-top: 92px;
+}
+.characters-content .hladberins-content, .characters-content .sbornik-kurogo-content {
+    padding-bottom: 72px;
+}
+.header-content.unknown-header>p {
+    padding: 74px 0;
+    padding-left: 40px;
+}
+.header-content.unknown-header .back-bttn {
+    margin-top: 50px;
+}
+.unknown-content {
+    padding-top: 21px;
+}
+.myatezhniki-list .character:nth-child(6n + 6) {
+    margin-right: 0;
+    margin-bottom: 64px;
+}
+.myatezhniki-list .character:last-child {
+    margin-bottom: 0;
+}
+.members-list .character:nth-child(6n + 6) {
+    margin-right: 0;
+    margin-bottom: 64px;
+}
+.members-list .character:last-child {
+    margin-bottom: 0;
+}
+.unknown-footer {
+    padding-top: 70px;
+    padding-bottom: 17px;
+}

@@ -1,0 +1,188 @@
+@font-face {
+    font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/DaysOne-Regular.ttf")
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: #181818;
+    color: #FFFFFF;
+    font-family: 'Cuprum', sans-serif;
+    scroll-behavior: smooth;
+}
+.content {
+    padding: 19px 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: #323232;
+}
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .back-bttn {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    margin-left: 40px;
+}
+header .back-bttn p {
+    font-size: 16px;
+    color: #DEDEDE;
+    font-family: "Days One";
+}
+header .back-bttn:hover p {
+    color: #FFFFFF;
+}
+header .right-side {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+header .login {
+    text-align: right;
+    margin-right: 31px;
+}
+header .login p{
+    font-size: 12px;
+    line-height: 15px;
+    font-family: "Days One";
+}
+header .login a {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Days One";
+}
+header .login a:hover {
+    color: #C34375;
+}
+.info-content {
+    margin: 0 40px;
+    display: flex;
+    padding-bottom: 225px;
+}
+.character-card .card-title {
+    width: 344px;
+    height: 60px;
+    background: #181818;
+    text-align: center;
+    position: relative;
+}
+.character-card .card-pic {
+    width: 344px;
+    height: 457px;
+}
+.character-card .card-title h3 {
+    font-size: 30px;
+    line-height: 35px;
+    padding-top: 5px;
+}
+.character-card .card-title p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    position: absolute;
+    left: calc(50% - 172px);
+    bottom: 3px;
+}
+.character-card .card-about>div {
+    display: flex;
+}
+.character-card .card-about>div p:first-child {
+    width: 160px;
+    height: 39px;
+    background: #C34375;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    border-left: 8px solid #181818;
+    border-bottom: 7px solid #181818;
+}
+.character-card .card-about>div p:last-child {
+    width: 155px;
+    height: 39px;
+    background: #323232;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    padding-left: 5px;
+    border-left: 8px solid #181818;
+    border-right: 8px solid #181818;
+    border-bottom: 7px solid #181818;
+}
+.info .character-card .card-about .all-appears p {
+    height: 73px;
+}
+.info .character-card .card-about .all-appears-right {
+    width: 155px;
+    height: 73px;
+    background: #323232;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    padding-left: 5px;
+    border-left: 8px solid #181818;
+    border-right: 8px solid #181818;
+    border-bottom: 7px solid #181818;
+}
+.info .character-card .card-about .all-appears-right .all-appears-text {
+    padding-top: 10px;
+}
+.info .character-card .card-about .all-appears a {
+    color: #FF75AB;
+}
+.info .character-card .card-about .first-appear-right {
+    width: 155px;
+    height: 28px;
+    background: #323232;
+    padding-top: 11px;
+    padding-left: 5px;
+    border-left: 8px solid #181818;
+    border-right: 8px solid #181818;
+    border-bottom: 7px solid #181818;
+}
+.info .character-card .card-about .first-appear-right a {
+    color: #FF75AB;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+}
+.general-info {
+    width: 738px;
+    margin-left: 38px;
+}
+.general-info .info-title {
+    box-sizing: border-box;
+    height: 32px;
+    background: #181818;
+    text-align: center;
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 5px;
+}
+.general-info .info-text {
+    margin-top: 21px;
+    font-size: 25px;
+    line-height: 29px;
+}
+.general-info .info-text {
+    margin-bottom: 66px;
+}
+.general-info>div:last-child .info-text {
+    margin-bottom: 0;
+}
