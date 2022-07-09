@@ -35,6 +35,7 @@ body {
     height: 100%;
     font-family: "Days One", sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 .preloader {
     background: url(../imgs/preloader.gif) center no-repeat;
@@ -58,7 +59,7 @@ a {
     color: white;
 }
 .container {
-    width: 1250px;
+    width: 1110px;
     margin: 0 auto;
 }
 header {
@@ -70,7 +71,7 @@ header {
 }
 .header-content {
     box-sizing: border-box;
-    width: 1200px;
+    width: 1110px;
     background: #181818;
     border: 1px solid #323232;
     display: flex;
@@ -142,56 +143,8 @@ header .login a {
 header .login a:hover {
     color: #C34375;
 }
-/* header .socials {
-    display: flex;
-}
-header .socials img {
-    width: 30px;
-    height: 30px;
-}
-header .socials a {
-    margin-right: 10px;
-}
-header .socials a:last-child {
-    margin-right: 0;
-}
-.vk-button, .inst-button, .tiktok-button, .discord-button, .youtube-button {
-    position: relative;
-    transition: transform 0.5s ease 0s;
-}
-.vk-fill, .inst-fill, .tiktok-fill, .discord-fill, .youtube-fill {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 20px;
-    height: 20px;
-    z-index: -1;
-    border-radius: 50%;
-    transition: transform 0.5s ease 0s;
-}
-.vk-fill {
-    background: #2A82BB;
-}
-.inst-fill {
-    background: linear-gradient(180deg, #FFB648 0%, #FF4241 24.25%, #F02182 50.58%, #BF2AB6 71.08%, #5840DB 100%);
-}
-.tiktok-fill {
-    background: #000000;
-}
-.discord-fill {
-    background: #6689C2;
-}
-.youtube-fill {
-    background: #FF0001;
-}
-.vk-button:hover .vk-fill, .inst-button:hover .inst-fill, .tiktok-button:hover .tiktok-fill, .discord-button:hover .discord-fill, .youtube-button:hover .youtube-fill {
-    transform: scale(1.5);
-}
-.vk-button:hover, .inst-button:hover, .tiktok-button:hover, .discord-button:hover, .youtube-button:hover {
-    transform: scale(1);
-} */
 h1, h2 {
-    font-size: 54px;
+    font-size: 3.375rem;
     text-align: center;
     color: #C34375;
     margin-top: 50px;
@@ -200,16 +153,16 @@ h1, h2 {
     display: flex;
     flex-direction: column;
 }
-.stories {
+.stories, .stories-content {
     background: #DEDEDE;
 }
 .manga-list, .stories-list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 72px;
+    margin-bottom: 4.5rem;
 }
 .stories-list {
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
 }
 .stories h3, .stories .stories-content p{
     color: #181818;
@@ -219,68 +172,68 @@ h1, h2 {
 }
 .manga .manga-list>div:nth-child(odd), .stories .stories-list>div:nth-child(odd) {
     margin-right: 112px;
-    margin-left: 119px;
+    margin-left: 49px;
 }
 .manga-list h3, .stories-list h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
     margin-top: 64px;
 }
 .manga-list .dandeathside h3 {
-    font-size: 19px;
+    font-size: 1.1875rem;
 }
 .manga .manga-content .manga-list .hi-story {
     margin-right: 0;
-    margin-left: 400px;
+    margin-left: 330px;
 }
 .hi-story h3 {
     margin-top: 70px;
 }
 .manga-list p, .stories-list p {
     text-align: center;
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #DEDEDE;
     margin-top: 21px;
-    line-height: 19px;
-    height: 114px;
-    margin-bottom: 21px;
+    line-height: 1.266;
+    min-height: 7.125rem;
+    margin-bottom: 1.3125rem;
 }
 .stories-list p {
-    height: 76px;
+    min-height: 4.75rem;
 }
 .manga-list .hi-story p {
-    height: 58px;
+    min-height: 3.625rem;
 }
 .butik .about, .butik .howtoget {
     display: flex;
 }
 .butik .about {
-    width: 849px;
+    width: 49.5rem;
     margin-top: 21px;
-    margin-left: 171px;
+    margin-left: 101px;
 }
 .butik .howtoget {
-    width: 884px;
-    margin-left: 171px;
+    width: 53.0625rem;
+    margin-left: 101px;
 }
 .butik .about p {
     margin-top: 33px;
     margin-left: 62px;
-    width: 530px;
+    width: 33.125rem;
 }
 .butik .howtoget p {
     margin-top: 50px;
     margin-right: 80px;
-    width: 569px;
+    width: 35.5625rem;
 }
 .butik p {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 1.25rem;
+    line-height: 1.25;
 }
 .content>hr {
     color: #323232; /*для IE */
     background-color:#323232; /*для Firefox, Opera, Safari*/
-    border:0px none;
+    border: 0px none;
     height: 1px; /* высота 1px IE, Firefox, Opera, Safari */
     margin-top: 28px;
 }
@@ -300,11 +253,11 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 660px;
+    height: 41.25rem;
 }
 .services .services-types>div {
-    width: 432px;
-    height: 84px;
+    width: 27rem;
+    height: 5.25rem;
     background: #C34375;
     border-top-left-radius: 21px;
     border-bottom-left-radius: 21px;
@@ -314,37 +267,37 @@ h1, h2 {
 .services .services-types>div .price {
     z-index: 2;
     cursor: pointer;
-    width: 158px;
-    height: 62px;
+    width: 9.875rem;
+    height: 3.875rem;
     background: #181818;
     border-top-left-radius: 21px;
     border-bottom-left-radius: 21px;
-    margin-top: 11px;
-    margin-left: 11px;
+    margin-top: 0.6875rem;
+    margin-left: 0.6875rem;
 }
 .services .services-types>div .price p {
-    font-size: 32px;
+    font-size: 2rem;
     text-align: center;
-    margin-top: 10px;
-    line-height: 41px;
+    margin-top: 0.625rem;
+    line-height: 1.28125;
 }
 .services .services-types>div .title {
     cursor: pointer;
     position: absolute;
-    left: 169px;
-    width: 285px;
-    height: 58px;
+    left: 10.5625rem;
+    width: 17.8125rem;
+    height: 3.625rem;
     background: #C34375;
     border-top-right-radius: 21px;
     border-bottom-right-radius: 21px;
     border: 2px solid #181818;
     border-left: none;
-    margin-top: 11px;
+    margin-top: 0.6875rem;
 }
 .services .services-types>div .title p {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 17px;
+    margin-top: 1.0625rem;
 }
 .services .services-types>div .price:hover+.title {
     background: #FF75AB;
@@ -355,24 +308,25 @@ h1, h2 {
 .services .profile-info {
     display: flex;
     align-items: center;
-    height: 71px;
+    height: 4.4375rem;
     margin-left: 105px;
-    margin-top: 589px;
+    margin-top: 36.8125rem;
 }
 .services .profile-info .nickname {
     margin-right: 10px;
 }
 .services .profile-info .dango-count {
     margin-left: 10px;
+    width: 3.5625rem;
 }
 .services .profile-info .nickname p:first-child, .services .profile-info .dango-count p:first-child {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 1.25;
     text-align: right;
 }
 .services .profile-info .nickname p:last-child, .services .profile-info .dango-count p:last-child {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25;
     text-align: right;
 }
 .services .profile-info .dango-count p:first-child {
@@ -385,12 +339,11 @@ h1, h2 {
     margin-left: 21px;
 }
 .services .order-bttn button {
-    cursor: pointer;
-    width: 295px;
-    height: 71px;
-    margin-top: 589px;
+    width: 18.4375rem;
+    height: 4.4375rem;
+    margin-top: 36.8125rem;
     font-family: 'Days One';
-    font-size: 36px;
+    font-size: 2.25rem;
     color: #C34375;
     border: 4px solid #C34375;
     background: #181818;
@@ -400,43 +353,44 @@ h1, h2 {
 .services .services-info>div {
     display: none;
     position: absolute;
-    right: 172px;
+    margin-left: 626px;
+    left: 0;
     top: 0;
-    width: 381px;
+    width: 23.8125rem;
 }
 .services .services-info>div h3 {
     text-align: center;
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 1.5rem;
+    line-height: 1.29166;
     margin-bottom: 18px;
 }
 .services .services-info>div hr {
     color: #FF75AB; /*для IE */
-    background-color:#FF75AB; /*для Firefox, Opera, Safari*/
-    border:0px none;
+    background-color: #FF75AB; /*для Firefox, Opera, Safari*/
+    border: 0px none;
     height: 5px; /* высота 1px IE, Firefox, Opera, Safari */
 }
 .services .services-info>div p {
     margin-top: 25px;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 1.25rem;
+    line-height: 1.25;
 }
 .services .services-info>div p.rules {
     margin-top: 25px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25;
 }
 .services .services-info>div ol {
     list-style: decimal;
     margin-left: 23px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25;
 }
 .services .services-types>div.active .price {
-    width: 182px;
+    width: 11.375rem;
 }
 .services .services-types>div.active .title {
-    left: 193px;
+    left: 12.0625rem;
     background: #FF75AB;
 }
 .services .services-info>div.active {
@@ -444,12 +398,14 @@ h1, h2 {
 }
 .services .order-bttn button.active {
     color: #FFFFFF;
+    cursor: pointer;
 }
 footer {
     background: #323232;
     flex: 0 0 auto;
 }
 .footer-content {
+    background: #323232;
     height: 56px;
     display: flex;
     justify-content: center;
