@@ -40,7 +40,7 @@ a {
     color: white;
 }
 .container {
-    width: 1250px;
+    width: 1110px;
     margin: 0 auto;
 }
 .header {
@@ -52,11 +52,10 @@ a {
 .header .socials-account {
     display: flex;
     margin-bottom: 30px;
-    margin-top: 110px;
 }
 .header .socials {
-    margin-right: 33px;
-    margin-left: 563px;
+    margin-right: 105px;
+    margin-left: 537px;
 }
 .socials a {
     display: block;
@@ -75,8 +74,8 @@ a {
 }
 .vk-fill, .inst-fill, .tiktok-fill, .discord-fill, .youtube-fill {
     position: absolute;
-    top: 7.5px;
-    left: 7.5px;
+    top: 7px;
+    left: 7px;
     width: 45px;
     height: 45px;
     z-index: -1;
@@ -108,59 +107,45 @@ a {
     display: flex;
 }
 .header .account .login {
-    margin-top: 31px;
-    margin-right: 11px;
+    margin-top: 32px;
+    margin-right: 8px;
 }
 .header .account .login a {
-    padding: 31px 5px 30px 6px;
+    padding: 1.9375rem 0.3125rem 1.875rem 0.375rem;
     background: #C34375;
     border-radius: 9px;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 1.25rem;
+    line-height: 1.25;
 }
 .header .account .login a:hover {
     background: #FF75AB;
 }
-.header .account .profile p {
-    font-size: 12px;
-    line-height: 15px;
-    color: #242424;
-    text-align: right;
-}
-.header .account .profile p.profile-nick {
-    font-size: 16px;
-    line-height: 20px;
-    color: #C34375;
-}
-.header .account .profile img {
-    width: 61px;
-    height: 50px;
-}
 .header h1 {
-    font-size: 128px;
+    font-size: 8rem;
     color: #C34375;
-    line-height: 122px;
-    -webkit-text-stroke: 2px #DEDEDE;
-    margin-left: 563px;
-    margin-bottom: 75px;
+    line-height: 0.953125;
+    -webkit-text-stroke: 0.125rem #DEDEDE;
+    text-align: center;
+    margin-left: 537px;
+    margin-bottom: 63px;
     font-family: 'Russo One', sans-serif;
 }
 .header-menu a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #FFFFFF;
-    width: 220px;
-    height: 110px;
+    width: 13.75rem;
+    height: 6.875rem;
     background: rgba(24, 24, 24, 0.8);
     margin-right: 11px;
 }
 .header-menu a.header-arrow {
-    width: 85px;
-    height: 110px;
+    width: 5.3125rem;
+    height: 6.875rem;
     border-radius: 17px;
-    margin-left: 147px;
+    margin-left: 136px;
     margin-right: 0;
 }
 .header-menu a:hover {
@@ -172,13 +157,12 @@ a {
 .header-menu {
     display: flex;
     justify-content: center;
-    margin-bottom: 106px;
 }
 .header-content {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 .rating {
     background: #181818;
@@ -190,20 +174,20 @@ a {
     height: 100vh;
 }
 .rating h2 {
-    font-size: 54px;
+    font-size: 3.375rem;
     text-align: center;
     color: #C34375;
-    -webkit-text-stroke: 1px #000000;
-    margin-bottom: 25px;
+    -webkit-text-stroke: 0.0625rem #000000;
+    margin-bottom: 22px;
 }
 .rating p {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
-    line-height: 30px;
+    line-height: 1.25;
 }
 .rating p.criteria {
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 0.9375rem;
+    line-height: 1.2666;
     margin-top: 10px;
 }
 .rating .rating-table {
@@ -213,7 +197,7 @@ a {
     justify-content: space-between;
     box-sizing: border-box;
     width: 955px;
-    height: 526px;
+    height: 420px;
     margin: 0 auto;
     border: 2px solid #817C7E;
     margin-top: 25px;
@@ -256,7 +240,7 @@ a {
 .rating .rating-table table {
     margin: 0 auto;
     width: 939px;
-    height: 454px;
+    height: 348px;
 }
 .rating .rating-table table th {
     box-sizing: border-box;
@@ -348,15 +332,17 @@ a {
     height: 100vh;
 }
 .formats h2 {
-    font-size: 54px;
+    font-size: 3.375rem;
+    line-height: 1.277;
     text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: -2px;
     color: #C34375;
 }
 .formats p {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #242424;
-    margin-bottom: 75px;
+    margin-bottom: 34px;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -364,6 +350,7 @@ a {
 .formats p a {
     color: #242424;
     margin-left: 7px;
+    height: 42px;
 }
 .format-buttons {
     display: flex;
@@ -371,25 +358,31 @@ a {
 }
 .formats .first-button, .formats .second-button, .formats .third-button {
     position: relative;
-    width: 350px;
-    height: 520px;
+    width: 326px;
+    height: 462px;
     border: none;
     padding: 0;
     margin: 0;
+    margin-right: 12px;
 }
-.first-format, .second-format, .third-format, .fourth-format, .fifth-format {
-    width: 350px;
-    height: 520px;
+.formats .third-button {
+    margin-right: 0;
+}
+.first-format, .second-format, .third-format, .fourth-format, .fifth-format, .sixth-format {
     transition: opacity 0.5s ease 0s;
 }
-.first-format, .second-format, .third-format, .fourth-format, .fifth-format {
+.first-format img, .second-format img, .third-format img, .fourth-format img, .fifth-format img, .sixth-format img {
+    width: 326px;
+    height: 462px;
+}
+.first-format, .second-format, .third-format, .fourth-format, .fifth-format, .sixth-format {
     position: absolute;
     top: 0;
 }
 .formats .dan-button {
     position: absolute;
-    top: -25px;
-    left: 150px;
+    top: -13px;
+    left: 138px;
     z-index: 2;
     cursor: pointer;
 }
@@ -404,11 +397,11 @@ a {
     height: 100vh;
 }
 .lists button {
-    margin-bottom: 85px;
-    width: 955px;
-    height: 96px;
+    margin-bottom: 63px;
+    width: 59.6875rem;
+    height: 6rem;
     background: #181818;
-    border: 4px solid #DEDEDE;
+    border: 0.25rem solid #DEDEDE;
     outline: none;
     cursor: pointer;
 }
@@ -419,12 +412,12 @@ a {
     margin-bottom: 0;
 }
 .top-donaters-bttn p, .first-donaters-bttn p {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-family: 'Days One';
     color: #EBE984;
 }
 .content-chronicles-bttn p, .faction-tournament-bttn p {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-family: 'Days One';
     color: #C34375;
 }
@@ -443,7 +436,7 @@ a {
     opacity: 0;
     visibility: hidden;
     width: 1000px;
-    height: 684px;
+    height: 600px;
     position: fixed;
     z-index: 30; 
     background: #242424;
@@ -452,7 +445,7 @@ a {
     transition: 0.3s all;
 }
 .modal__title {
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-top: 31px;
     color: #EBE984;
 }
@@ -473,7 +466,7 @@ a {
 .top-donaters ol {
     box-sizing: border-box;
     width: 895px;
-    height: 529px;
+    height: 445px;
     background: #323232;
     border: 4px solid #DEDEDE;
     border-radius: 20px;
@@ -483,9 +476,9 @@ a {
     list-style-type: decimal;
 }
 .top-donaters li {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #D9D9D9;
-    line-height: 25px;
+    line-height: 1.25;
     padding-left: 19px;
     margin-left: 70px;
 }
@@ -551,8 +544,8 @@ a {
     width: 1000px;
 }
 .first-donaters .donaters-imgs {
-    max-width: 643px;
-    max-height: 553px;
+    max-width: 575px;
+    max-height: 468px;
     position: relative;
 }
 .first-donaters .donaters-imgs img {
@@ -565,16 +558,16 @@ a {
     opacity: 1;
 }
 .first-donaters .donaters-imgs .first-type {
-    width: 643px;
-    height: 482px;
-    margin-top: 49px;
-    margin-left: 148px;
+    width: 575px;
+    height: 431px;
+    margin-top: 41px;
+    margin-left: 213px;
 }
 .first-donaters .donaters-imgs .second-type {
-    width: 415px;
-    height: 553px;
-    margin-top: 18px;
-    margin-left: 293px;
+    width: 351px;
+    height: 468px;
+    margin-top: 22px;
+    margin-left: 325px;
 }
 .content-chronicles .modal__title, .faction-tournament .modal__title {
     color: #C34375;
@@ -590,29 +583,29 @@ a {
 }
 .content-chronicles .content-bttns button {
     font-family: 'Days One';
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #D9D9D9;
     margin-bottom: 0;
 }
 .content-chronicles .content-bttns .films-bttn {
-    width: 297px;
-    height: 40px;
+    width: 18.5625rem;
+    height: 2.5rem;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border: 4px solid #DEDEDE;
     border-right: none;
 }
 .content-chronicles .content-bttns .serials-bttn {
-    width: 300px;
-    height: 40px;
+    width: 18.75rem;
+    height: 2.5rem;
     border-left: 2px solid #DEDEDE;
     border-right: 2px solid #DEDEDE;
     border-top: 4px solid #DEDEDE;
     border-bottom: 4px solid #DEDEDE;
 }
 .content-chronicles .content-bttns .games-bttn {
-    width: 297px;
-    height: 40px;
+    width: 18.5625rem;
+    height: 2.5rem;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border: 4px solid #DEDEDE;
@@ -633,7 +626,7 @@ a {
 }
 .content-chronicles .films-info h3, .content-chronicles .serials-info h3, .content-chronicles .games-info h3 {
     font-family: 'Days One';
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #C34375;
     margin: 10px 0;
     text-align: center;
@@ -643,10 +636,10 @@ a {
 }
 .content-chronicles .films-info li, .content-chronicles .serials-info li, .content-chronicles .games-info li {
     font-family: 'Days One';
-    font-size: 15px;
+    font-size: 0.9375rem;
     color: #DEDEDE;
     text-align: left;
-    line-height: 19px;
+    line-height: 1.266;
     padding-bottom: 10px;
 }
 .content-chronicles .simplebar-track.simplebar-vertical {
