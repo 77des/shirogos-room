@@ -74,8 +74,8 @@ a {
 }
 .vk-fill, .inst-fill, .tiktok-fill, .discord-fill, .youtube-fill {
     position: absolute;
-    top: 7px;
-    left: 7px;
+    top: 7.5px;
+    left: 7.5px;
     width: 45px;
     height: 45px;
     z-index: -1;
