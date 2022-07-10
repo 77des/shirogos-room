@@ -15,7 +15,7 @@ a {
     color: white;
 }
 .container {
-    width: 1250px;
+    width: 1110px;
     margin: 0 auto;
 }
 header {
@@ -103,7 +103,6 @@ header {
 .chapter-menu {
     padding-top: 7px;
     padding-bottom: 6px;
-    margin-left: 25px;
 }
 .chapter-menu:hover {
     background: #181818;
@@ -163,7 +162,6 @@ header {
 .back-bttn {
     display: flex;
     align-items: center;
-    margin-right: 25px;
     font-family: 'Cuprum';
     font-size: 20px;
     color: #DEDEDE;
@@ -173,11 +171,11 @@ header {
     align-items: center;
     position: absolute;
     height: 41px;
-    left: 534px;
+    left: 483px;
 }
 .bottom-nav-bttns {
     display: flex;
-    margin-left: 535px;
+    margin-left: 483px;
     padding-top: 25px;
     position: absolute;
 }
@@ -215,31 +213,31 @@ header {
     cursor: pointer;
 }
 .pages.forlowers {
-    height: 1760px;
+    height: 1628px;
     display: flex;
     justify-content: center;
 }
 .pages.forlowers img {
-    width: 1200px;
-    height: 1760px;
+    width: 1110px;
+    height: 1628px;
 }
 .pages.dandeathside {
-    height: 1600px;
+    height: 1480px;
     display: flex;
     justify-content: center;
 }
 .pages.dandeathside img {
-    width: 1200px;
-    height: 1600px;
+    width: 1110px;
+    height: 1480px;
 }
 .pages.hi-story {
-    height: 700px;
+    height: 647.5px;
     display: flex;
     justify-content: center;
 }
 .pages.hi-story img {
-    width: 1200px;
-    height: 700px;
+    width: 1110px;
+    height: 647.5px;
 }
 .pages.iceflame, .pages.mutiny {
     display: flex;
@@ -251,39 +249,39 @@ header {
     visibility: hidden;
 }
 .pages.forlowers .manga-page {
-    height: 1760px;
+    height: 1628px;
 }
 .pages.dandeathside .manga-page {
-    height: 1600px;
+    height: 1480px;
 }
 .pages.hi-story .manga-page {
-    height: 700px;
+    height: 647.5px;
 }
 .pages .manga-page.active {
     visibility: visible;
 }
 .pages.iceflame p, .pages.mutiny p {
-    width: 1200px;
+    width: 1110px;
     margin-top: 37px;
     font-family: 'Cuprum';
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 1.5rem;
+    line-height: 1.166;
     color: #FFFFFF;
 }
 .pages.iceflame h2, .pages.mutiny h2 {
     font-family: 'Cuprum';
-    font-size: 32px;
+    font-size: 2rem;
     color: #D9D9D9;
     margin-top: 37px;
     text-align: center;
-    line-height: 37px;
+    line-height: 1.15625;
 }
 .pages.iceflame h3, .pages.mutiny h3 {
     font-family: 'Cuprum';
     text-align: center;
     color: #C34375;
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 1.75rem;
+    line-height: 1.1428;
     padding-bottom: 12px;
     margin-top: 37px;
 }
