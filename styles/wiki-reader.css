@@ -132,7 +132,6 @@ header .login a:hover {
 .info .character-card .card-about .all-appears-right {
     width: 155px;
     height: 4.5625rem;
-    overflow-y: scroll;
     background: #323232;
     font-weight: 400;
     font-size: 0.9375rem;
@@ -167,6 +166,7 @@ header .login a:hover {
 .general-info {
     width: 663px;
     margin-left: 18px;
+    position: relative;
 }
 .general-info .info-title {
     box-sizing: border-box;
@@ -187,4 +187,33 @@ header .login a:hover {
 }
 .general-info>div:last-child .info-text {
     margin-bottom: 0;
+}
+.spoiler {
+    cursor: pointer;
+    background: #181818;
+    color:#C34375;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    box-sizing: border-box;
+    padding-top: 2px;
+    position: absolute;
+    height: 26px;
+}
+.spoiler:hover {
+    color:#FF75AB;
+}
+.disappear { 
+    animation-name: disappear;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

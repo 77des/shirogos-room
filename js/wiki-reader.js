@@ -29,3 +29,15 @@ if (allAppearsRight) {
 
     allAppearsText.style.paddingTop = indent + 'px';
 }
+
+//spoiler disappear effect
+let spoilers = document.querySelectorAll('.spoiler');
+
+for (let spoiler of spoilers) {
+    spoiler.addEventListener('click', function() {
+        spoiler.classList.add('disappear');
+        setTimeout(() => {
+            spoiler.style.display = 'none';
+        }, 500);
+    })
+}
