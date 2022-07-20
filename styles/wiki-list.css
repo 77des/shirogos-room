@@ -22,7 +22,7 @@ a {
     color: white;
 }
 .container {
-    width: 1200px;
+    width: 1110px;
     margin: 0 auto;
     background: #323232;
 }
@@ -33,11 +33,11 @@ header .header-content {
 .header-content>p {
     font-size: 32px;
     padding: 20px 0;
-    padding-left: 40px;
+    padding-left: 39px;
     line-height: 41px;
 }
 .header-content .back-bttn {
-    margin-right: 25px;
+    margin-right: 34px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +63,7 @@ header .header-content {
     padding-bottom: 0;
 }
 .list-title {
-    width: 1120px;
+    width: 1020px;
     height: 48px;
     background: #181818;
     margin: 0 auto;
@@ -81,13 +81,13 @@ header .header-content {
     line-height: 25px;
 }
 .list {
-    width: 1120px;
+    width: 1020px;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 40px;
+    margin-left: 45px;
 }
 .list .character {
-    margin-right: 44px;
+    margin-right: 24px;
     display: flex;
     flex-direction: column;
 }

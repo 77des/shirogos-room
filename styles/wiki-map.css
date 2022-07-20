@@ -69,7 +69,7 @@ a {
     color: white;
 }
 .container {
-    width: 1250px;
+    width: 1110px;
     margin: 0 auto;
 }
 header {
@@ -80,7 +80,6 @@ header {
 }
 .header-content {
     box-sizing: border-box;
-    width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,37 +175,6 @@ header .login a:hover {
 .wiki-content p.hovered {
     display: inline;
 }
-.wiki-content h1 {
-    display: none;
-    opacity: 0;
-    width: 900px;
-    position: fixed;
-    font-family: 'Days One';
-    font-size: 100px;
-    color: #DEDEDE;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-}
-.wiki-content .appear { 
-    display: block;
-    animation-name: appear;
-	animation-duration: 3s;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
-}
-@keyframes appear {
-    from {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
 .wiki-content .island-desc {
     position: absolute;
     left: 50%;
@@ -284,7 +252,7 @@ header .login a:hover {
 }
 .wiki-content .dango-island-main {
     position: absolute;
-    left: 132px;
+    left: 64px;
     top: 131px;
 }
 .wiki-content .dango-island-main>a {
