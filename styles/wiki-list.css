@@ -31,23 +31,23 @@ header .header-content {
     justify-content: space-between;
 }
 .header-content>p {
-    font-size: 32px;
-    padding: 20px 0;
+    font-size: 2rem;
+    padding: 1.25rem 0;
     padding-left: 39px;
-    line-height: 41px;
+    line-height: 1.28125;
 }
 .header-content .back-bttn {
     margin-right: 34px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 37px;
-    height: 82px;
+    margin-top: 2.3125rem;
+    height: 5.125rem;
 }
 .header-content .back-bttn p {
     margin-top: 7px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25;
     color: #DEDEDE;
 }
 .header-content .back-bttn:hover p {
@@ -64,21 +64,21 @@ header .header-content {
 }
 .list-title {
     width: 1020px;
-    height: 48px;
+    height: 3rem;
     background: #181818;
     margin: 0 auto;
     margin-bottom: 39px;
 }
 .list-title h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #C34375;
     text-align: center;
-    line-height: 38px;
+    line-height: 1.26666666667;
     padding-top: 5px;
 }
 .list-title span {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 1.25rem;
+    line-height: 1.25;
 }
 .list {
     width: 1020px;
@@ -93,7 +93,7 @@ header .header-content {
 }
 .list .character:nth-child(6n + 6) {
     margin-right: 0;
-    margin-bottom: 39px;
+    margin-bottom: 2.4375rem;
 }
 .list .character:last-child {
     margin-bottom: 0;
@@ -104,8 +104,8 @@ header .header-content {
     height: 200px;
 }
 .list .character a:last-child {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25;
     margin-top: 5px;
     text-align: center;
     width: 150px;
@@ -144,7 +144,7 @@ header .header-content {
 .footer-content .prev-bttn a, .footer-content .next-bttn a {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 1rem;
     color: #DEDEDE;
 }
 .footer-content .prev-bttn {
@@ -181,16 +181,16 @@ header .header-content {
     padding-left: 40px;
 }
 .hladberin-header .title p:first-child {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 2rem;
+    line-height: 1.25;
 }
 .hladberin-header .title p:last-child{
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 1.25rem;
+    line-height: 1.25;
 }
 .events-list .character:nth-child(6n + 6) {
     margin-right: 0;
-    margin-bottom: 72px;
+    margin-bottom: 4.5rem;
 }
 .events-list .character:last-child {
     margin-bottom: 0;
@@ -213,14 +213,14 @@ header .header-content {
 }
 .myatezhniki-list .character:nth-child(6n + 6) {
     margin-right: 0;
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
 }
 .myatezhniki-list .character:last-child {
     margin-bottom: 0;
 }
 .members-list .character:nth-child(6n + 6) {
     margin-right: 0;
-    margin-bottom: 64px;
+    margin-bottom: 4rem;
 }
 .members-list .character:last-child {
     margin-bottom: 0;
