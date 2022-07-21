@@ -173,7 +173,7 @@ header .header-content {
     padding-bottom: 76px;
 }
 .d-island-2-footer {
-    padding-top: 130px;
+    padding-top: 83px;
     padding-bottom: 25px;
 }
 .hladberin-header .title {
@@ -228,4 +228,10 @@ header .header-content {
 .unknown-footer {
     padding-top: 70px;
     padding-bottom: 17px;
+}
+.others-list .character:nth-child(6n + 6) {
+    margin-bottom: 4.5rem;
+}
+.others-list .character:last-child {
+    margin-bottom: 0;
 }
