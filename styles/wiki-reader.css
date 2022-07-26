@@ -217,3 +217,106 @@ header .login a:hover {
         opacity: 0;
     }
 }
+.chronicles-info-content .dates-list {
+    padding: 0 42.5px;
+}
+.chronicles-info .info-title {
+    box-sizing: border-box;
+    width: 1025px;
+    height: 60px;
+    background: #181818;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.chronicles-info .info-title p:first-child {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    padding-top: 3px;
+}
+.chronicles-info .info-title p:last-child {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    margin-top: -3px;
+}
+.chronicles-info .event {
+    display: flex;
+    margin-bottom: 34px;
+}
+.chronicles-info .dates-column .event:last-child {
+    margin-bottom: 0;
+}
+.chronicles-info .event.one-line-event {
+    align-items: center;
+}
+.chronicles-info .event .date {
+    box-sizing: border-box;
+    width: 144px;
+    height: 32px;
+    margin-right: 18px;
+    background: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chronicles-info .event .date.green-date {
+    border: 2px solid #68FFA4;
+}
+.chronicles-info .event .date.red-date {
+    border: 2px solid #FF6363;
+}
+.chronicles-info .event .date.purple-date {
+    border: 2px solid #B468FF;
+}
+.chronicles-info .event .date.white-date {
+    border: 2px solid #FFFFFF;
+}
+.chronicles-info .event .date.yellow-date {
+    border: 2px solid #FCFF63;
+}
+.chronicles-info .event .date p {
+    font-size: 20px;
+    line-height: 23px;
+}
+.chronicles-info .event .event-info {
+    display: flex;
+    align-items: center;
+}
+.chronicles-info .event .event-info p, .chronicles-info .event .event-info span, .chronicles-info .event .event-info li {
+    font-size: 22px;
+    line-height: 25px;
+    margin-right: 6px;
+    font-weight: 400;
+}
+li::marker {
+    font-size: 17px;
+}
+.chronicles-info .event .event-info span, .chronicles-info .event .event-info li {
+    margin-right: 0;
+}
+.chronicles-info .event .event-info h4 {
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 700;
+}
+.chronicles-info .event .event-info ol {
+    list-style-type: square;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+.chronicles-info .dates-flex {
+    display: flex;
+}
+.dates-list > img {
+    margin-bottom: 34px;
+}
+.dates-list > .event {
+    margin-bottom: 13px;
+}
+.chronicles-info .event-info img {
+    margin-right: 6px;
+}
+.chronicles-info .event-info img:last-child {
+    margin-right: 0;
+}
