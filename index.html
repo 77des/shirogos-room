@@ -98,12 +98,18 @@
         <div class="container">
           <div class="rating-content">
             <h2>Данго-Рейтинг</h2>
-            <p>Данго-Рейтинг - цифровой подсчет всех достижений дангожителя.</p>
+            <p class="desktop-rating-desc">
+              Данго-Рейтинг - цифровой подсчет всех достижений дангожителя.
+            </p>
+            <p class="mobile-rating-desc">
+              Цифровой подсчет всех<br />
+              достижений дангожителя.
+            </p>
             <p class="criteria">
               Отражается на ролях сервера Discord и Комнаты Широго. Критерии
               описываются при наведении на них.
             </p>
-            <div class="rating-table">
+            <div class="rating-table desktop-table">
               <div id="page-preloader" class="preloader done"></div>
               <div class="top-arrow">
                 <img
@@ -841,6 +847,18 @@
                 <img src="./imgs/bottom-table-arrow.svg" />
               </div>
             </div>
+            <div class="rating-table mobile-table">
+              <div class="top-arrow">
+                <img
+                  src="./imgs/top-table-arrow-disabled.svg"
+                  class="disabled"
+                />
+              </div>
+              <div class="nick-block"></div>
+              <div class="bottom-arrow">
+                <img src="./imgs/bottom-table-arrow.svg" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -878,6 +896,9 @@
                 <div class="sixth-format" style="opacity: 0">
                   <img src="./imgs/exam-format.png" />
                 </div>
+                <div class="seventh-format" style="opacity: 0">
+                  <img src="./imgs/concert-format.png" />
+                </div>
               </div>
               <div class="second-button">
                 <img src="./imgs/swipe-button.svg" class="dan-button" />
@@ -898,6 +919,9 @@
                 </div>
                 <div class="sixth-format" style="opacity: 0">
                   <img src="./imgs/exam-format.png" />
+                </div>
+                <div class="seventh-format" style="opacity: 0">
+                  <img src="./imgs/concert-format.png" />
                 </div>
               </div>
               <div class="third-button">
@@ -920,6 +944,9 @@
                 <div class="sixth-format" style="opacity: 0">
                   <img src="./imgs/exam-format.png" />
                 </div>
+                <div class="seventh-format" style="opacity: 0">
+                  <img src="./imgs/concert-format.png" />
+                </div>
               </div>
             </div>
           </div>
@@ -937,16 +964,15 @@
             <button
               class="content-chronicles-bttn js-open-modal"
               data-modal="3"
-              style="margin-bottom: 0"
             >
               <p>Хроники контента</p>
             </button>
-            <!-- <button
+            <button
               class="faction-tournament-bttn js-open-modal"
               data-modal="4"
             >
               <p>Турниры Фракций</p>
-            </button> -->
+            </button>
             <div class="modal top-donaters" data-modal="1">
               <img src="./imgs/close.svg" class="modal__cross js-modal-close" />
               <p class="modal__title">Топ донатеров</p>
@@ -1345,12 +1371,12 @@
               <img src="./imgs/close.svg" class="modal__cross js-modal-close" />
               <p class="modal__title">Турниры Фракций</p>
               <div class="select-bttns">
-                <button class="tournament-select active">
-                  Турнир Фракций 1
+                <button class="tournament-select">
+                  <p>Турнир Фракций 1</p>
                   <div class="arrow-bottom"></div>
                 </button>
                 <button class="week-select">
-                  Неделя 1
+                  <p>Неделя 1</p>
                   <div class="arrow-bottom"></div>
                 </button>
               </div>
@@ -1359,9 +1385,8 @@
                 <a href="#">Турнир Фракций 2</a>
                 <a href="#">Турнир Фракций 3</a>
                 <a href="#">Турнир Фракций 4</a>
-                <a href="#">Турнир Фракций 5</a>
               </div>
-              <div class="week-dropdown">
+              <div class="week-dropdown" data-simplebar>
                 <a href="#" class="active">Неделя 1</a>
                 <a href="#">Неделя 2</a>
                 <a href="#">Неделя 3</a>
@@ -1369,6 +1394,15 @@
                 <a href="#">Неделя 5</a>
                 <a href="#">Неделя 6</a>
                 <a href="#">Результаты</a>
+                <a href="#" style="display: none;">День 8</a>
+                <a href="#" style="display: none;">День 9</a>
+                <a href="#" style="display: none;">День 10</a>
+                <a href="#" style="display: none;">День 11</a>
+                <a href="#" style="display: none;">День 12</a>
+                <a href="#" style="display: none;">День 13</a>
+                <a href="#" style="display: none;">День 14</a>
+                <a href="#" style="display: none;">День 15</a>
+                <a href="#" style="display: none;">Результаты</a>
               </div>
               <div class="main-content">
                 <div class="first-tour active">
@@ -1380,7 +1414,10 @@
                       <a href="#">Крокодил-рисунки</a>
                       <a href="#" class="result-bttn">Результаты</a>
                     </div>
-                    <div class="right-content jackbox active">
+                    <div
+                      class="right-content jackbox active simplebar"
+                      data-simplebar
+                    >
                       <h3>ЛОХ-СОСТАВ</h3>
                       <ul>
                         <li>HolYSP: 2 место (2)</li>
@@ -1434,7 +1471,7 @@
                         <li>mercenaryJulian (35): 3 место</li>
                       </ul>
                     </div>
-                    <div class="right-content sigame">
+                    <div class="right-content sigame simplebar" data-simplebar>
                       <h3>КУЛЬТ МЁРТВЫХ</h3>
                       <ul>
                         <li>Svaiat: 3,4 места (1ф)</li>
@@ -1467,7 +1504,10 @@
                         <li>wateryay: 1В + пак, 4 место</li>
                       </ul>
                     </div>
-                    <div class="right-content crocodile" data-simplebar>
+                    <div
+                      class="right-content crocodile simplebar"
+                      data-simplebar
+                    >
                       <h3>АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
                       <ul>
                         <li>yaleretayaeryl (28) - 1 место</li>
@@ -1514,19 +1554,19 @@
                   </div>
                   <div class="second-week">
                     <div class="left-bttns">
-                      <a href="#" class="active">Jackbox</a>
+                      <a href="#">Jackbox</a>
                       <a href="#">Dark Souls</a>
                       <a href="#">SiGame</a>
                       <a href="#">Угадай мелодию</a>
                       <a href="#">OVERWATCH</a>
                       <a href="#" class="result-bttn">Результаты</a>
                     </div>
-                    <div class="right-content jackbox active">
+                    <div class="right-content jackbox simplebar" data-simplebar>
                       <h3>ЛОХ-СОСТАВ</h3>
                       <ul>
                         <li>
-                          HolYSP: 1 место (вс6), 1 место (3), 3 место (2), 1
-                          место (3)
+                          HolYSP: 1 место (вс6), 1 место (3), 3 место (2),<br />
+                          1 место (3)
                         </li>
                         <li>Mode_Of_God: 2 место (3)</li>
                         <li>yobani_pomidorka: 3 место (3), 2 место (3)</li>
@@ -1534,7 +1574,10 @@
 
                       <h3>ЛИГА ЭЛЬФОВ</h3>
                       <ul>
-                        <li>wateryay: 3 место (вс5), 3 место (вс6), 3 место</li>
+                        <li>
+                          wateryay: 3 место (вс5), 3 место (вс6),<br />
+                          3 место
+                        </li>
                       </ul>
 
                       <h3>АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
@@ -1547,13 +1590,16 @@
                       <ul>
                         <li>AsterAc: 2 место (2 вс6)</li>
                         <li>
-                          mercenaryJulian: 4 место (вс5), 2 место (вс6), 3 место
-                          (2 вс6), 3 место (2), 2 место (вс7), 1 место (вс7), 2
-                          место
+                          mercenaryJulian: 4 место (вс5), 2 место (вс6),<br />
+                          3 место (2 вс6), 3 место (2), 2 место (вс7), 1 место
+                          (вс7), 2 место
                         </li>
                       </ul>
                     </div>
-                    <div class="right-content darksouls">
+                    <div
+                      class="right-content darksouls simplebar"
+                      data-simplebar
+                    >
                       <p>Ответ: 31 смертей</p>
                       <h3>АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
                       <ul>
@@ -1610,7 +1656,7 @@
                         <li>wateryay: (4ф), 1 место (1ф), 2,3 места (3ф)</li>
                       </ul>
                     </div>
-                    <div class="right-content melody">
+                    <div class="right-content melody simplebar" data-simplebar>
                       <h3 class="semibold">ЛОХ-СОСТАВ</h3>
                       <ul>
                         <li>HolYSP(15): 3 место</li>
@@ -1677,18 +1723,18 @@
                   </div>
                   <div class="third-week">
                     <div class="left-bttns">
-                      <a href="#" class="active">Jackbox</a>
+                      <a href="#">Jackbox</a>
                       <a href="#">Dark Souls</a>
                       <a href="#">SiGame</a>
                       <a href="#">OVERWATCH</a>
                       <a href="#" class="result-bttn">Результаты</a>
                     </div>
-                    <div class="right-content jackbox active">
+                    <div class="right-content jackbox simplebar" data-simplebar>
                       <h3>ЛОХ-СОСТАВ</h3>
                       <ul>
                         <li>
-                          HolYSP: 1, 4 места (вс7), 1, 3 места (вс6), 1, 4 места
-                          (2)
+                          HolYSP: 1, 4 места (вс7), 1, 3 места (вс6), 1,<br />
+                          4 места (2)
                         </li>
                         <li>yobani_pomidorka: 1, 1, 3 места (2), 2 место</li>
                       </ul>
@@ -1696,8 +1742,8 @@
                       <h3>ЛИГА ЭЛЬФОВ</h3>
                       <ul>
                         <li>
-                          wateryay: 1, 3 места (вс6), 2, 4 места (вс7), 2, 3
-                          места
+                          wateryay: 1, 3 места (вс6), 2, 4 места (вс7), 2,<br />
+                          3 места
                         </li>
                       </ul>
 
@@ -1709,8 +1755,8 @@
                       <h3>ОТРЯД СТАЛКЕРОВ</h3>
                       <ul>
                         <li>
-                          mercenaryJulian: 2, 2 места (вс6), 1, 2 места, 3 место
-                          (вс7))
+                          mercenaryJulian: 2, 2 места (вс6), 1, 2 места,<br />
+                          3 место (вс7))
                         </li>
                       </ul>
 
@@ -1824,12 +1870,12 @@
                   </div>
                   <div class="fourth-week">
                     <div class="left-bttns">
-                      <a href="#" class="active">Jackbox</a>
+                      <a href="#">Jackbox</a>
                       <a href="#">Dark Souls</a>
                       <a href="#">SiGame</a>
                       <a href="#" class="result-bttn">Результаты</a>
                     </div>
-                    <div class="right-content jackbox active">
+                    <div class="right-content jackbox">
                       <h3>ЛОХ-СОСТАВ</h3>
                       <ul>
                         <li>
@@ -1905,14 +1951,14 @@
                   </div>
                   <div class="fifth-week">
                     <div class="left-bttns">
-                      <a href="#" class="active"
+                      <a href="#"
                         >Угадай мелодию + SiGame Year Pack + Jackbox</a
                       >
                       <a href="#">Dark Souls</a>
                       <a href="#">SiGame</a>
                       <a href="#" class="result-bttn">Результаты</a>
                     </div>
-                    <div class="right-content jackbox active">
+                    <div class="right-content jackbox simplebar" data-simplebar>
                       <h3>ЛОХ-СОСТАВ</h3>
                       <ul>
                         <li>HolYSP: 17 баллов, 7 баллов</li>
@@ -1921,8 +1967,8 @@
                       <h3>АНТИМАГИЧЕСКИЙ ОРДЕН</h3>
                       <ul>
                         <li>
-                          yaleretayaeryl: 19 баллов, 16 баллов, 1, 2 места, 1
-                          место (2)
+                          yaleretayaeryl: 19 баллов, 16 баллов, 1,<br />
+                          2 места, 1 место (2)
                         </li>
                         <li>chusui_uchiha: 6 баллов, 3,4 места (2)</li>
                       </ul>
@@ -2015,12 +2061,12 @@
                   </div>
                   <div class="sixth-week">
                     <div class="left-bttns">
-                      <a href="#" class="active">Jackbox</a>
+                      <a href="#">Jackbox</a>
                       <a href="#">Dark Souls</a>
                       <a href="#">SiGame</a>
                       <a href="#" class="result-bttn">Финал ТФ</a>
                     </div>
-                    <div class="right-content jackbox active">
+                    <div class="right-content jackbox">
                       <h3>ЛОХ-СОСТАВ</h3>
                       <ul>
                         <li>
@@ -2119,9 +2165,9 @@
                   </div>
                   <div class="result-week">
                     <div class="left-bttns">
-                      <a href="#" class="active">Результаты</a>
+                      <a href="#">Результаты</a>
                     </div>
-                    <div class="right-content result active" data-simplebar>
+                    <div class="right-content result" data-simplebar>
                       <h3>Результаты:</h3>
                       <ul>
                         <li>1. ЛОХ-СОСТАВ</li>
@@ -2208,9 +2254,9 @@
                   </div>
                 </div>
                 <div class="second-tour">
-                  <div class="first-week active">
+                  <div class="first-week">
                     <div class="left-bttns">
-                      <a href="#" class="active">Шифр</a>
+                      <a href="#">Шифр</a>
                       <a href="#">Предсказания</a>
                       <a href="#">SiGame</a>
                       <a href="#">Jackbox</a>
@@ -2218,7 +2264,7 @@
                       <a href="#">Мини-игры</a>
                       <a href="#" class="result-bttn">Результаты</a>
                     </div>
-                    <div class="right-content shifr active">
+                    <div class="right-content shifr">
                       <ul>
                         <li>+10 yaleretayaeryl</li>
                         <li>+5 Svaiat</li>
@@ -2257,7 +2303,7 @@
                         <li>-10 Gevork</li>
                       </ul>
                     </div>
-                    <div class="right-content jackbox">
+                    <div class="right-content jackbox simplebar" data-simplebar>
                       <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
                       <ul>
                         <li>+6 yobani_pomidorka - 1 место</li>
@@ -2284,7 +2330,7 @@
                         <li>-10 Gevork - 4 место</li>
                       </ul>
                     </div>
-                    <div class="right-content nastolki">
+                    <div class="right-content nastolki simplebar" data-simplebar>
                       <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
                       <ul>
                         <li>+1 yobani_pomidorka - 2 место (соло)</li>
@@ -2315,7 +2361,7 @@
                         <li>+3 Gevork - 1 место (золото инков)</li>
                       </ul>
                     </div>
-                    <div class="right-content minigame">
+                    <div class="right-content minigame simplebar" data-simplebar>
                       <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
                       <ul>
                         <li>+7 yobani_pomidorka</li>
@@ -2356,14 +2402,14 @@
                   </div>
                   <div class="second-week">
                     <div class="left-bttns">
-                      <a href="#" class="active">Шифр</a>
+                      <a href="#">Шифр</a>
                       <a href="#">Предсказания</a>
                       <a href="#">Jackbox</a>
                       <a href="#">SiGame</a>
                       <a href="#">Мини-игры</a>
                       <a href="#" class="result-bttn">Результаты</a>
                     </div>
-                    <div class="right-content shifr active">
+                    <div class="right-content shifr">
                       <ul>
                         <li>+8 ddefamationn</li>
                         <li>+8 yobani_pomidorka</li>
@@ -2378,7 +2424,7 @@
                         <li>+25 J33Z</li>
                       </ul>
                     </div>
-                    <div class="right-content jackbox">
+                    <div class="right-content jackbox simplebar" data-simplebar>
                       <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
                       <ul>
                         <li>+3 yobani_pomidorka - 2 место (2), 4 место</li>
@@ -2391,7 +2437,7 @@
                       <h3>АВАНТЮРИСТЫ</h3>
                       <ul>
                         <li>
-                          +6 mercenaryJulian - 3 место (2), 1, 1, 1, 2, 2, 2, 2,
+                          +6 mercenaryJulian - 3 место (2), 1, 1, 1, 2, 2, 2,<br> 2,
                           4 места
                         </li>
                         <li>maksmaksimmaks - 3, 4 места</li>
@@ -2410,7 +2456,7 @@
                         <li>+2 NEDRYG_lONOR - 4 место</li>
                       </ul>
                     </div>
-                    <div class="right-content sigame">
+                    <div class="right-content sigame simplebar" data-simplebar>
                       <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
                       <ul>
                         <li>+6 yobani_pomidorka - 1В</li>
@@ -2437,7 +2483,7 @@
                         <li>Buffoniwe1 - 2 место</li>
                       </ul>
                     </div>
-                    <div class="right-content minigame">
+                    <div class="right-content minigame simplebar" data-simplebar>
                       <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
                       <ul>
                         <li>+8 yobani_pomidorka</li>
@@ -2474,6 +2520,3092 @@
                         <li>4. ШТУРМ ФОРС [•]</li>
                       </ul>
                       <span>лучший игрок: mercenaryJulian</span>
+                    </div>
+                  </div>
+                  <div class="third-week">
+                    <div class="left-bttns">
+                      <a href="#">Шифр</a>
+                      <a href="#">Предсказания</a>
+                      <a href="#">Jackbox</a>
+                      <a href="#">Мини-игры</a>
+                      <a href="#">SiGame</a>
+                      <a href="#">Настолки</a>
+                      <a href="#">Брось мне вызов</a>
+                      <a href="#" class="result-bttn">Результаты</a>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+20 HolYSP</li>
+                        <li>+15 yobani_pomidorka</li>
+                        <li>+10 ddefamationn</li>
+                        <li>+1 mademyself</li>
+                      </ul>
+                    </div>
+                    <div class="right-content predict">
+                      <ul>
+                        <li>+20 mercenaryJulian</li>
+                        <li>+15 HolYSP</li>
+                        <li>+15 maksmaksimmaks</li>
+                        <li>+10 ddefamationn</li>
+                        <li>+5 yobani_pomidorka</li>
+                        <li>+5 WaterYay</li>
+                        <li>+5 chusui_uchiha</li>
+                        <li>+5 mademyself</li>
+                      </ul>
+                    </div>
+                    <div class="right-content jackbox">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+                      <ul>
+                        <li>yobani_pomidorka - 1, 2 места</li>
+                      </ul>
+
+                      <h3>АВАНТЮРИСТЫ</h3>
+                      <ul>
+                        <li>
+                          mercenaryJulian - 2, 2 места (2), 1, 3 места,<br> 2 место
+                          (3)
+                        </li>
+                        <li>LordSanch1o1 - 1 место</li>
+                        <li>HolYSP - 3, 3 места (2), 2, 2, 3, 4 места</li>
+                        <li>fakeregem - 2 место</li>
+                        <li>evfks - 1, 1 места</li>
+                      </ul>
+
+                      <h3>УКРЫТИЕ ТЕНИ</h3>
+                      <ul>
+                        <li>mademyself - 2, 3, 3 места</li>
+                        <li>
+                          WaterYay - 1 место (2), 1, 2, 4 места, 3 место (3)
+                        </li>
+                        <li>AsterAc - 4 место</li>
+                      </ul>
+                    </div>
+                    <div class="right-content minigame">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>+4 yobani_pomidorka</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>+6 mercenaryJulian</li>
+    						      	<li>+2 LordSanch1o1</li>
+    						      	<li>+6 HolYSP</li>
+    						      </ul>
+                    
+    						      <h3>УКРЫТИЕ ТЕНИ</h3>
+    						      <ul>
+    						      	<li>+4 mademyself</li>
+    						      	<li>+2 WaterYay</li>
+    						      	<li>+8 AsterAc</li>
+    						      </ul>
+                    
+    						      <h3>ШТУРМ ФОРС</h3>
+    						      <ul>
+    						      	<li>+6 Buffoniwe1</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content sigame">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>yobani_pomidorka - 4 место, 1В</li>
+    						      	<li>J33Z - 4 место</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>HolYSP - 2, 3 места</li>
+    						      	<li>fakeregem - 1, 1 места</li>
+    						      </ul>
+                    
+    						      <h3>УКРЫТИЕ ТЕНИ</h3>
+    						      <ul>
+    						      	<li>mademyself - 2, 3 места</li>
+    						      	<li>WaterYay - 1В + пак</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content nastolki">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>yobani_pomidorka - 2 место</li>
+    						      	<li>+15 J33Z - 1 место</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>maksmaksimmaks - 3 место (2)</li>
+    						      	<li>+4 fakeregem</li>
+    						      	<li>+14 HolYSP - 1 место (2)</li>
+    						      </ul>
+                    
+    						      <h3>УКРЫТИЕ ТЕНИ</h3>
+    						      <ul>
+    						      	<li>+4 mademyself - 4 место</li>
+    						      	<li>+12 WaterYay - 3 место, 2 место (2)</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content challenge">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>+1 yobani_pomidorka - [1-2] (Brawlhalla)</li>
+    						      	<li>J33Z - [2-0] (CS:GO: 16/8, 16/9)</li>
+    						      	<li>+1 chusui_uchiha - [0-1] (Шашки)</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>mercenaryJulian - [1-0] (Шахматы)</li>
+    						      	<li>+1 maksmaksimmaks - [0-1] (Шашки)</li>
+    						      	<li>+10 fakeregem - [1-1] (Шахматы)</li>
+    						      	<li>+1 HolYSP - [0-2] (Dota 2: SF, Pudge)</li>
+    						      </ul>
+                    
+    						      <h3>УКРЫТИЕ ТЕНИ</h3>
+    						      <ul>
+    						      	<li>mademyself - [2-0] (osu!)</li>
+    						      	<li>+1 WaterYay - [1-2] (osu!)</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>1. АВАНТЮРИСТЫ [•]</li>
+                        <li>2. СЕРДЦЕ НЕКРОМАНТИИ [•]</li>
+                        <li>3. УКРЫТИЕ ТЕНИ [•]</li>
+                        <li>4. ШТУРМ ФОРС [•]</li>
+                      </ul>
+                      <span>лучший игрок: HolYSP</span>
+                    </div>
+                  </div>
+                  <div class="fourth-week">
+                    <div class="left-bttns">
+                      <a href="#">Шифр</a>
+                      <a href="#">Предсказания</a>
+                      <a href="#">Jackbox</a>
+                      <a href="#">Мини-игры</a>
+                      <a href="#">Угадай мелодию</a>
+                      <a href="#">Настолки</a>
+                      <a href="#">SiGame</a>
+                      <a href="#" class="result-bttn">Результаты</a>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+15 chusui_uchiha</li>
+                        <li>+10 HolYSP</li>
+                      </ul>
+                    </div>
+                    <div class="right-content predict">
+                      <ul>
+                        <li>+14 mercenaryJulian</li>
+                        <li>+14 HolYSP</li>
+                        <li>+14 maksmaksimmaks</li>
+                        <li>+12 WaterYay</li>
+                        <li>+10 yobani_pomidorka</li>
+                      </ul>
+                    </div>
+                    <div class="right-content jackbox simplebar" data-simplebar>
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>yobani_pomidorka - 4 место</li>
+    						      	<li>J33Z - 1, 2, 3 места, 3 место (2)</li>
+    						      	<li>owleren - 1, 3, 4 места</li>
+    						      	<li>chusui_uchiha - 2, 2 места</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>mercenaryJulian - 1 место</li>
+    						      	<li>HolYSP - 1, 1, 1, 3, 4 места</li>
+    						      	<li>redi_x_ - 3, 4 места</li>
+    						      	<li>evfks - 2 место, 1 место (2)</li>
+    						      	<li>maksmaksimmaks - 1, 3, 3 места</li>
+    						      </ul>
+                    
+    						      <h3>УКРЫТИЕ ТЕНИ</h3>
+    						      <ul>
+    						      	<li>WaterYay - 3, 4, 4 места</li>
+    						      	<li>FrayZTV1 - 1, 2, 3, 3 места</li>
+    						      </ul>
+                    
+    						      <h3>ШТУРМ ФОРС</h3>
+    						      <ul>
+    						      	<li>sonlc_games - 2, 2 места</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content minigame simplebar" data-simplebar>
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>+6 chusui_uchiha</li>
+    						      	<li>+12 J33Z</li>
+    						      	<li>+6 owleren</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>+6 mercenaryJulian</li>
+    						      	<li>+8 HolYSP</li>
+    						      	<li>+4 evfks</li>
+    						      	<li>+2 redi_x_</li>
+    						      	<li>+2 maksmaksimmaks</li>
+    						      </ul>
+                    
+    						      <h3>УКРЫТИЕ ТЕНИ</h3>
+    						      <ul>
+    						      	<li>+2 WaterYay</li>
+    						      	<li>+4 AsterAc</li>
+    						      	<li>+8 FrayZTV1</li>
+    						      </ul>
+                    
+    						      <h3>ШТУРМ ФОРС</h3>
+    						      <ul>
+    						      	<li>+8 sonlc_games</li>
+    						      	<li>+2 Mode_Of_God</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content melody">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>J33Z - 4 ответа</li>
+    						      	<li>owleren - 3 ответа</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>mercenaryJulian - 1 ответ</li>
+    						      	<li>HolYSP - 17 ответов</li>
+    						      </ul>
+                    
+    						      <h3>УКРЫТИЕ ТЕНИ</h3>
+    						      <ul>
+    						      	<li>WaterYay - 3 ответа</li>
+    						      </ul>
+                    
+    						      <h3>ШТУРМ ФОРС</h3>
+    						      <ul>
+    						      	<li>Mode_Of_God - 4 ответа</li>
+    						      	<li>yaleretayaeryl - 6 ответов</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content nastolki">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					        <ul>
+    					        	<li>yobani_pomidorka - 3, 4 места</li>
+    					        	<li>J33Z - 1 место</li>
+    					        </ul>
+
+    					        <h3>АВАНТЮРИСТЫ</h3>
+    					        <ul>
+    					        	<li>mercenaryJulian - 2, 3 места</li>
+    					        	<li>HolYSP - 1 место (2)</li>
+    					        	<li>maksmaksimmaks - 1 место, 2 место (2)</li>
+    					        	<li>LordSanch1o1 - 2 место</li>
+    					        </ul>
+
+    					        <h3>УКРЫТИЕ ТЕНИ</h3>
+    					        <ul>
+    					        	<li>WaterYay - 4 место, 3 место (2)</li>
+    					        </ul>
+                    </div>
+                    <div class="right-content sigame">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    				          <ul>
+    				          	<li>yobani_pomidorka - 1В</li>
+    				          	<li>J33Z - 1В</li>
+    				          	<li>owleren - 3 место, 1В</li>
+    				          </ul>
+
+    				          <h3>АВАНТЮРИСТЫ</h3>
+    				          <ul>
+    				          	<li>mercenaryJulian - 2 место</li>
+    				          	<li>HolYSP - 1, 2 места</li>
+    				          </ul>
+
+    				          <h3>УКРЫТИЕ ТЕНИ</h3>
+    				          <ul>
+    				          	<li>WaterYay - 3, 3 места</li>
+    				          	<li>mademyself - 1 место</li>
+    				          </ul>
+
+    				          <h3>ШТУРМ ФОРС</h3>
+    				          <ul>
+    				          	<li>yaleretayaeryl - 4 место</li>
+    				          </ul>
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>1. АВАНТЮРИСТЫ [•]</li>
+                        <li>2. СЕРДЦЕ НЕКРОМАНТИИ [•]</li>
+                        <li>3. УКРЫТИЕ ТЕНИ [•]</li>
+                        <li>4. ШТУРМ ФОРС [•]</li>
+                      </ul>
+                      <span>лучший игрок: HolYSP</span>
+                    </div>
+                  </div>
+                  <div class="fifth-week">
+                    <div class="left-bttns">
+                      <a href="#">Шифр</a>
+                      <a href="#">Предсказания</a>
+                      <a href="#">Квесты</a>
+                      <a href="#">Jackbox</a>
+                      <a href="#">Мини-игры</a>
+                      <a href="#">Данетки, ANIMALS, Угадай мелодию, Настолки</a>
+                      <a href="#">SiGame</a>
+                      <a href="#" class="result-bttn">Результаты</a>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+15 yobani_pomidorka</li>
+                      </ul>
+                    </div>
+                    <div class="right-content predict">
+                      <ul>
+                        <li>+25 WaterYay</li>
+                        <li>+20 HolYSP</li>
+                        <li>+20 chusui_uchiha</li>
+                        <li>+20 mercenaryJulian</li>
+                        <li>+15 yobani_pomidorka</li>
+                        <li>+15 maksmaksimmaks</li>
+                      </ul>
+                    </div>
+                    <div class="right-content quest">
+                      <ul>
+                        <li>+15 mercenaryJulian</li>
+                        <li>+15 HolYSP</li>
+                      </ul>
+                    </div>
+                    <div class="right-content jackbox">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					      	<ul>
+    					      		<li>yobani_pomidorka - 3 место</li>
+    					      		<li>owleren - 2, 4 места (2)</li>
+    					      	</ul>
+                    
+    					      	<h3>АВАНТЮРИСТЫ</h3>
+    					      	<ul>
+    					      		<li>mercenaryJulian - 1, 3 места (4), 1 место (2), 2,<br> 3 места (3)</li>
+    					      		<li>HolYSP - 1, 1 места (3), 2, 3, 4 места (2), 1, 3 места (4)</li>
+    					      		<li>maksmaksimmaks - 1, 2 места (3), 2, 4 места (2)</li>
+    					      		<li>LordSanch1o1 - 2 место (4)</li>
+    					      	</ul>
+                    
+    					      	<h3>УКРЫТИЕ ТЕНИ</h3>
+    					      	<ul>
+    					      		<li>WaterYay - 3, 3 места (2), 2, 2 места</li>
+    					      		<li>slohhh - 1 место (2), 1 место (4)</li>
+    					      	</ul>
+                    </div>
+                    <div class="right-content minigame simplebar" data-simplebar>
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					      	<ul>
+    					      		<li>+2 yobani_pomidorka</li>
+    					      		<li>+2 chusui_uchiha</li>
+    					      		<li>+4 owleren</li>
+    					      	</ul>
+                    
+    					      	<h3>АВАНТЮРИСТЫ</h3>
+    					      	<ul>
+    					      		<li>+8 HolYSP</li>
+    					      		<li>+4 maksmaksimmaks</li>
+    					      		<li>+4 LordSanch1o1</li>
+    					      	</ul>
+                    
+    					      	<h3>УКРЫТИЕ ТЕНИ</h3>
+    					      	<ul>
+    					      		<li>+8 WaterYay</li>
+    					      		<li>+4 AsterAc</li>
+    					      		<li>+4 slohhh</li>
+    					      	</ul>
+                    
+    					      	<h3>ШТУРМ ФОРС</h3>
+    					      	<ul>
+    					      		<li>+2 Buffoniwe1</li>
+    					      		<li>+2 Mode_Of_God</li>
+    					      	</ul>
+                    </div>
+                    <div class="right-content melody nastolki simplebar" data-simplebar>
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					      	<ul>
+    					      		<li>+14 chusui_uchiha</li>
+    					      		<li>+21 owleren - 3 место</li>
+    					      		<li>+15 J33Z</li>
+    					      	</ul>
+                    
+    					      	<h3>АВАНТЮРИСТЫ</h3>
+    					      	<ul>
+    					      		<li>+28 mercenaryJulian - 3, 3 места</li>
+    					      		<li>+23 HolYSP</li>
+    					      		<li>+10 maksmaksimmaks - 1, 2 места</li>
+    					      		<li>+5 LordSanch1o1</li>
+    					      	</ul>
+                    
+    					      	<h3>УКРЫТИЕ ТЕНИ</h3>
+    					      	<ul>
+    					      		<li>+24 WaterYay - 1, 1, 2 места</li>
+    					      		<li>slohhh - 2 место</li>
+    					      		<li>+10 YungAaalik</li>
+    					      	</ul>
+                    
+    					      	<h3>ШТУРМ ФОРС</h3>
+    					      	<ul>
+    					      		<li>+3 Buffoniwe1</li>
+    					      	</ul>
+                    </div>
+                    <div class="right-content sigame">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					        <ul>
+    					        	<li>yobani_pomidorka - 1,5 В</li>
+    					        	<li>J33Z - 1В</li>
+    					        	<li>owleren - 1Ф</li>
+    					        </ul>
+
+    					        <h3>АВАНТЮРИСТЫ</h3>
+    					        <ul>
+    					        	<li>HolYSP - 1, 3 места, 2 место (3)</li>
+    					        	<li>fakeregem - 2 место, 1 место (3)</li>
+    					        	<li>LordSanch1o1 - 0,5В</li>
+    					        </ul>
+
+    					        <h3>УКРЫТИЕ ТЕНИ</h3>
+    					        <ul>
+    					        	<li>WaterYay - 2 место</li>
+    					        	<li>mademyself - 1, 3 места</li>
+    					        </ul>
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>1. АВАНТЮРИСТЫ [•]</li>
+                        <li>2. СЕРДЦЕ НЕКРОМАНТИИ [•]</li>
+                        <li>3. УКРЫТИЕ ТЕНИ [•]</li>
+                        <li>4. ШТУРМ ФОРС [•]</li>
+                      </ul>
+                      <span>лучший игрок: HolYSP</span>
+                    </div>
+                  </div>
+                  <div class="sixth-week">
+                    <div class="left-bttns">
+                      <a href="#">Предсказания</a>
+                      <a href="#">SiGame</a>
+                      <a href="#">Jackbox</a>
+                      <a href="#">Сурвайв</a>
+                      <a href="#">Настолки</a>
+                      <a href="#">ВЫЗОВ-ТУРНИР: ФИНАЛ ТФ-2</a>
+                    </div>
+                    <div class="right-content predict">
+                      <ul>
+                        <li>+10 mercenaryJulian</li>
+                        <li>+10 yobani_pomidorka</li>
+                      </ul>
+                    </div>
+                    <div class="right-content sigame">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					      	<ul>
+    					      		<li>yobani_pomidorka - 1В</li>
+    					      		<li>-10 owleren</li>
+    					      	</ul>
+                    
+    					      	<h3>АВАНТЮРИСТЫ</h3>
+    					      	<ul>
+    					      		<li>HolYSP - 1В</li>
+    					      		<li>fakeregem - 1, 1 места</li>
+    					      		<li>maksmaksimmaks - 2 место</li>
+    					      	</ul>
+                    
+    					      	<h3>УКРЫТИЕ ТЕНИ</h3>
+    					      	<ul>
+    					      		<li>WaterYay - 3 место</li>
+    					      		<li>mademyself - 1 место</li>
+    					      	</ul>
+                    </div>
+                    <div class="right-content jackbox">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					      	<ul>
+    					      		<li>yobani_pomidorka - 3 место (2)</li>
+    					      		<li>chusui_uchiha - 1 место (2)</li>
+    					      	</ul>
+                    
+    					      	<h3>АВАНТЮРИСТЫ</h3>
+    					      	<ul>
+    					      		<li>+6 mercenaryJulian - 1, 1 места, 2 место (3),<br> 2 место (2)</li>
+    					      		<li>HolYSP - 2 место</li>
+    					      		<li>+4 maksmaksimmaks - 1, 4 места (2)</li>
+    					      	</ul>
+                    
+    					      	<h3>УКРЫТИЕ ТЕНИ</h3>
+    					      	<ul>
+    					      		<li>+3 WaterYay - 3, 3 места, 3 место (3), 4 место (2)</li>
+    					      		<li>slohhh - 2 место</li>
+    					      	</ul>
+                    
+    					      	<h3>ШТУРМ ФОРС</h3>
+    					      	<ul>
+    					      		<li>NEDRYG_lONOR - 1 место (3)</li>
+    					      	</ul>
+                    </div>
+                    <div class="right-content survive">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    					        <ul>
+    					        	<li>+4 yobani_pomidorka</li>
+    					        	<li>+2 chusui_uchiha</li>
+    					        </ul>
+
+    					        <h3>АВАНТЮРИСТЫ</h3>
+    					        <ul>
+    					        	<li>+6 mercenaryJulian</li>
+    					        	<li>+2 maksmaksimmaks</li>
+    					        </ul>
+
+    					        <h3>УКРЫТИЕ ТЕНИ</h3>
+    					        <ul>
+    					        	<li>+4 WaterYay</li>
+    					        	<li>+2 mademyself</li>
+    					        </ul>
+                    </div>
+                    <div class="right-content nastolki">
+                      <h3>СЕРДЦЕ НЕКРОМАНТИИ</h3>
+    						      <ul>
+    						      	<li>yobani_pomidorka - 2 место, 3 место (3)</li>
+    						      </ul>
+                    
+    						      <h3>АВАНТЮРИСТЫ</h3>
+    						      <ul>
+    						      	<li>evfks - 3 место, 3 место (2)</li>
+    						      </ul>
+                    
+    						      <h3>ШТУРМ ФОРС</h3>
+    						      <ul>
+    						      	<li>NEDRYG_lONOR - 3 место, 2 место (3), 1 место (2)</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>1. mademyself</li>
+                        <li>2. yobani_pomidorka</li>
+                        <li>3. chusui_uchiha</li>
+                      </ul>
+                      <img src="./imgs/final-table-2.jpg" alt="final-table-2" style="width: 500px;">
+                    </div>
+                  </div>
+                  <div class="result-week">
+                    <div class="left-bttns">
+                      <a href="#">Результаты</a>
+                    </div>
+                    <div class="right-content result simplebar" data-simplebar>
+                      <h3>Результаты:</h3>
+                      <ul>
+                        <li>1. АВАНТЮРИСТЫ</li>
+                        <li>2. СЕРДЦЕ НЕКРОМАНТИИ</li>
+                      </ul>
+
+                      <ul>
+                        <li><span>Лучшие в шифрах:</span> HolYSP & yobani_pomidorka (+11)</li>
+                        <li><span>Лучший в The Jackbox:</span> mercenaryJulian (+15)</li>
+                        <li><span>Лучший в SIGame:</span> HolYSP (+15)</li>
+                        <li><span>Лучшая в Настольных играх:</span> WaterYay (+15)</li>
+                        <li><span>Лучшая в Мини-играх:</span> ddefamationn (+15)</li>
+                        <li><span>Лучший предсказатель:</span> mercenaryJulian (+15)</li>
+                        <li><span>Лучший игрок:</span> HolYSP (+20)</li>
+                      </ul>
+        
+                      <h3>1. АВАНТЮРИСТЫ: 1519</h3>
+                      <h3>Финал ТФ +40</h3>
+                      <ul>
+                        <li>Финал ТФ +0</li>
+                        <li>+557 HolYSP</li>
+                        <li>+499 mercenaryJulian</li>
+                        <li>+198 maksmaksimmaks</li>
+                        <li>+147 fakeregem</li>
+                        <li>+59 LordSanch1o1</li>
+                        <li>+48 evfks</li>
+                        <li>+11 redi`_x_`</li>
+                        <li>felikahug</li>
+                      </ul>
+        
+                      <h3>2. СЕРДЦЕ НЕКРОМАНТИИ: 1039</h3>
+        
+                      <h3>Финал ТФ +28</h3>
+                      <ul>
+                        <li>Финал ТФ +130</li>
+                        <li>+348 yobani_pomidorka</li>
+                        <li>+242 J33Z</li>
+                        <li>+184 ddefamationn</li>
+                        <li>+178 chusui_uchiha</li>
+                        <li>+74 owleren</li>
+                        <li>+8 riffiiii</li>
+                        <li>+5 Svaiat</li>
+                        <li>arxitriklin</li>
+                        <li>scorpinex2019</li>
+                      </ul>
+        
+                      <h3>3. УКРЫТИЕ ТЕНИ: 932</h3>
+                      <h3>Финал ТФ +26</h3>
+                      <ul>
+                        <li>Финал ТФ +120</li>
+                        <li>+450 WaterYay</li>
+                        <li>+329 mademyself</li>
+                        <li>+67 slohhh</li>
+                        <li>+36 FrayZTV1</li>
+                        <li>+32 AsterAc</li>
+                        <li>+18 YungAaalik</li>
+                        <li>marakayse</li>
+                        <li>don ballon</li>
+                        <li>dyavolst</li>
+                      </ul>
+        
+                      <h3>4. ШТУРМ ФОРС: 217</h3>
+                      <h3>Финал ТФ +14</h3>
+                      <ul>
+                        <li>Финал ТФ +0</li>
+                        <li>+68 Buffoniwe1</li>
+                        <li>+67 yaleretayaeryl</li>
+                        <li>+31 NEDRYG_lONOR</li>
+                        <li>+24 sonlc_games</li>
+                        <li>+22 Mode_Of_God</li>
+                        <li>+5 Gevork</li>
+                        <li>xxdreametxx</li>
+                        <li>senyach</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="third-tour">
+                  <div class="first-week">
+                    <div class="left-bttns">
+                      <a href="#">Истинная рулетка</a>
+                      <a href="#">Марблс-чемпионат</a>
+                      <a href="#">Шпионаж-чемпионат</a>
+                      <a href="#">Смехлыст-чемпионат</a>
+                      <a href="#">Крокодил</a>
+                      <a href="#">Корова-006-чемпионат</a>
+                      <a href="#">Шифр#1</a>
+                      <a href="#">Шифр#2</a>
+                      <a href="#">Сапёр-чемпионат</a>
+                      <a href="#">SIGame</a>
+                      <a href="#">Предсказания</a>
+                      <a href="#" class="result-bttn">Результаты</a>
+                    </div>
+                    <div class="right-content roulette simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    					      	<ul>
+    					      		<li>Репутация: +6</li>
+    					      		<li>+2 Stawlie - 5</li>
+    					      		<li>+5 slohhh - 2 акоин</li>
+    					      		<li>+2 annanagets - 5</li>
+    					      		<li>+ AsterAc</li>
+    					      		<li>+ owleren</li>
+    					      		<li>+ eg_geraskin</li>
+    					      	</ul>
+    					      	<h3>ВАЛВЫ</h3>
+    					      	<ul>
+    					      		<li>Репутация: +4</li>
+    					      		<li>+4 mercenaryJulian - 3</li>
+    					      		<li>+ Garik_Bananchik</li>
+    					      		<li>+2 chusui_uchiha - 5</li>
+    					      		<li>+11 jevil_3310 - 1, 2 акоин акоин</li>
+    					      	</ul>
+    					      	<h3>НУМЕРОВАННЫЕ</h3>
+    					      	<ul>
+    					      		<li>Репутация: +3</li>
+    					      		<li>+3 bronhelm - 4</li>
+    					      		<li>+ maksmaksimmaks</li>
+    					      		<li>+9 StPenek - 1, 4 акоин</li>
+    					      	</ul>
+    					      	<h3>РУННЫ</h3>
+    					      	<ul>
+    					      		<li>Репутация: +5</li>
+    					      		<li>+5 timetobury - 2 акоин</li>
+    					      		<li>+ fayzeel</li>
+    					      		<li>+ sar_cat</li>
+    					      		<li>+4 wateryay - 3</li>
+    					      		<li>+6 yungaaalik - 1 акоин</li>
+    					      	</ul>
+    					      	<h3>ТЕТТА</h3>
+    					      	<ul>
+    					      		<li>Репутация: +5</li>
+    					      		<li>+3 mademyself - 4</li>
+    					      		<li>+4 Je3z - 3</li>
+    					      		<li>+ FakeRegem</li>
+    					      		<li>+ sharovvelikii</li>
+    					      		<li>+ Mode_Of_God</li>
+    					      	</ul>
+                    </div>
+                    <div class="right-content marbls simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+ Stawlie (18)</li>
+    						      	<li>+ slohhh (13)</li>
+    						      	<li>+ annanagets (11)</li>
+    						      	<li>+ AsterAc (8)</li>
+    						      	<li>+ owleren (5)</li>
+    						      </ul>
+    						      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ mercenaryJulian (17)</li>
+    						      	<li>+ Garik_Bananchik (14)</li>
+    						      	<li>+ chusui_uchiha (13)</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+10 bronhelm (25) акоин</li>
+    						      	<li>+ maksmaksimmaks (14)</li>
+    						      	<li>+ StPenek (8)</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+8 timetobury (22) акоин</li>
+    						      	<li>+5 fayzeel (19) акоин</li>
+    						      	<li>+8 sar_cat (22) акоин</li>
+    						      	<li>+ wateryay (18)</li>
+    						      	<li>+ yungaaalik (17)</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +1</li>
+    						      	<li>+ mademyself (13)</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content shpionazh simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ annanagets - 5 (Финал: 7)</li>
+    						      	<li>+ owleren - 7</li>
+    						      	<li>+ eg_geraskin - 7</li>
+    						      </ul>
+    						      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+8 mercenaryJulian - 3 (Финал: 3) бронза бронза амедаль</li>
+    						      	<li>+8 Garik_Bananchik - 2 (Финал: 5) серебро</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      	<li>+ jevil_3310</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+8 bronhelm - 1 (Финал: 6) золото</li>
+    						      	<li>+12 maksmaksimmaks - 1 (Финал: 2) золото серебро амедаль</li>
+    						      	<li>+6 StPenek - 4 (Финал: 1) золото амедаль</li>
+    						      	<li>+3 9_spektor_6 - 3 (Финал: 4) бронза</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ timetobury - 6</li>
+    						      	<li>+ fayzeel - 4 (Финал: 4)</li>
+    						      	<li>+ wateryay - 6</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ mademyself - 8</li>
+    						      	<li>+ poopmen112 - 8</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content smehlist simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+6 Cobalt23 - 2 (Финал: 5) серебро</li>
+    						      	<li>+3 slohhh - 3 (Финал: 8) бронза</li>
+    						      	<li>+5 annanagets - 3 (Финал: 7) бронза</li>
+    						      	<li>+1 eg_geraskin</li>
+    						      </ul>
+    						      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +0</li>
+    						      	<li>+13 mercenaryJulian - 1 (Финал: 3) золото бронза амедаль (-2реп)</li>
+    						      	<li>+10 Garik_Bananchik - 1 (Финал: замена) золото</li>
+    						      	<li>+ chusui_uchiha - (Финал: на замене - 4)</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ bronhelm - 6</li>
+    						      	<li>+13 maksmaksimmaks - 2 (Финал: 1) золото серебро амедаль</li>
+    						      	<li>+ 9_spektor_6 - 4 (Финал: 6)</li>
+    						      	<li>+ sashafoxcat - 5</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +1</li>
+    						      	<li>+ fayzeel - 6</li>
+    						      	<li>+ sar_cat - 8 (-2реп)</li>
+    						      	<li>+8 WaterYay - 5 (Финал: 2) серебро амедаль</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +1</li>
+    						      	<li>+ mademyself - 7</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content crocodile simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+8 annanagets</li>
+    						      	<li>+3 slohhh</li>
+    						      	<li>+4 owleren</li>
+    						      	<li>+4 eg_geraskin</li>
+    						      </ul>
+    						      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+23 mercenaryJulian - амедаль</li>
+    						      	<li>+3 Garik_Bananchik</li>
+    						      	<li>+2 chusui_uchiha</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+5 bronhelm</li>
+    						      	<li>+19 maksmaksimmaks</li>
+    						      	<li>+3 sashafoxcat</li>
+    						      	<li>+13 9_spektor_6</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +6</li>
+    						      	<li>+19 timetobury</li>
+    						      	<li>+4 fayzeel</li>
+    						      	<li>+18 wateryay</li>
+    						      	<li>+1 masisich</li>
+    						      	<li>+27 yaleretayaeryl - амедаль</li>
+    						      	<li>+1 sar_cat</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+21 mademyself</li>
+    						      	<li>+37 je3z - амедаль</li>
+    						      	<li>+2 Mode_Of_God</li>
+    						      	<li>+4 faceloff1</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content korova simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+8 owleren - 1 золото (Финал: замена Stawlie)</li>
+    						      	<li>+ slohhh - 7</li>
+    						      	<li>+ annanagets - 10</li>
+    						      	<li>+ Stawlie - 9 (Финал: замена - 6)</li>
+    						      </ul>
+    						      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ mercenaryJulian - 6</li>
+    						      	<li>+10 Garik_Bananchik - 4 (Финал: 2) серебро амедаль</li>
+    						      	<li>+ chusui_uchiha - 8</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ bronhelm - 7</li>
+    						      	<li>+3 maksmaksimmaks - 3 (Финал: 8) бронза</li>
+    						      	<li>+2 9_spektor_6 - 5 (Финал: 3) бронза амедаль</li>
+    						      	<li>+6 sashafoxcat - 2 (Финал: 8) серебро</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ fayzeel - 4 (Финал: замена timetobury)</li>
+    						      	<li>+3 YungAaalik - 3 (Финал: 7) бронза</li>
+    						      	<li>+7 timetobury - 8 (Финал: замена - 1) золото амедаль</li>
+    						      	<li>+6 WaterYay - 2 (Финал: 5) серебро</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ mademyself - 9</li>
+    						      	<li>+ faceloff1 - 6</li>
+    						      	<li>+ je3z - 5 (Финал - 9)</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+25 НУМЕРОВАННЫЕ - maksmaksimmaks</li>
+                        <li>+20 ВАЛВЫ - Garik_Bananchik</li>
+                        <li>+ АССАSИНЫ - annanagets (-20реп)</li>
+                      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+25 ТЕТТА - Je3z</li>
+                        <li>+25 НУМЕРОВАННЫЕ - StPenek</li>
+                      </ul>
+                    </div>
+                    <div class="right-content saper simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+25 AsterAc амедаль</li>
+    						      	<li>+2 annanagets</li>
+    						      </ul>
+    						      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+13 chusui_uchiha</li>
+    						      	<li>+4 Garik_Bananchik</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+18 bronhelm амедаль</li>
+    						      	<li>+1 maksmaksimmaks</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +1</li>
+    						      	<li>+5 wateryay</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+16 je3z амедаль</li>
+    						      	<li>+5 mademyself</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content sigame simplebar" data-simplebar>
+                      <h3>АССАSИНЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ owleren</li>
+    						      	<li>+ eg_geraskin</li>
+    						      	<li>+4 AsterAc - 2 серебро</li>
+    						      	<li>+4 annanagets</li>
+    						      	<li>- 4, 4</li>
+    						      </ul>
+    						      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ mercenaryJulian</li>
+    						      	<li>+15 Garik_Bananchik - 4, 2, 1 золото серебро</li>
+    						      	<li>+6 chusui_uchiha - 2 серебро</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ maksmaksimmaks</li>
+    						      	<li>+2 sashafoxcat - 4</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ fayzeel</li>
+    						      	<li>+13 WaterYay - 2, 1 золото серебро</li>
+    						      	<li>+12 yaleretayaeryl - 4, 1, 3 бронза, золото</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+12 mademyself - 3, 3, 2 серебро, бронза, бронза</li>
+    						      	<li>+3 je3z - 3 бронза</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content predict">
+                      <ul>
+                        <li>+5 eg_geraskin</li>
+                        <li>+5 Bronhelm</li>
+                      </ul>
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>1. НУМЕРОВАННЫЕ</li>
+                        <li>2. ВАЛВЫ</li>
+                        <li>3. РУННЫ</li>
+                        <li>4. ТЕТТА</li>
+                        <li>5. АССАSИНЫ - выбывают</li>
+                      </ul>
+                      <span>лучший игрок: Je3z</span><br>
+                      <span>Репутация: каждый бывший ассаsин получает по 16/5 = 3 очка</span>
+                    </div>
+                  </div>
+                  <div class="second-week">
+                    <div class="left-bttns">
+                      <a href="#">Олимпийский забег</a>
+                      <a href="#">Мини-игры</a>
+                      <a href="#">Монстр-ищет-монстра-чемпионат</a>
+                      <a href="#">Маскарад</a>
+                      <a href="#">Цепной рисунок</a>
+                      <a href="#">Krunker на выбывание</a>
+                      <a href="#">Инки-чемпионат</a>
+                      <a href="#">Корова-006</a>
+                      <a href="#">Шифр#3</a>
+                      <a href="#">Шифр#4</a>
+                      <a href="#">Minecraft-испытания</a>
+                      <a href="#">Своя игра</a>
+                      <a href="#">Предсказания</a>
+                      <a href="#" class="result-bttn">Результаты</a>
+                    </div>
+                    <div class="right-content zabeg simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+3 chusui_uchiha (6)</li>
+    						      	<li>+9 slohhh (2) - акоин</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+5 9_spektor_6 (5) - акоин</li>
+    						      	<li>+8 maksmaksimmaks (3) - акоин</li>
+    						      	<li>+6 annanagets (4) - :акоин</li>
+    						      	<li>+ Bronhelm</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+ timetobury</li>
+    						      	<li>+ yaleretayaeryl</li>
+    						      	<li>+ sar_cat</li>
+    						      	<li>+2 owleren (7)</li>
+    						      	<li>+ WaterYay</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ mademyself</li>
+    						      	<li>+3 Je3z (6)</li>
+    						      	<li>+10 AsterAc (1) - акоин</li>
+    						      	<li>+2 eg_geraskin (7)</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content minigame simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+3 mercenaryJulian</li>
+    						      	<li>+2 Garik_Bananchik</li>
+    						      	<li>+15 chusui_uchiha - акоин</li>
+    						      	<li>+12 slohhh - акоин</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+1 bronhelm</li>
+    						      	<li>+8 maksmaksimmaks</li>
+    						      	<li>+1 9_spektor_6</li>
+    						      	<li>+9 annanagets</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+8 timetobury</li>
+    						      	<li>+1 sar_cat</li>
+    						      	<li>+3 wateryay</li>
+    						      	<li>+7 owleren</li>
+    						      	<li>+12 yaleretayaeryl - акоин</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+13 mademyself - акоин</li>
+    						      	<li>+13 Je3z - акоин</li>
+    						      	<li>+11 eg_geraskin</li>
+    						      	<li>+7 AsterAc</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content monstr simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+5 Garik_Bananchik - бронза</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      	<li>+ amir_krytoi</li>
+    						      	<li>+10 jevil_3310 - золото</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ bronhelm</li>
+    						      	<li>+ 9_spektor_6</li>
+    						      	<li>+ annanagets</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ fayzeel</li>
+    						      	<li>+ wateryay</li>
+    						      	<li>+ owleren</li>
+    						      	<li>+6 sinriot - серебро</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ mademyself</li>
+    						      	<li>+ Je3z</li>
+    						      	<li>+ eg_geraskin</li>
+    						      	<li>+ AsterAc</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content maskarad simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+ Garik_Bananchik</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      	<li>+1 slohhh</li>
+    						      	<li>+ amir_krytoi</li>
+    						      	<li>+ jevil_3310</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+5 9_spektor_6 - акоин</li>
+    						      	<li>+2 maksmaksimmaks</li>
+    						      	<li>+ annanagets</li>
+    						      	<li>+1 Bronhelm</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +6</li>
+    						      	<li>+7 timetobury - :акоин</li>
+    						      	<li>+2 sar_cat - акоин</li>
+    						      	<li>+15 owleren - акоин</li>
+    						      	<li>+ sinriot</li>
+    						      	<li>+ fayzeel</li>
+    						      	<li>+ WaterYay</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+ mademyself</li>
+    						      	<li>+ Je3z</li>
+    						      	<li>+ AsterAc</li>
+    						      	<li>+ eg_geraskin</li>
+    						      	<li>+ hlebu4ak</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content risunok simplebar" data-simplebar>
+                      <h3>ВАЛВЫ серебро</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+4 chusui_uchiha</li>
+    						      	<li>+4 slohhh</li>
+    						      	<li>+4 mercenaryJulian</li>
+    						      	<li>+4 Garik_Bananchik</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+2 StPenek</li>
+    						      	<li>+2 maksmaksimmaks</li>
+    						      	<li>+2 annanagets</li>
+    						      	<li>+2 Bronhelm</li>
+    						      </ul>
+    						      <h3>РУННЫ золото</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+5 timetobury</li>
+    						      	<li>+5 owleren</li>
+    						      	<li>+10 WaterYay</li>
+    						      </ul>
+    						      <h3>ТЕТТА бронза</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+9 mademyself</li>
+    						      	<li>+3 hlebu4ak</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content krunker simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      	<li>+8 slohhh - серебро амедаль</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ bronhelm</li>
+    						      	<li>+ 9_spektor_6</li>
+    						      	<li>+5 annanagets - бронза амедаль</li>
+    						      	<li>+ sashafoxcat</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ wateryay</li>
+    						      	<li>+ owleren</li>
+    						      	<li>+ yaleretayaeryl</li>
+    						      	<li>+ timetobury</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+10 mademyself - золото амедаль</li>
+    						      	<li>+ AsterAc</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content inki simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+5 Garik_Bananchik - 3 бронза</li>
+    						      	<li>+3 chusui_uchiha - 3 бронза</li>
+    						      	<li>+ zenidexx - 7</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+11 9_spektor_6 - 2 (Финал: 2) серебро серебро амедаль</li>
+    						      	<li>+8 maksmaksimmaks - 1 золото</li>
+    						      	<li>+ annanagets - 4</li>
+    						      	<li>+8 sashafoxcat - 1 золото</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ timetobury - 4</li>
+    						      	<li>+ yaleretayaeryl - 4</li>
+    						      	<li>+11 owleren - 2 (Финал: 3) серебро бронза амедаль</li>
+    						      	<li>+ WaterYay - 4</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+10 mademyself - 4 (Финал: 1) золото амедаль</li>
+    						      	<li>+ AsterAc - 5</li>
+    						      	<li>+ hlebu4ak - 8</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content korova simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ Garik_Bananchik - 6</li>
+    						      	<li>+7 mercenaryJulian - 1 золото</li>
+    						      	<li>+ zenidexx - 8</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ maksmaksimmaks - 7</li>
+    						      	<li>+2 sashafoxcat - 4</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ timetobury - 10</li>
+    						      	<li>+ YungAaalik - 9</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+3 mademyself - 3 бронза</li>
+    						      	<li>+ AsterAc - 5</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+20 РУННЫ - WaterYay</li>
+                        <li>+15 НУМЕРОВАННЫЕ - maksmaksimmaks</li>
+                        <li>+10 ТЕТТА - Je3z</li>
+                        <li>+10 ВАЛВЫ - chusui_uchiha</li>
+                      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+15 НУМЕРОВАННЫЕ - annanagets</li>
+                      </ul>
+                    </div>
+                    <div class="right-content minecraft simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+3 Garik_Bananchik - 3</li>
+    						      	<li>+9 chusui_uchiha - 3, 2 бронза амедаль</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+2 annanagets - 3</li>
+    						      	<li>+ sashafoxcat</li>
+    						      	<li>+ maksmaksimmaks</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ wateryay</li>
+    						      	<li>+14 fayzeel - 3, 2, 2 серебро амедаль</li>
+    						      	<li>+ masisich</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+24 mademyself - 1, 1, 1 золото амедаль</li>
+    						      	<li>+14 AsterAc - 2, 1 серебро амедаль</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content svoya-igra simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ Garik_Bananchik</li>
+    						      	<li>+16 mercenaryJulian - 1, 2 золото серебро</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ maksmaksimmaks</li>
+    						      	<li>+2 sashafoxcat - 4</li>
+    						      	<li>+6 annanagets - 2, 3 серебро бронза</li>
+    						      	<li>+ 9_spektor_6</li>
+    						      </ul>
+    						      <h3>РУННЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ timetobury</li>
+    						      	<li>+ owleren</li>
+    						      	<li>+14 WaterYay - 1, 2 золото серебро</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+28 mademyself - 1, 2, 1, 2 золото золото серебро серебро</li>
+    						      	<li>+3 AsterAc - 3 бронза</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content predict">
+                      <ul>
+                        <li>+12 sashafoxcat</li>
+                        <li>+10 annanagets</li>
+                        <li>+10 slohhh</li>
+                        <li>+5</li>
+                      </ul>
+                      <ul>
+                        <li>9_spektor_6</li>
+                        <li>+5 WaterYay</li>
+                        <li>+5 timetobury</li>
+                        <li>+5 chusui_uchiha</li>
+                        <li>+5 mademyself</li>
+                        <li>+5 AsterAc</li>
+                        <li>+5 Bronhelm</li>
+                        <li>+5 maksmaksimmaks</li>
+                      </ul>
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>1. НУМЕРОВАННЫЕ</li>
+                        <li>2. ВАЛВЫ</li>
+                        <li>3. ТЕТТА</li>
+                        <li>4. РУННЫ - выбывает</li>
+                      </ul>
+                      <span>лучший игрок: mademyself</span><br>
+                      <span>Репутация: каждый бывший самурай получает по 67/5 = 13 очков</span>
+                    </div>
+                  </div>
+                  <div class="third-week">
+                    <div class="left-bttns">
+                      <a href="#">Злобный змей</a>
+                      <a href="#">Мини-игры: Последний заезд</a>
+                      <a href="#">Мэдверс-сити-чемпионатт</a>
+                      <a href="#">Рисовательный крокодил</a>
+                      <a href="#">ПВП-на-вылет</a>
+                      <a href="#">Настольные игры (Соло, Корова 006, Инки)е</a>
+                      <a href="#">Шифр #5</a>
+                      <a href="#">Шифр #6</a>
+                      <a href="#">Шифр #7</a>
+                      <a href="#">Брось Мне Вызова</a>
+                      <a href="#">Предсказания</a>
+                      <a href="#" class="result-bttn">Результаты</a>
+                    </div>
+                    <div class="right-content zmey simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+ slohhh</li>
+    						      	<li>+ mercenaryJulian</li>
+    						      	<li>+ Stawlie</li>
+    						      	<li>+6 chusui_uchiha - 2 акоин</li>
+    						      	<li>+ yaleretayaeryl</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+8 annanagets - 2 акоин</li>
+    						      	<li>+8 sashafoxcat - 2 акоин</li>
+    						      	<li>+ maksmaksimmaks</li>
+    						      	<li>+ StPenek</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +8</li>
+    						      	<li>+5 mademyself - 1 акоин</li>
+    						      	<li>+ AsterAc</li>
+    						      	<li>+ WaterYay</li>
+    						      	<li>+ fayzeel</li>
+    						      	<li>+4 Je3z - 2 акоин</li>
+    						      	<li>+3 eg_geraskin - 4</li>
+    						      	<li>+ sharovvelikii</li>
+    						      	<li>+1 hlebu4ak - 4</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content minigames simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+5 Garik_Bananchik - 17 (3) акоин</li>
+    						      	<li>+ mercenaryJulian - 6</li>
+    						      	<li>+ yaleretayaeryl - 9</li>
+    						      	<li>+ chusui_uchiha - 9</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+8 maksmaksimmaks - 20 (2) акоин</li>
+    						      	<li>+ sashafoxcat - 12</li>
+    						      	<li>+ annanagets - 10</li>
+    						      	<li>+ timetobury - 11</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +8</li>
+    						      	<li>+ mademyself - 3</li>
+    						      	<li>+ WaterYay - 11</li>
+    						      	<li>+10 fayzeel - 33 (1) акоин</li>
+    						      	<li>+ Je3z - 15</li>
+    						      	<li>+ eg_geraskin - 1</li>
+    						      	<li>+ hlebu4ak - 9</li>
+    						      	<li>+ masisich - 8</li>
+    						      	<li>+ YungAaalik - 9</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content madverse-city simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +6</li>
+    						      	<li>+ owleren (Финал: 5)</li>
+    						      	<li>+ mercenaryJulian</li>
+    						      	<li>+ jevil_3310</li>
+    						      	<li>+5 chusui_uchiha - 2 (Финал: 7) серебро</li>
+    						      	<li>+ yaleretayaeryl</li>
+    						      	<li>+ Garik_Bananchik</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: -7</li>
+    						      	<li>+ annanagets (Финал: 6) -2 реп</li>
+    						      	<li>+ bronhelm</li>
+    						      	<li>+9 maksmaksimmaks - 2 (Финал: 3) серебро бронза амедаль</li>
+    						      	<li>+ 9_spektor_6 -10 реп</li>
+    						      	<li>+7 hennesygovnoed - 1 золото</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +</li>
+    						      	<li>+3 WaterYay - 3 (Финал: 8) бронза</li>
+    						      	<li>+ fayzeel</li>
+    						      	<li>+13 Je3z - 1 (Финал: 1) золото золото амедаль</li>
+    						      	<li>+ sharovvelikii -5 реп (Финал: 4)</li>
+    						      	<li>+6 masisich - 3 (Финал: 2) серебро бронза амедаль</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content crocodile simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+2 owleren - 4</li>
+    						      	<li>+1 mercenaryJulian - 5</li>
+    						      	<li>+16 yaleretayaeryl - 1, 1 золото золото</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+2 maksmaksimmaks - 3 бронза</li>
+    						      	<li>+ sashafoxcat -2 реп</li>
+    						      	<li>+13 annanagets - 1, 2 золото серебро</li>
+    						      	<li>+1 timetobury - 5</li>
+    						      	<li>+ sinriot</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+15 mademyself - 2, 3, 5 серебро бронза</li>
+    						      	<li>+3 WaterYay - 4</li>
+    						      	<li>+ sharovvelikii</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content pvp simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ owleren</li>
+    						      	<li>+2 mercenaryJulian - 3 бронза амедаль</li>
+    						      	<li>+ jevil_3310 -2 реп</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ annanagets</li>
+    						      	<li>+ maksmaksimmaks</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: -1</li>
+    						      	<li>+ WaterYay</li>
+    						      	<li>+5 fayzeel - 2 серебро амедаль -5 реп</li>
+    						      	<li>+ eg_geraskin</li>
+    						      	<li>+7 AsterAc - 1 золото амедаль</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content nastolki simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+20 mercenaryJulian - 1, 1 золото золото</li>
+    						      	<li>+8 owleren - 2, 3 серебро бронза</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+8 maksmaksimmaks - 3, 4 бронза</li>
+    						      	<li>+8 annanagets - 2 серебро</li>
+    						      	<li>+ timetobury</li>
+                      
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ mademyself</li>
+    						      	<li>+ WaterYay</li>
+    						      	<li>+11 eg_geraskin - 2, 4 серебро</li>
+    						      	<li>+ AsterAc</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+5 ВАЛВЫ - chusui_uchiha</li>
+                      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+20 ТЕТТА - WaterYay</li>
+                      </ul>
+                    </div>
+                    <div class="right-content challenge simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+5 owleren - Шашки (0-1)</li>
+    						      	<li>+15 yaleretayaeryl - Шашки (1-0) амедаль</li>
+    						      	<li>+10 chusui_uchiha - Шашки (1-2)</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+5 annanagets - Overwatch (0-1)</li>
+    						      	<li>+5 maksmaksimmaks - Шашки (0-1)</li>
+    						      	<li>+5 sinriot - Overwatch (0-1)</li>
+    						      	<li>+25 9_spektor_6 - osu! (2-0) амедаль</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+25 mademyself - osu! (2-0) амедаль</li>
+    						      	<li>+25 fayzeel - CS:GO (2-0) амедаль</li>
+    						      	<li>+20 Je3z - CS:GO (2-1) амедаль</li>
+    						      	<li>+5 AsterAc - Покер (0-1)</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content predict">
+                      <ul>
+                        <li>+6 9_spektor_6</li>
+                        <li>+6 AsterAc</li>
+                        <li>+6 Je3z</li>
+                        <li>+6 maksmaksimmaks</li>
+                      </ul>
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>2. ВАЛВЫ</li>
+                        <li>2. НУМЕРОВАННЫЕ</li>
+                        <li>2. ТЕТТА</li>
+                      </ul>
+                      <span>лучший игрок: не определен</span>
+                    </div>
+                  </div>
+                  <div class="fourth-week">
+                    <div class="left-bttns">
+                      <a href="#">Камень-Ножницы-Бумага</a>
+                      <a href="#">Крокодил-рисунки</a>
+                      <a href="#">Смехатлон</a>
+                      <a href="#">Рисовательный крокодил</a>
+                      <a href="#">Музыкальный крокодил</a>
+                      <a href="#">Настольные игры</a>
+                      <a href="#">Шифр #8</a>
+                      <a href="#">Шифр #9</a>
+                      <a href="#">Шифр #10</a>
+                      <a href="#">Предсказания</a>
+                      <a href="#">Финал ТФ-3</a>
+                    </div>
+                    <div class="right-content knb simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+ mercenaryJulian</li>
+    						      	<li>+5 chusui_uchiha - 2 акоин</li>
+    						      	<li>+ yaleretayaeryl</li>
+    						      	<li>+ slohhh</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+3 annanagets акоин</li>
+    						      	<li>+4 maksmaksimmaks - 3 акоин</li>
+    						      	<li>+3 timetobury акоин</li>
+    						      	<li>+6 sinriot - 1 акоин</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +8</li>
+    						      	<li>+ mademyself</li>
+    						      	<li>+ Je3z</li>
+    						      	<li>+ WaterYay</li>
+    						      	<li>+3 fayzeel акоин</li>
+    						      	<li>+ sharovvelikii</li>
+    						      	<li>+ masisich</li>
+    						      	<li>+ eg_geraskin</li>
+    						      	<li>+ AsterAc</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content crocodile simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+3 mercenaryJulian</li>
+    						      	<li>+21 yaleretayaeryl золото амедаль: + Разделяй и властвуй</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+21 annanagets золото амедаль + Разделяй и властвуй</li>
+    						      	<li>+6 timetobury бронза амедаль</li>
+    						      	<li>+1 sinriot</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+5 mademyself амедаль</li>
+    						      	<li>+5 Je3z амедаль</li>
+    						      	<li>+5 WaterYay</li>
+    						      	<li>+1 AsterAc</li>
+    						      	<li>+1 eg_geraskin</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content smehalton">
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+ yaleretayaeryl</li>
+    						      	<li>+5 chusui_uchiha - 3 бронза амедаль</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+10 annanagets - 1 золото амедаль</li>
+    						      	<li>+8 maksmaksimmaks - 2 серебро амедаль</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ WaterYay</li>
+    						      	<li>+ eg_geraskin</li>
+    						      	<li>+ Je3z</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content crocodile simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ mercenaryJulian</li>
+    						      	<li>+13 yaleretayaeryl - 2, 2, 3 серебро амедаль</li>
+    						      	<li>+ chusui_uchiha</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ maksmaksimmaks</li>
+    						      	<li>+2 annanagets - 3</li>
+    						      	<li>+9 timetobury - 1, 3 бронза амедаль</l>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+10 mademyself - 1, 3 бронза амедаль</li>
+    						      	<li>+24 WaterYay - 1, 1, 1, 3 золото амедаль</li>
+    						      	<li>+12 Je3z - 2, 2, 3 серебро амедаль</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content crocodile simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +2</li>
+    						      	<li>+21 yaleretayaeryl золото амедаль</li>
+    						      	<li>+8 chusui_uchiha</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+15 annanagets</li>
+    						      	<li>+5 maksmaksimmaks</li>
+    						      	<li>+17 timetobury бронза амедаль</li>
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +5</li>
+    						      	<li>+19 mademyself серебро амедаль</li>
+    						      	<li>+10 Je3z</li>
+    						      	<li>+12 WaterYay</li>
+    						      	<li>+8 eg_geraskin</li>
+    						      	<li>+1 AsterAc</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content nastolki simplebar" data-simplebar>
+                      <h3>ВАЛВЫ</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+6 mercenaryJulian - 2 серебро</li>
+    						      	<li>+8 yaleretayaeryl - 2, 4 серебро</li>
+    						      	<li>+16 chusui_uchiha - 1, 2 золото серебро</li>
+    						      </ul>
+    						      <h3>НУМЕРОВАННЫЕ</h3>
+    						      <ul>
+    						      	<li>Репутация: +4</li>
+    						      	<li>+8 maksmaksimmaks - 1 золото</li>
+    						      	<li>+ annanagets</li>
+    						      	<li>+14 timetobury - 2, 2, 4 серебро серебро</li>
+    						      	<li>+3 sinriot - 3 бронза</li>
+                      
+    						      </ul>
+    						      <h3>ТЕТТА</h3>
+    						      <ul>
+    						      	<li>Репутация: +3</li>
+    						      	<li>+ eg_geraskin</li>
+    						      	<li>+8 WaterYay - 1 золото</li>
+    						      	<li>+8 Je3z - 1 золото</li>
+    						      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+15 ВАЛВЫ - yaleretayaeryl</li>
+                      </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                      <li>+25 НУМЕРОВАННЫЕ - timetobury</li>
+                      <li>+20 ТЕТТА - WaterYay</li>
+                      <li>+15 ВАЛВЫ - mercenaryJulian</li>
+                    </ul>
+                    </div>
+                    <div class="right-content shifr">
+                      <ul>
+                        <li>+25 ТЕТТА - WaterYay</li>
+                      </ul>
+                    </div>
+                    <div class="right-content predict simplebar" data-simplebar>
+                      <ul>
+                        <li>+40 9_spektor_6 (угадал первое и третье<br> места на ТФ)</li>
+                        <li>+40 owleren (угадал первое место на ТФ + ChoiceChamber)</li>
+                        <li>+30 yaleretayaeryl (ChoiceChamber)</li>
+                        <li>+30 chusui_uchiha (ChoiceChamber)</li>
+                        <li>+20 SinRiot (ChoiceChamber)</li>
+                        <li>+20 AsterAc (ChoiceChamber)</li>
+                        <li>+20 maksmaksimmaks (ChoiceChamber)</li>
+                        <li>+10 mademyself (ChoiceChamber)</li>
+                        <li>+10 eg_geraskin (ChoiceChamber)</li>
+                      </ul>
+                      <img src="./imgs/final-table-3.jpg" alt="final-table-3" style="width: 500px; margin-bottom: 30px;">
+                      <img src="./imgs/final-table-3-1.jpg" alt="final-table-3-1" style="width: 500px; margin-bottom: 30px;">
+                      <img src="./imgs/final-table-3-2.jpg" alt="final-table-3-2" style="width: 500px;">
+                    </div>
+                    <div class="right-content result">
+                      <ul>
+                        <li>+120 maksmaksimmaks</li>
+                        <li>+80 AsterAc</li>
+                        <li>+40 9_spektor_6</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="result-week">
+                    <div class="left-bttns">
+                      <a href="#">Результаты</a>
+                    </div>
+                    <div class="right-content result simplebar" data-simplebar>
+                      <h3>Результаты:</h3>
+    						      <ul>
+    						      	<li>1. НУМЕРОВАННЫЕ</li>
+    						      	<li>2. ТЕТТА</li>
+    						      	<li>3. ВАЛВЫ</li>
+    						      	<li>4. РУННЫ</li>
+    						      	<li>5. АССАSИНЫ</li>
+    						      </ul>
+    						      <span>лучший игрок: yaleretayaeryl</span>
+    						      <ul>
+    						      	<li>+10 owleren - КТО?</li>
+    						      	<li>+10 maksmaksimmaks - КТО?</li>
+    						      	<li>+10 chusui_uchiha - КТО?</li>
+    						      	<li>+10 9_spektor_6 - КТО?</li>
+    						      	<li>+10 WaterYay - КТО?</li>
+    						      </ul>
+    						      <ul>
+    						      	<li>+20 WaterYay - Шифровик</li>
+    						      	<li>+20 9_spektor_6 - Ванга</li>
+    						      	<li>+25 mademyself - Медалист</li>
+    						      	<li>+25 mademyself - Лучший в мире</li>
+    						      	<li>+25 maksmaksimmaks - Мавроди</li>
+    						      </ul>
+    						      <span>лучший игрок ТФ-3: mademyself</span>
+    						      <h3>Лучшие 5 игроков:</h3>
+    						      <ul>
+    						      	<li> mademyself</li>
+    						      	<li> maksmaksimmaks</li>
+    						      	<li> Je3z</li>
+    						      	<li> yaleretayaeryl</li>
+    						      	<li> WaterYay</li>
+    						      </ul>
+    						      <h3>Лидеры фракций:</h3>
+    						      <ul>
+    						      	<li>ВАЛВЫ: yaleretayaeryl</li>
+    						      	<li>НУМЕРОВАННЫЕ: maksmaksimmaks</li>
+    						      	<li>ТЕТТА: mademyself</li>
+    						      </ul>
+    					        <h3>1. НУМЕРОВАННЫЕ</h3>
+    						      <h3>Репутация: на высоте (94)</h3>
+    						      <ul>
+    						      	<li>+359 maksmaksimmaks</li>
+    						      	<li>+192 9_spektor_6</li>
+    						      	<li>+164 annanagets</li>
+    						      	<li>+152 timetobury</li>
+    						      	<li>+58 Bronhelm</li>
+    						      	<li>+54 sinriot</li>
+    						      	<li>+43 sashafoxcat</li>
+    						      	<li>+42 StPenek</li>
+    						      </ul>
+    						      <ul>
+    						      	<li>11 золота 12 серебра 12 бронзы 15 амедалей<br> 13 акоинов</li>
+    						      	<li>+1064</li>
+    						      </ul>
+    					        <h3>2. ТЕТТА</h3>
+    						      <h3>Репутация: на высоте (98)</h3>
+    						      <ul>
+    						      	<li>+282 mademyself</li>
+    						      	<li>+269 WaterYay</li>
+    						      	<li>+191 AsterAc</li>
+    						      	<li>+189 Je3z</li>
+    						      	<li>+79 fayzeel</li>
+    						      	<li>+59 eg_geraskin</li>
+    						      	<li>+22 YungAaalik</li>
+    						      	<li>+20 masisich</li>
+    						      	<li>+4 hlebu4ak</li>
+    						      	<li>+ sharovvelikii</li>
+    						      </ul>
+    						      <ul>
+    						      	<li>11 золота 10 серебра 10 бронзы 19 амедалей<br> 7 акоинов</li>
+    						      	<li>+1115</li>
+    						      </ul>
+    					        <h3>3. ВАЛВЫ</h3>
+    						      <h3>Репутация: на высоте (98)</h3>
+    						      <ul>
+    						      	<li>+203 yaleretayaeryl</li>
+    						      	<li>+166 chusui_uchiha</li>
+    						      	<li>+133 owleren</li>
+    						      	<li>+125 mercenaryJulian</li>
+    						      	<li>+94 Garik_Bananchik</li>
+    						      	<li>+58 slohhh</li>
+    						      	<li>+21 jevil_3310</li>
+    						      	<li>+18 Stawlie</li>
+    						      </ul>
+    						      <ul>
+    						      	<li>13 золота 13 серебра 10 бронзы 12 амедалей<br> 8 акоинов</li>
+    						      	<li>+818</li>
+    						      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="fourth-tour">
+                  <div class="first-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 1</a>
+                      <a href="#">Испытание Логикой</a>
+                      <a href="#">Испытание Воздухом</a>
+                      <a href="#">Испытание Марблсом</a>
+                      <a href="#">Просто Чума</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Что под бумажкой?</h3>
+                      <img src="./imgs/tf4-shifr1.png" alt="shift1">
+                      <h3>Ответ на Шифр I: Брелоки</h3>
+                      <ul>
+                        <li>&lt;Кавалерия&gt; - 12:25 - maksmaksimmaks</li>
+                        <li>&lt;Дайлеры&gt; - 12:36 - annanagets</li>
+                        <li>&lt;Торренты&gt; - 12:41 - tuskastel</li>
+                        <li>&lt;Мятежники&gt; - 14:34 - Ekonoms</li>
+                        <li>&lt;Титаны&gt; - Правильного ответа нет</li>
+                      </ul>
+                      <img src="./imgs/tf4-shifr1-otvet.png" alt="shifr1-otver">
+                    </div>
+                    <div class="right-content logic simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+2,6<img src="./imgs/tf-s-icon.png">] sashafoxcat</li>
+                        <li>[+2,6<img src="./imgs/tf-s-icon.png">] TheMaxCrashE</li>
+                        <li>[+2,4<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+2,6<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+2,1<img src="./imgs/tf-s-icon.png">] TaFeedRoom</li>
+                        <li>[+2,1<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+2,1<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                        <li>[+2,1<img src="./imgs/tf-s-icon.png">] Zerr0ta</li>
+                        <li>[+1,8<img src="./imgs/tf-s-icon.png">] chusui</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+2,6<img src="./imgs/tf-s-icon.png">] yaleretayaeryl</li>
+                        <li>[+2,6<img src="./imgs/tf-s-icon.png">] blin_s_malinoy</li>
+                        <li>[+1,2<img src="./imgs/tf-s-icon.png">] maksmaksimmaks</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+2,9<img src="./imgs/tf-s-icon.png">] dr0chi</li>
+                        <li>[+2,1<img src="./imgs/tf-s-icon.png">] tuskastel</li>
+                        <li>[+2,1<img src="./imgs/tf-s-icon.png">] WaterYay</li>
+                      </ul>
+                    </div>
+                    <div class="right-content wind simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+2,1<img src="./imgs/tf-r-icon.png">] sashafoxcat</li>
+                        <li>[+4,6<img src="./imgs/tf-r-icon.png">] 970710hex</li>
+                        <li>[+2,5<img src="./imgs/tf-r-icon.png">] AsterAc</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+4,2<img src="./imgs/tf-r-icon.png">] annanagets</li>
+                        <li>[+5<img src="./imgs/tf-r-icon.png">] Xellronin</li>
+                        <li>[+2,5<img src="./imgs/tf-r-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+3,8<img src="./imgs/tf-r-icon.png">] Ekonoms</li>
+                        <li>[+2,5<img src="./imgs/tf-r-icon.png">] Zerr0ta</li>
+                        <li>[+2,5<img src="./imgs/tf-r-icon.png">] fayzeel</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+4,2<img src="./imgs/tf-r-icon.png">] maksmaksimmaks</li>
+                        <li>[+3,8<img src="./imgs/tf-r-icon.png">] lisa_manoban12</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+5<img src="./imgs/tf-r-icon.png">] WaterYay</li>
+                        <li>[+5,8<img src="./imgs/tf-r-icon.png">] tuskastel</li>
+                      </ul>
+                      <h3>НЕЙТРАЛЫ</h3>
+                      <ul>
+                        <li>[+3,8<img src="./imgs/tf-r-icon.png">] HODZO</li>
+                      </ul>
+                    </div>
+                    <div class="right-content marbls simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+7,7<img src="./imgs/tf-r-icon.png">] TheMaxCrashE</li>
+                        <li>[+12,3<img src="./imgs/tf-r-icon.png">] AsterAc</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+15,4<img src="./imgs/tf-r-icon.png">] annanagets</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+9,2<img src="./imgs/tf-r-icon.png">] Ekonoms</li>
+                        <li>[+13,8<img src="./imgs/tf-r-icon.png">] Zerr0ta</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+10,8<img src="./imgs/tf-r-icon.png">] asperrrrrr</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+13,8<img src="./imgs/tf-r-icon.png">] WaterYay</li>
+                        <li>[+7,7<img src="./imgs/tf-r-icon.png">] dr0chi</li>
+                      </ul>
+                      <h3>НЕЙТРАЛЫ</h3>
+                      <ul>
+                        <li>[+9,2<img src="./imgs/tf-r-icon.png">] AutoMexanuk</li>
+                      </ul>
+                    </div>
+                    <div class="right-content chuma simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+11,5<img src="./imgs/tf-rs-icon.png">] TheMaxCrashE</li>
+                        <li>[+6,2<img src="./imgs/tf-rs-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+11,5<img src="./imgs/tf-rs-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+11,5<img src="./imgs/tf-rs-icon.png">] Ekonoms</li>
+                        <li>[+11,5<img src="./imgs/tf-rs-icon.png">] fayzeel</li>
+                        <li>[+6,9<img src="./imgs/tf-rs-icon.png">] Zerr0ta</li>
+                        <li>[+5,4<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+11,5<img src="./imgs/tf-rs-icon.png">] WaterYay</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="second-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 2</a>
+                      <a href="#">Испытание Джекбоксом (Путинка & Тупинка)</a>
+                      <a href="#">ЛастХитер</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Кто такая Сайя?</h3>
+                      <img src="./imgs/tf4-shifr2.png" alt="shifr2">
+                      <h3>Ответ на Шифр II: Психобард</h3>
+                      <span>Решение: надо было сопоставить список персонажей в Трейлере Мятежников со списком персонажей-победителей в ТФ:Мятеж</span>
+                      <ul style="margin-top: 30px;">
+                        <li>&lt;Мятежники&gt; - 14:07 - Je3z</li>
+                        <li>&lt;Дайлеры&gt; - 16:10 - annanagets</li>
+                        <li>&lt;Торренты&gt; - Правильного ответа нет</li>
+                        <li>&lt;Кавалерия&gt; - Правильного ответа нет</li>
+                        <li>&lt;Титаны&gt; - Правильного ответа нет</li>
+                      </ul>
+                    </div>
+                    <div class="right-content jackbox simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+17<img src="./imgs/tf-rs-icon.png">] AsterAc</li>
+                        <li>[+10<img src="./imgs/tf-rs-icon.png">] jevil3310</li>
+                        <li>[+5<img src="./imgs/tf-rs-icon.png">] 970710hex</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+27<img src="./imgs/tf-rs-icon.png">] KiriDa2_0</li>
+                        <li>[+15<img src="./imgs/tf-rs-icon.png">] mercenaryJulian</li>
+                        <li>[+13,5<img src="./imgs/tf-rs-icon.png">] annanagets</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+6<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+20<img src="./imgs/tf-rs-icon.png">] maksmaksimmaks</li>
+                        <li>[+12,5<img src="./imgs/tf-rs-icon.png">] RadiumEXE</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+33<img src="./imgs/tf-rs-icon.png">] WaterYay</li>
+                        <li>[+25<img src="./imgs/tf-rs-icon.png">] dr0chi</li>
+                        <li>[+8<img src="./imgs/tf-rs-icon.png">] Byklya_</li>
+                        <li>[+6<img src="./imgs/tf-rs-icon.png">] super_metalhead</li>
+                        <li>[+5<img src="./imgs/tf-rs-icon.png">] tuskastel</li>
+                      </ul>
+                    </div>
+                    <div class="right-content lasthiter simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+3,6<img src="./imgs/tf-r-icon.png">] sashafoxcat</li>
+                        <li>[+2,4<img src="./imgs/tf-r-icon.png">] TheMaxCrashE</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+2,4<img src="./imgs/tf-r-icon.png">] annanagets</li>
+                        <li>[+3,6<img src="./imgs/tf-r-icon.png">] mercenaryJulian</li>
+                        <li>[+1,2<img src="./imgs/tf-r-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+2,4<img src="./imgs/tf-r-icon.png">] lisa_manoban12</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+1,2<img src="./imgs/tf-r-icon.png">] Byklya_</li>
+                      </ul>
+                      <h3>Карточки:</h3>
+                      <ul>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - МЯТЕЖНИКИ</li>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - ТОРРЕНТЫ</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="third-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 3</a>
+                      <a href="#">Караоке Испытание</a>
+                      <a href="#">Настольный Хаос</a>
+                      <a href="#">Майнкрафт-Бег с Препятствиями</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>5 расписаний дадут 1 ответ</h3>
+                       <h3>Ответ на Шифр III: BINKS</h3>
+                       <span>Решение: в старых расписаниях я оставлял по 1 букве, пять из них составляли его имя</span>
+                       <ul style="margin-top: 30px;">
+                         <li>&lt;Торренты&gt; - 12:04 - tuskastel</li>
+                         <li>&lt;Кавалерия&gt; - 12:08 - maksmaksimmaks</li>
+                         <li>&lt;Дайлеры&gt; - 12:24 - KiriDa2_0</li>
+                         <li>&lt;Мятежники&gt; - 12:37 - Je3z</li>
+                         <li>&lt;Титаны&gt; - 13:59 - sashafoxcatт</li>
+                       </ul>
+                    </div>
+                    <div class="right-content karaoke simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+18,5<img src="./imgs/tf-s-icon.png">] sashafoxcat</li>
+                        <li>[+17,3<img src="./imgs/tf-s-icon.png">] TheMaxCrashE</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+25,4<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                        <li>[+16,2<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+24,2<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+19,6<img src="./imgs/tf-s-icon.png">] fayzeel</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+23,1<img src="./imgs/tf-s-icon.png">] maksmaksimmaks</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+21,9<img src="./imgs/tf-s-icon.png">] WaterYay</li>
+                        <li>[+20,8<img src="./imgs/tf-s-icon.png">] tuskastel</li>
+                        <li>[+15<img src="./imgs/tf-s-icon.png">] dr0chi</li>
+                      </ul>
+                    </div>
+                    <div class="right-content haos simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+9,6<img src="./imgs/tf-rs-icon.png">] AsterAc</li>
+                        <li>[+4,8<img src="./imgs/tf-rs-icon.png">] TheMaxCrashE</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+2,4<img src="./imgs/tf-rs-icon.png">] TaFeedRoom</li>
+                        <li>[+7,2<img src="./imgs/tf-rs-icon.png">] mercenaryJulian</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+6<img src="./imgs/tf-rs-icon.png">] Ekonoms</li>
+                        <li>[+7,2<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+4,8<img src="./imgs/tf-rs-icon.png">] maksmaksimmaks</li>
+                        <li>[+9,5<img src="./imgs/tf-rs-icon.png">] yaleretayaeryl</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+3,6<img src="./imgs/tf-rs-icon.png">] WaterYay</li>
+                        <li>[+10,1<img src="./imgs/tf-rs-icon.png">] tuskastel</li>
+                      </ul>
+                      <h3>Карточки:</h3>
+                      <ul>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - КАВАЛЕРИЯ</li>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - ТОРРЕНТЫ</li>
+                      </ul>
+                    </div>
+                    <div class="right-content minecraft simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+5,4<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+17,7<img src="./imgs/tf-s-icon.png">] TaFeedRoom</li>
+                        <li>[+17,7<img src="./imgs/tf-s-icon.png">] rrasher</li>
+                        <li>[+3,8<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+4,6<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                        <li>[+12,3<img src="./imgs/tf-s-icon.png">] Xellronin</li>
+                        <li>[+0,8<img src="./imgs/tf-s-icon.png">] mercenaryJulian</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+18,5<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                        <li>[+17,7<img src="./imgs/tf-rs-icon.png">] fayzeel</li>
+                        <li>[+9,2<img src="./imgs/tf-rs-icon.png">] Ekonoms</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="fourth-day">
+                    <div class="left-bttns">
+                      <a href="#">Настольный Хаос 2</a>
+                    </div>
+                    <div class="right-content haos simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+3,9<img src="./imgs/tf-rs-icon.png">] sashafoxcat</li>
+                        <li>[+1,1<img src="./imgs/tf-rs-icon.png">] TheMaxCrashE</li>
+                        <li>[+4,8<img src="./imgs/tf-rs-icon.png">] 970710hex</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+19,5<img src="./imgs/tf-rs-icon.png">] KiriDa2_0</li>
+                        <li>[+14,8<img src="./imgs/tf-rs-icon.png">] annanagets</li>
+                        <li>[+4,3<img src="./imgs/tf-rs-icon.png">] Xellronin</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+21,1<img src="./imgs/tf-rs-icon.png">] Ekonoms</li>
+                        <li>[+4,3<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+5,7<img src="./imgs/tf-rs-icon.png">] maksmaksimmaks</li>
+                        <li>[+9,5<img src="./imgs/tf-rs-icon.png">] lisa_manoban12</li>
+                        <li>[+3<img src="./imgs/tf-rs-icon.png">] blin_s_malinoy</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+22,2<img src="./imgs/tf-rs-icon.png">] WaterYay</li>
+                        <li>[+24,5<img src="./imgs/tf-rs-icon.png">] tuskastel</li>
+                      </ul>
+                      <h3>Карточки:</h3>
+                      <ul>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - ДАЙЛЕРЫ</li>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - МЯТЕЖНИКИ</li>
+                        <li>2<img src="./imgs/tf-one-icon.png"> - ТОРРЕНТЫ</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="fifth-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 4</a>
+                      <a href="#">Мега-Крокодил</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Ответить на 0:18 получится только ключом прошлой загадки</h3>
+                      <h3>Ответ на Шифр IV:<br></h3>
+                       <span>- Шифр Вижинера<br>
+                        - Ключ: БИНКС<br>
+                        - Этот чёртов Леонидас...<br>
+                        ----юыьэ ижщащу мньшъеия...<br>
+                        - У меня поплатится.<br>
+                        ----ф хтшр рчэцсусаьр.</span>
+                      <ul style="margin-top: 30px;">
+                        <li>&lt;Титаны&gt; - 14:51 - TheMaxCrashe</li>
+                        <li>&lt;Торренты&gt; - 12:52 - dr0chi (ошибка в одном слове)</li>
+                        <li>&lt;Кавалерия&gt; - 13:22 - blin_s_malinoy (ошибка<br> в одном слове)</li>
+                        <li>&lt;Дайлеры&gt; - 17:33 - XellRonin (ошибка в<br> одном слове)</li>
+                        <li>&lt;Мятежники&gt; - 12:03 - chusui (ошибки в двух словах)</li>
+                      </ul>
+                    </div>
+                    <div class="right-content crocodile simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+13,9<img src="./imgs/tf-s-icon.png">] sashafoxcat</li>
+                        <li>[+21,3<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                        <li>[+15,3<img src="./imgs/tf-s-icon.png">] 970710hex</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+30,6<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                        <li>[+26,9<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+13<img src="./imgs/tf-s-icon.png">] mercenaryJulian</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+23,1<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                        <li>[+8,3<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                      </ul>
+                      <h3>КАВАЛЕРИЯ</h3>
+                      <ul>
+                        <li>[+11,1<img src="./imgs/tf-s-icon.png">] maksmaksimmaks</li>
+                        <li>[+12<img src="./imgs/tf-s-icon.png">] WhiteeWave</li>
+                        <li>[+44,4<img src="./imgs/tf-s-icon.png">] yaleretayaeryl</li>
+                        <li>[+15,7<img src="./imgs/tf-s-icon.png">] blin_s_malinoy</li>
+                        <li>[+8,3<img src="./imgs/tf-s-icon.png">] RadiumEXE</li>
+                        <li>[+1,9<img src="./imgs/tf-s-icon.png">] lisa_manoban12</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+6<img src="./imgs/tf-s-icon.png">] WaterYay</li>
+                        <li>[+22,2<img src="./imgs/tf-s-icon.png">] tuskastel</li>
+                        <li>[+25<img src="./imgs/tf-s-icon.png">] dr0chi</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sixth-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 5</a>
+                      <a href="#">Распределение Павшей Фракции</a>
+                      <a href="#">Дурацкое Испытание</a>
+                      <a href="#">Просто Чума 2</a>
+                      <a href="#">Просто Чума 2.1</a>
+                    </div>
+                    <div class="right-content shifr">
+                      <h3>Музыка прошлого дня укажет на имя сильнейшего Титана</h3>
+                      <h3>Ответ на Шифр V: <br>
+                        - Смотрим часть стрима "Музыкальный <br>Крокодил"<br>
+                        - Выписываем названия песен по порядку<br>
+                        - В одном отрезке получится:<br>
+                        Знаешь ли ты<br>
+                        Экспонат<br>
+                        Режиссёр<br>
+                        О тебе</h3>
+                        <h3>- Ответ: Зэро</h3>
+                        <ul>
+                          <li>Правильно ответил: Никто</li>
+                        </ul>
+                    </div>
+                    <div class="right-content fraction">
+                      <span>Проигравшая фракция: <h3 style="margin-top: 10px;">Кавалерия</h3></span>
+                    </div>
+                    <div class="right-content durackoe simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+14,9<img src="./imgs/tf-rs-icon.png">] maksmaksimmaks</li>
+                        <li>[+7,6<img src="./imgs/tf-rs-icon.png">] sashafoxcat</li>
+                        <li>[+7,1<img src="./imgs/tf-rs-icon.png">] AsterAc</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+7,4<img src="./imgs/tf-rs-icon.png">] KiriDa2_0</li>
+                        <li>[+11,4<img src="./imgs/tf-rs-icon.png">] annanagets</li>
+                        <li>[+6,2<img src="./imgs/tf-rs-icon.png">] rrasher</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+12,1<img src="./imgs/tf-rs-icon.png">] yaleretayaeryl</li>
+                        <li>[+5,7<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                        <li>[+13,4<img src="./imgs/tf-rs-icon.png">] Ekonoms</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+4,7<img src="./imgs/tf-rs-icon.png">] owleren</li>
+                        <li>[+14,3<img src="./imgs/tf-rs-icon.png">] super_metalhead</li>
+                        <li>[+12,5<img src="./imgs/tf-rs-icon.png">] dr0chi</li>
+                      </ul>
+                    </div>
+                    <div class="right-content chuma simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+9,8<img src="./imgs/tf-r-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+6,6<img src="./imgs/tf-r-icon.png">] Xellronin</li>
+                        <li>[+5,7<img src="./imgs/tf-r-icon.png">] rrasher</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+9,8<img src="./imgs/tf-r-icon.png">] yaleretayaeryl</li>
+                        <li>[+7,4<img src="./imgs/tf-r-icon.png">] Ekonoms</li>
+                        <li>[+4,9<img src="./imgs/tf-r-icon.png">] litten183</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+5,7<img src="./imgs/tf-r-icon.png">] dr0chi</li>
+                      </ul>
+                    </div>
+                    <div class="right-content chuma simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+4,2<img src="./imgs/tf-r-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+4,2<img src="./imgs/tf-r-icon.png">] Xellronin</li>
+                        <li>[+5,6<img src="./imgs/tf-r-icon.png">] annanagets</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+4,2<img src="./imgs/tf-r-icon.png">] yaleretayaeryl</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+5,6<img src="./imgs/tf-r-icon.png">] owleren</li>
+                        <li>[+5,6<img src="./imgs/tf-r-icon.png">] tuskastel</li>
+                      </ul>
+                      <h3>Карточки:</h3>
+                      <ul>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - ТОРРЕНТЫ</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="seventh-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 6</a>
+                      <a href="#">Пиратская Бочка</a>
+                      <a href="#">Испытание Мини-Играми</a>
+                      <a href="#">КТО ОВОЩ?</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Показал 19/13/16/3/1 в timsah, но восславил имя главного дайлера</h3>
+                      <h3>Ответ на Шифр VI: <br>
+                        - 19/13/16/3/1 решается по русскому<br> алфавиту как слова<br>
+                        - timsah решается с помощью переводчика<br> как крокодил<br>
+                        - Ответ составляется из первых букв слов, которые я показывал на показывательном крокодиле</h3>
+                        <h3>Ответ: Максимилиан</h3>
+                        <ul style="margin-top: 30px;">
+                          <li>&lt;Титаны&gt; - 12:20 - maksmaksimmaks</li>
+                          <li>&lt;Торренты&gt; - 12:29 - owleren</li>
+                          <li>&lt;Мятежники&gt; - 12:50 - yaleretayaeryl</li>
+                          <li>&lt;Дайлеры&gt; - 14:10 - rrasher</li>
+                      </ul>
+                    </div>
+                    <div class="right-content bochka">
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+18,3<img src="./imgs/tf-rs-icon.png">] yaleretayaeryl</li>
+                      </ul>
+                    </div>
+                    <div class="right-content minigames">
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+6,7<img src="./imgs/tf-r-icon.png">] sashafoxcat</li>
+                        <li>[+13,4<img src="./imgs/tf-r-icon.png">] 970710hex</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+3,3<img src="./imgs/tf-r-icon.png">] Xellronin</li>
+                        <li>[+13,4<img src="./imgs/tf-r-icon.png">] rrasher</li>
+                        <li>[+15,5<img src="./imgs/tf-r-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+16,1<img src="./imgs/tf-r-icon.png">] Je3z</li>
+                      </ul>
+                    </div>
+                    <div class="right-content ovosh">
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+5<img src="./imgs/tf-r-icon.png">] sashafoxcat</li>
+                        <li>[+20<img src="./imgs/tf-r-icon.png">] 970710hex</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+10<img src="./imgs/tf-r-icon.png">] yaleretayaeryl</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+6<img src="./imgs/tf-r-icon.png">] owleren</li>
+                        <li>[+5,5<img src="./imgs/tf-r-icon.png">] blin_s_malinoy</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="eighth-day">
+                    <div class="left-bttns">
+                      <a href="#">Испытание Цветом</a>
+                      <a href="#">Испытание Битвой</a>
+                      <a href="#">Смайл-Детектив</a>
+                      <a href="#">Испытание Рисунками</a>
+                    </div>
+                    <div class="right-content color simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+4,6<img src="./imgs/tf-rs-icon.png">] AsterAc</li>
+                        <li>[+4,6<img src="./imgs/tf-rs-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+4,6<img src="./imgs/tf-rs-icon.png">] annanagets</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+2,3<img src="./imgs/tf-rs-icon.png">] yaleretayaeryl</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+2,3<img src="./imgs/tf-rs-icon.png">] WaterYay</li>
+                        <li>[+2,3<img src="./imgs/tf-rs-icon.png">] blin_s_malinoy</li>
+                        <li>[+2,3<img src="./imgs/tf-rs-icon.png">] dr0chi</li>
+                      </ul>
+                      <h3>НЕЙТРАЛЫ</h3>
+                      <ul>
+                        <li>[+4,6<img src="./imgs/tf-rs-icon.png">] angryhoma</li>
+                        <li>[+4,6<img src="./imgs/tf-rs-icon.png">] AIarminGG</li>
+                      </ul>
+                    </div>
+                    <div class="right-content battle simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+5,5<img src="./imgs/tf-rs-icon.png">] AsterAc</li>
+                        <li>[+3,8<img src="./imgs/tf-rs-icon.png">] sashafoxcat</li>
+                        <li>[+4,5<img src="./imgs/tf-rs-icon.png">] maksmaksimmaks</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+7,1<img src="./imgs/tf-rs-icon.png">] annanagets</li>
+                        <li>[+10,7<img src="./imgs/tf-rs-icon.png">] KiriDa2_0</li>
+                        <li>[+7<img src="./imgs/tf-rs-icon.png">] mercenaryJulian</li>
+                        <li>[+8,9<img src="./imgs/tf-rs-icon.png">] rrasher</li>
+                        <li>[+2,6<img src="./imgs/tf-rs-icon.png">] timurik_jmurik173</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+8,3<img src="./imgs/tf-rs-icon.png">] yaleretayaeryl</li>
+                        <li>[+7,9<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                        <li>[+12,8<img src="./imgs/tf-rs-icon.png">] Ekonoms</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+13,6<img src="./imgs/tf-rs-icon.png">] WaterYay</li>
+                        <li>[+2,7<img src="./imgs/tf-rs-icon.png">] tuskastel</li>
+                        <li>[+7<img src="./imgs/tf-rs-icon.png">] dr0chi</li>
+                        <li>[+3,6<img src="./imgs/tf-rs-icon.png">] blin_s_malinoy</li>
+                        <li>[+3,2<img src="./imgs/tf-rs-icon.png">] owleren</li>
+                      </ul>
+                      <h3>НЕЙТРАЛЫ</h3>
+                      <ul>
+                        <li>[+14<img src="./imgs/tf-rs-icon.png">] AIarminGG</li>
+                      </ul>
+                    </div>
+                    <div class="right-content smile">
+                      <h3>[+12,5] ТИТАНЫ</h3>
+                      <h3>[+3,1] ДАЙЛЕРЫ</h3>
+                      <h3>[+25] МЯТЕЖНИКИ</h3>
+                      <h3>[+12,5] ТОРРЕНТЫ</h3>
+                    </div>
+                    <div class="right-content risunok">
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+3,7<img src="./imgs/tf-s-icon.png">] 970710hex</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+7,3<img src="./imgs/tf-s-icon.png">] rrasher</li>
+                      </ul>
+                      <h3>Карточки:</h3>
+                      <ul>
+                        <li>1<img src="./imgs/tf-one-icon.png"> - ДАЙЛЕРЫ</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="ninth-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 7</a>
+                      <a href="#">БРОСЬ МНЕ ВЫЗОВ</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Каким образом Бронированный Титан проломил крышу Вандерленда? Может, он использовал какой-то инструмент?</h3>
+                      <img src="./imgs/tf4-shifr7.png" alt="shifr7">
+                      <h3>Ответ на Шифр VII:<br>
+                        Инструменты = буквы. Надо просто<br> соединить их в "Sem Aurorus". Всё просто</h3>
+                      <h3>Ответ: Sem Aurorus / Сэм Аврорус</h3>
+                      <ul style="margin-top: 30px;">
+                        <li>&lt;Мятежники&gt; - 18:01 - Ekonoms</li>
+                        <li>&lt;Торренты&gt; - Никто</li>
+                        <li>&lt;Титаны&gt; - Никто</li>
+                        <li>&lt;Дайлеры&gt; - Никто</li>
+                    </ul>
+                    </div>
+                    <div class="right-content challenge simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] sashafoxcat</li>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] maksmaksimmaks</li>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] 970710hex</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] rrasher</li>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] Xellronin</li>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] RadiumEXE</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+7<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] fayzeel</li>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] yaleretayaeryl</li>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+7<img src="./imgs/tf-s-icon.png">] blin_s_malinoy</li>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] owleren</li>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] tuskastel</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tenth-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 8</a>
+                      <a href="#">Испытание Мини-Играми 2</a>
+                      <a href="#">АМОГУС: Испытание Доверия</a>
+                      <a href="#">Майнкрафт-Прятки</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Стрим, что был полон загадок, рисунками укажет, к какой фракции принадлежит Леонидас</h3>
+                      <img src="./imgs/tf4-shifr8.png" alt="shifr8">
+                      <h3>Ответ на Шифр VIII:<br>
+                        Смотрим снова на стрим в Мега-Крокодиле, но теперь в слова рисунков. Первые буквы <br>4-х слов дадут слово "ВНИЗ". Так, собираем паззл QR-кода внизу и считываем его</h3>
+                      <h3>Ответ: Авантюристы</h3>
+                      <ul style="margin-top: 30px;">
+                        <li>&lt;Дайлеры&gt; - ??:?? - KiriDa2_0 (+annanagets)</li>
+                        <li>&lt;Торренты&gt; - Неверно</li>
+                        <li>&lt;Титаны&gt; - Неверно</li>
+                        <li>&lt;Мятежники&gt; - Неверно</li>
+                    </ul>
+                    </div>
+                    <div class="right-content minigames simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+13,4<img src="./imgs/tf-rs-icon.png">] TheMaxCrashE</li>
+                        <li>[+1,6<img src="./imgs/tf-rs-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+8,5<img src="./imgs/tf-rs-icon.png">] KiriDa2_0</li>
+                        <li>[+2,4<img src="./imgs/tf-rs-icon.png">] RadiumEXE</li>
+                        <li>[+6,7<img src="./imgs/tf-rs-icon.png">] Xellronin</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+1,5<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                        <li>[+5,5<img src="./imgs/tf-rs-icon.png">] Ekonoms</li>
+                        <li>[+3,3<img src="./imgs/tf-rs-icon.png">] yaleretayaeryl</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+4,4<img src="./imgs/tf-rs-icon.png">] tuskastel</li>
+                        <li>[+2<img src="./imgs/tf-rs-icon.png">] owleren</li>
+                        <li>[+5<img src="./imgs/tf-rs-icon.png">] dr0chi</li>
+                        <li>[+4,2<img src="./imgs/tf-rs-icon.png">] Byklya__</li>
+                        <li>[+2,6<img src="./imgs/tf-rs-icon.png">] asperrrrrr</li>
+                      </ul>
+                      <h3>НЕЙТРАЛЫ</h3>
+                      <ul>
+                        <li>[+2,6<img src="./imgs/tf-rs-icon.png">] besterqpmn_</li>
+                      </ul>
+                    </div>
+                    <div class="right-content amogus simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+12,2<img src="./imgs/tf-rs-icon.png">] maksmaksimmaks</li>
+                        <li>[+4,7<img src="./imgs/tf-rs-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+4,7<img src="./imgs/tf-rs-icon.png">] annanagets</li>
+                        <li>[+9,4<img src="./imgs/tf-rs-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+6,1<img src="./imgs/tf-rs-icon.png">] yaleretayaeryl</li>
+                        <li>[+10,8<img src="./imgs/tf-rs-icon.png">] chusui_</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+14,6<img src="./imgs/tf-rs-icon.png">] owleren</li>
+                        <li>[+6,1<img src="./imgs/tf-rs-icon.png">] asperrrrrr</li>
+                      </ul>
+                    </div>
+                    <div class="right-content minecraft simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+12<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                        <li>[+13,8<img src="./imgs/tf-s-icon.png">] TheMaxCrashE</li>
+                        <li>[+12<img src="./imgs/tf-s-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+12<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+12<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+13,8<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+6<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                      </ul>
+                      <h3>ТОРРЕНТЫ</h3>
+                      <ul>
+                        <li>[+7,8<img src="./imgs/tf-s-icon.png">] owleren</li>
+                        <li>[+9,6<img src="./imgs/tf-s-icon.png">] Byklya__</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="eleventh-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 9</a>
+                      <a href="#">Распределение Павшей Фракции</a>
+                      <a href="#">Испытание Слов</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Путь тебя ведёт туда,<br>
+                        Где описание стрима:<br>
+                        И после ПКМ тогда<br>
+                        Найдёшь ответ ты на слова:<br>
+                        Кто лидер был у ЛОХ-СОСТАВА?</h3>
+                      <h3>Ответ на Шифр IX:<br>
+                        1) Заходим в описание к стриму<br>
+                        2) После ПКМ (Последователи Кисдез Мятежники) написано Айнайн</h3>
+                      <h3>Ответ: Айнайн</h3>
+                      <ul style="margin-top: 30px;">
+                        <li>&lt;Торренты&gt; - tuskastel</li>
+                        <li>&lt;Мятежники&gt; - yaleretayaeryl</li>
+                        <li>&lt;Титаны&gt; - Неверно</li>
+                        <li>&lt;Дайлеры&gt; - Неверно</li>
+                    </ul>
+                    </div>
+                    <div class="right-content fraction">
+                      <span>Проигравшая фракция: <h3 style="margin-top: 10px;">Торренты</h3></span>
+                    </div>
+                    <div class="right-content words simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+5<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                        <li>[+6,2<img src="./imgs/tf-s-icon.png">] TheMaxCrashE</li>
+                        <li>[+14,4<img src="./imgs/tf-s-icon.png">] dr0chi</li>
+                        <li>[+4<img src="./imgs/tf-s-icon.png">] blin_s_malinoy</li>
+                        <li>[+1,9<img src="./imgs/tf-s-icon.png">] hard_mems</li>
+                        <li>[+3<img src="./imgs/tf-s-icon.png">] sashafoxcat</li>
+                        <li>[+3,7<img src="./imgs/tf-s-icon.png">] maksmaksimmaks</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+8,6<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+3,6<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                        <li>[+4,6<img src="./imgs/tf-s-icon.png">] Xellronin</li>
+                        <li>[+5,9<img src="./imgs/tf-s-icon.png">] mercenaryJulian</li>
+                        <li>[+6,7<img src="./imgs/tf-s-icon.png">] tuskastel</li>
+                        <li>[+1,4<img src="./imgs/tf-s-icon.png">] RadiumEXE</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+1,7<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+8,2<img src="./imgs/tf-s-icon.png">] yaleretayaeryl</li>
+                        <li>[+6,1<img src="./imgs/tf-s-icon.png">] Byklya__</li>
+                        <li>[+6,9<img src="./imgs/tf-s-icon.png">] gergenes20</li>
+                        <li>[+4,6<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                        <li>[+1,7<img src="./imgs/tf-s-icon.png">] WhiteeWave</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="twelfth-day">
+                    <div class="left-bttns">
+                      <a href="#">Смехатлон XL</a>
+                      <a href="#">Дьяволы во Фракциях</a>
+                      <a href="#">Счетовод</a>
+                    </div>
+                    <div class="right-content smehalton">
+                      <h3>[+50,7] ТИТАНЫ</h3>
+                      <h3>[+43,1] ДАЙЛЕРЫ</h3>
+                      <h3>[+55,9] МЯТЕЖНИКИ</h3>
+                    </div>
+                    <div class="right-content devil simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+4,8<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                        <li>[+6,2<img src="./imgs/tf-s-icon.png">] TheMaxCrashE</li>
+                        <li>[+6<img src="./imgs/tf-s-icon.png">] maksmaksimmaks</li>
+                        <li>[+4<img src="./imgs/tf-s-icon.png">] dr0chi</li>
+                        <li>[+3,5<img src="./imgs/tf-s-icon.png">] asperrrrrr</li>
+                        <li>[+4,7<img src="./imgs/tf-s-icon.png">] hard_mems</li>
+                        <li>[+4,5<img src="./imgs/tf-s-icon.png">] sashafoxcat</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+1,6<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+1,6<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] mercenaryJulian</li>
+                        <li>[+1,2<img src="./imgs/tf-s-icon.png">] tuskastel</li> 
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+12,9<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+10,1<img src="./imgs/tf-s-icon.png">] yaleretayaeryl</li>
+                        <li>[+10,2<img src="./imgs/tf-s-icon.png">] Je3z</li>
+                        <li>[+9,9<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                      </ul>
+                    </div>
+                    <div class="right-content shetovod">
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+4,3<img src="./imgs/tf-s-icon.png">] TheMaxCrashE</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+4,3<img src="./imgs/tf-s-icon.png">] Xellronin</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+7,7<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="thirteenth-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 10</a>
+                      <a href="#">Испытания Отчаяния</a>
+                      <a href="#">Испытание Рисунками 2</a>
+                      <a href="#">Майнкрафт-Испытания</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Погибшая фракция<br>
+                        Оставила послание,<br>
+                        Что составит имя<br>
+                        Одинокого водителя.</h3>
+                      <img src="./imgs/tf4-shifr10.png" alt="shifr10" style="width: 183px;">
+                      <h3>Ответ на Шифр X:<br>
+                        1) Заходим в описание к стриму к павшей фракции <Кавалерия><br>
+                        2) Проводим параллель между выделенными буквами и картинкой (см. изображение ниже)</h3>
+                      <img src="./imgs/tf4-shifr10-otvet.png" alt="shifr10-otvet">
+                      <h3>Ответ: Юкси Юхт</h3>
+                      <ul style="margin-top: 30px;">
+                        <li>&lt;Мятежники&gt; - Неверно</li>
+                        <li>&lt;Титаны&gt; - Неверно</li>
+                        <li>&lt;Дайлеры&gt; - Неверно</li>
+                    </ul>
+                    </div>
+                    <div class="right-content otchayaniya simplebar" data-simplebar>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+15,4<img src="./imgs/tf-r-icon.png">] AsterAc</li>
+                        <li>[+11,3<img src="./imgs/tf-r-icon.png">] TheMaxCrashE</li>
+                        <li>[+9,7<img src="./imgs/tf-r-icon.png">] maksmaksimmaks</li>
+                        <li>[+13,8<img src="./imgs/tf-r-icon.png">] dr0chi</li>
+                        <li>[+14,6<img src="./imgs/tf-r-icon.png">] lisa_manoban12</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+16,2<img src="./imgs/tf-r-icon.png">] annanagets</li>
+                        <li>[+11,3<img src="./imgs/tf-r-icon.png">] KiriDa2_0</li>
+                        <li>[+13<img src="./imgs/tf-r-icon.png">] tuskastel</li> 
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+9,7<img src="./imgs/tf-r-icon.png">] chusui_</li>
+                        <li>[+17<img src="./imgs/tf-r-icon.png">] yaleretayaeryl</li>
+                        <li>[+8,9<img src="./imgs/tf-r-icon.png">] WhiteeWave</li>
+                        <li>[+8,1<img src="./imgs/tf-r-icon.png">] Ekonoms</li>
+                      </ul>
+                    </div>
+                    <div class="right-content risunok">
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+4,1<img src="./imgs/tf-s-icon.png">] dr0chi</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+2,7<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+3,2<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+3,2<img src="./imgs/tf-s-icon.png">] yaleretayaeryl</li>
+                        <li>[+4,8<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                        <li>[+3,1<img src="./imgs/tf-s-icon.png">] Byklya__</li>
+                      </ul>
+                    </div>
+                    <div class="right-content minecraft simplebar" data-simplebar>
+                      <h3 style="margin-bottom: 25px; font-size: 25px;">Лабиринт Миноса Тавруса</h3>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+7<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+14<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+7<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+25<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+20<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                        <li>[+7<img src="./imgs/tf-s-icon.png">] Byklya__</li>
+                      </ul>
+                      <h3 style="margin-top: 10px; margin-bottom: 25px; font-size: 25px;">Пол - Это Взрыв</h3>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+5<img src="./imgs/tf-s-icon.png">] AsterAc</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+4<img src="./imgs/tf-s-icon.png">] annanagets</li>
+                        <li>[+6<img src="./imgs/tf-s-icon.png">] KiriDa2_0</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+2<img src="./imgs/tf-s-icon.png">] chusui_</li>
+                        <li>[+1<img src="./imgs/tf-s-icon.png">] Ekonoms</li>
+                        <li>[+3<img src="./imgs/tf-s-icon.png">] Byklya__</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="fourteenth-day">
+                    <div class="left-bttns">
+                      <a href="#">Шифр 11</a>
+                      <a href="#">Финал ТФ-4</a>
+                    </div>
+                    <div class="right-content shifr simplebar" data-simplebar>
+                      <h3>Имя Культа, что обратит Данго Остров в<br> Хаос определится тем, что практически идентично друг другу:<br>
+                        - звездой;<br>
+                        - персонажем StarCraft;<br>
+                        - персонажем Marvel.</h3>
+                      <h3>Требовалось найти одинаковые названия по пунктам</h3>
+                      <h3>Ответ: Нова (Культ Нова)</h3>
+                      <ul style="margin-top: 30px;">
+                        <li>&lt;Титаны&gt; - 13:44 - hard_mems (feat blin_s_malinoy)</li>
+                        <li>&lt;Мятежники&gt; - 13:45 - yaleretayaeryl</li>
+                        <li>&lt;Дайлеры&gt; - 14:00:00 - tuskastel (feat mercenaryJulian)</li>
+                    </ul>
+                    </div>
+                    <div class="right-content final simplebar" data-simplebar>
+                      <h3 style="margin-bottom: 5px;">СЕТКА НА ФИНАЛ ТУРНИРА ФРАКЦИЙ 4</h3>
+                      <img src="./imgs/tf4-final-bracket.png" alt="final-bracket">
+                      <h3>Ссылка на сетку: <a href="https://challonge.com/ru/z8ik9xa2">https://challonge.com/ru/z8ik9xa2</a></h3>
+                      <h3 style="margin-bottom: 5px;">Сетка после первого дня:</h3>
+                      <img src="./imgs/tf4-final-bracket-firstday.png" alt="final-bracket-after-first-day">
+                    </div>
+                  </div>
+                  <div class="fifteenth-day">
+                    <div class="left-bttns">
+                      <a href="#">Финал ТФ-4</a>
+                    </div>
+                    <div class="right-content final simplebar" data-simplebar>
+                      <h3 style="margin-bottom: 5px;">Итоговая сетка:</h3>
+                      <img src="./imgs/tf4-final-bracket-result.png" alt="final-bracket-result">
+                      <h3 style="font-size: 25px; margin-bottom: 25px;">Очки за Финал ТФ-4</h3>
+                      <h3>ТИТАНЫ</h3>
+                      <ul>
+                        <li>[+97,0] maksmaksimmaks</li>
+                        <li>[+50,8] blin_s_malinoy</li>
+                        <li>[+12,8] AsterAc</li>
+                        <li>[+8,30] TheMaxCrashE</li>
+                        <li>[+5,30] hard_mems</li>
+                        <li>[+3,80] lisa_manoban12</li>
+                      </ul>
+                      <h3>ДАЙЛЕРЫ</h3>
+                      <ul>
+                        <li>[+35,8] KiriDa2_0</li>
+                        <li>[+34,8] annanagets</li>
+                        <li>[+9,80] tuskastel</li>
+                        <li>[+6,80] rrasher</li>
+                      </ul>
+                      <h3>МЯТЕЖНИКИ</h3>
+                      <ul>
+                        <li>[+68,0] chusui_</li>
+                        <li>[+60,8] Ekonoms</li>
+                        <li>[+56,5] Je3z</li>
+                        <li>[+48,8] fayzeel</li>
+                        <li>[+5,30] yaleretayaeryl</li>
+                        <li>[+3,80] Byklya__</li>
+                        <li>[+3,80] WhiteeWave</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="result-day">
+                    <div class="left-bttns">
+                      <a href="#">Ответы на Бинго ТФ-4</a>
+                      <a href="#">Очки за Бинго ТФ-4</a>
+                      <a href="#">Итоговые очки</a>
+                      <a href="#">Итоговые Итоги</a>
+                    </div>
+                    <div class="right-content bingo-answers simplebar" data-simplebar>
+                      <h2>— 1) Какая фракция вылетит первой?</h2>
+                      <h3>Ответ: Кавалерия (Защитники Ди-Тауна)</h3>
+                      <h2>— 2) Какая фракция вылетит второй?</h2>
+                      <h3>Ответ: Торренты (Пираты Бинкса)</h3>
+                      <h2>— 3) Будет ли у какой-нибудь фракции как минимум два бездействующих лица (заработают 0 очков)?</h2>
+                      <h3>Ответ: Да</h3>
+                      <h2>— 4) Предскажи трёх лучших игроков<br> Турнира</h2>
+                      <h3>Ответ: KiriDa2_0, Ekonoms, yaleretayaeryl</h3>
+                      <h2>— 5) Кто будет самым везучим гадом?<br> (то есть заработает больше всех очков на рандомных играх)</h2>
+                      <h3>Ответ: annanagets</h3>
+                      <h2>— 6) Кто будет самым скилловым челом?<br> (то есть заработает больше всех очков на играх, в которых требуется какая-то<br> смекалка, умение и в таком духе)</h2>
+                      <h3>Ответ: chusui_</h3>
+                      <h2>— 7) Кто даст больше всего правильных ответов на шифрах?</h2>
+                      <h3>Ответ: KiriDa2_0</h3>
+                      <h2>— 8) Разрушится ли Ди-Таун?</h2>
+                      <h3>Ответ: Да)</h3>
+                      <h2>— 9) Получит ли Кисдез желаемое?</h2>
+                      <h3>Ответ: Нет</h3>
+                      <h2>— 10) Угадай хотя бы одного персонажа, который будет принимать участие в<br> рассказе "ТУРНИР ФРАКЦИЙ 4. ЛЕДЯНОЕ ПЛАМЯ"? (из всего перечня их 2)</h2>
+                      <h3>Ответ: Кристал Ширен & Леонидас</h3>
+                      <h2>— 11) Будем ли мы играть в Свою Игру?</h2>
+                      <h3>Ответ: Нет</h3>
+                      <h2>— 12) Будем ли мы испытывать свои способности в танцах?</h2>
+                      <h3>Ответ: Нет</h3>
+                      <h2>— 13) Будет ли Мафия?</h2>
+                      <h3>Ответ: Нет</h3>
+                      <h2>— 14) Будем ли мы выяснять, кто из нас<br> овощ?</h2>
+                      <h3>Ответ: Да</h3>
+                      <h2>— 15) Будут ли Дьяволы в деталях?</h2>
+                      <h3>Ответ: Да</h3>
+                      <h2>— 16) Кто победит?</h2>
+                      <h3>Ответ: Титаны (Союзники Авроруса)</h3>
+                      <h2>— 17) Как думаешь, сколько всего будет испытаний и различных соревнований? (шифры не считаем, то есть сейчас таких испытаний в расписании 9)</h2>
+                      <h3>Ответ: 32 (без Финала)</h3>
+                    </div>
+                    <div class="right-content bingo-points simplebar" data-simplebar>
+                      <ul>
+                        <li>+45 — [9/17] 970710hex (1) : 3, 4(1), 5, 8, 9, 11,<br> 13, 14, 15</li>
+                      </ul>
+                      <ul>
+                        <li>+35 — [7/17] fayzeel (3) : 6, 7, 9, 12, 13, 14, 15</li>
+                        <li>+35 — [7/17] maksmaksimmaks (1) : 4(1), 9, 10,<br> 11, 13, 14, 15</li>
+                        <li>+35 — [7/17] Je3z (3) : 3, 4(1), 6, 8, 9, 12, 14</li>
+                        <li>+35 — [7/17] Xellronin (2) : 1, 3, 4(1), 9, 12, 13, 15</li>
+                      </ul>
+                      <ul>
+                        <li>+30 — [6/17] WaterYay (3) : 3, 4(1), 8, 14, 15, 17</li>
+                        <li>+30 — [6/17] chusui_ (3) : 3, 4(1), 5, 9, 10, 15</li>
+                        <li>+30 — [6/17] TheMaxCrashE (1) : 1, 9, 12, 13, 14,<br> 15</li>
+                      </ul>
+                      <ul>
+                        <li>+25 — [5/17] blin_s_malinoy (1) : 8, 9, 12, 13, 14</li>
+                        <li>+25 — [5/17] Zerr0ta (3) : 3, 11, 12, 15, 16</li>
+                        <li>+25 — [5/17] Lisa_Manoban12 (1) : 2, 13, 14, 15,<br> 17</li>
+                        <li>+25 — [5/17] sashafoxcat (1) : 3, 12, 13, 14, 15</li>
+                      </ul>
+                      <ul>
+                        <li>+20 — [4/17] AsterAc (1) : 3, 12, 14, 15</li>
+                        <li>+20 — [4/17] KiriDa2_0 (2) : 8, 9, 11, 14</li>
+                        <li>+20 — [4/17] annanagets (2) : 3, 8, 10, 15</li>
+                        <li>+20 — [4/17] yaleretayaeryl (3) : 5, 9, 14, 15</li>
+                        <li>+20 — [4/17] tuskastel (2) : 3, 12, 14, 15</li>
+                        <li>+20 — [4/17] TaFeedRoom (2) : 3, 8, 9, 15</li>
+                      </ul>
+                    </div>
+                    <div class="right-content result-points simplebar" data-simplebar>
+                      <img src="./imgs/tf4-resultpoints-titan.png" alt="titans-result-points">
+                      <img src="./imgs/tf4-resultpoints-dylers.png" alt="dylers-result-points">
+                      <img src="./imgs/tf4-resultpoints-myatezhniki.png" alt="myatezhniki-result-points">
+                    </div>
+                    <div class="right-content result simplebar" data-simplebar>
+                      <p>— Лучший игрок ТФ-4: <span>KiriDa2_0</span></p>
+                      <p style="margin-bottom: 0;">— Рандомайзер: <span>annanagets</span></p>
+                      <p style="margin-bottom: 0;">— Сильнейший в смежной категории:<br> <span>KiriDa2_0</span></p>
+                      <p style="margin-bottom: 0;">— Самый скилловый: <span>chusui_</span></p>
+                      <p>— Шифровик: <span>KiriDa2_0</span></p>
+                      <p style="margin-bottom: 0;">— Финалист: <span>maksmaksimmaks (NENS0_0)</span></p>
+                      <p style="margin-bottom: 0;">— Предвестник бури: <span>970710hex</span></p>
+                      <p>— Мигрант: <span>blin_s_malinoy</span></p>
+                      <p style="margin-bottom: 0;">— Пять лучших игроков:<br>
+                      — 1. <span>KiriDa2_0</span><br>
+                      — 2. <span>Ekonoms</span><br>
+                      — 3. <span>yaleretayaeryl</span><br>
+                      — 4. <span>annanagets</span><br>
+                      — 5. <span>chusui_</span></p>
+                      <p style="margin-bottom: 0; margin-top: 20px;">— Отряд нулевых:<br>
+                      — <span>goodbyer339</span> & <span>NoorgTV</span><br>
+                      — <span>shlunik</span> & <span>SkinnyM</span><br>
+                      — <span>sanyafromdonbass</span> & <span>haku31</span><br>
+                      — <span>marstvi</span> & <span>meduzika</span></p>
                     </div>
                   </div>
                 </div>

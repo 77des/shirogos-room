@@ -175,6 +175,9 @@ height: 72px;
     justify-content: center;
     height: 100vh;
 }
+.rating .mobile-table.rating-table {
+    display: none;
+}
 .rating h2 {
     font-size: 3.375rem;
     text-align: center;
@@ -186,6 +189,9 @@ height: 72px;
     font-size: 1.5rem;
     text-align: center;
     line-height: 1.25;
+}
+.rating .mobile-rating-desc {
+    display: none;
 }
 .rating p.criteria {
     font-size: 0.9375rem;
@@ -370,16 +376,14 @@ height: 72px;
 .formats .third-button {
     margin-right: 0;
 }
-.first-format, .second-format, .third-format, .fourth-format, .fifth-format, .sixth-format {
+.first-format, .second-format, .third-format, .fourth-format, .fifth-format, .sixth-format, .seventh-format {
     transition: opacity 0.5s ease 0s;
-}
-.first-format img, .second-format img, .third-format img, .fourth-format img, .fifth-format img, .sixth-format img {
-    width: 326px;
-    height: 462px;
-}
-.first-format, .second-format, .third-format, .fourth-format, .fifth-format, .sixth-format {
     position: absolute;
     top: 0;
+}
+.first-format img, .second-format img, .third-format img, .fourth-format img, .fifth-format img, .sixth-format img, .seventh-format img {
+    width: 326px;
+    height: 462px;
 }
 .formats .dan-button {
     position: absolute;
@@ -711,11 +715,11 @@ height: 72px;
     margin-left: 48px;
     border-top: 15px solid #D9D9D9;
 }
-.faction-tournament .first-tour>div, .faction-tournament .second-tour>div {
+.faction-tournament .first-tour>div, .faction-tournament .second-tour>div, .faction-tournament .third-tour>div, .faction-tournament .fourth-tour>div {
     margin-top: 28px;
     display: none;
 }
-.faction-tournament .first-tour>div.active, .faction-tournament .second-tour>div.active {
+.faction-tournament .first-tour>div.active, .faction-tournament .second-tour>div.active, .faction-tournament .third-tour>div.active, .faction-tournament .fourth-tour>div.active {
     display: flex;
 }
 .faction-tournament .left-bttns {
@@ -735,8 +739,8 @@ height: 72px;
     color: #C34375;
 }
 .faction-tournament .left-bttns .result-bttn {
-    margin-bottom: 0;
-    margin-top: 178px;
+    margin-bottom: 0 !important;
+    margin-top: 94px;
 }
 .faction-tournament .right-content {
     margin-left: 80px;
@@ -744,10 +748,15 @@ height: 72px;
     display: none;
     position: absolute;
     left: 350px;
-    height: 475px;
+    height: 391px;
 }
 .faction-tournament .right-content.active {
     display: block;
+}
+.faction-tournament .right-content h2 {
+    font-size: 20px;
+    line-height: 25px;
+    color: white;
 }
 .faction-tournament .right-content h3 {
     font-size: 20px;
@@ -767,7 +776,17 @@ height: 72px;
 .faction-tournament .right-content p {
     margin-bottom: 20px;
 }
-.faction-tournament .right-content.crocodile {
+.faction-tournament .result-day .right-content p {
+    font-size: 20px;
+    line-height: 25px;
+    color: white;
+}
+.faction-tournament .result-day .right-content span {
+    color: #C34375;
+    font-size: 20px;
+    line-height: 25px;
+}
+.faction-tournament .right-content.simplebar {
     width: 530px;
 }
 .faction-tournament .simplebar-track.simplebar-vertical {
@@ -798,6 +817,7 @@ height: 72px;
     position: absolute;
     background: #242424;
     width: 230px;
+    max-height: 262px;
     z-index: 1;
     margin-left: 563px;
 }
@@ -822,12 +842,16 @@ height: 72px;
 .week-dropdown a.active, .tournament-dropdown a.active {
     display: none;
 }
+.faction-tournament .week-dropdown .simplebar-track.simplebar-vertical {
+    background: #181818;
+}
 .tournament-dropdown {
     width: 282px;
     margin-left: 208px;
 }
 .faction-tournament .second-week .left-bttns .result-bttn {
-    margin-top: 112px;
+    margin-top: 28px;
+    margin-bottom: 0;
 }
 .faction-tournament .sixth-week .right-content.darksouls {
     width: 530px;
@@ -849,10 +873,56 @@ height: 72px;
     width: 530px;
 }
 .faction-tournament .fourth-week .left-bttns .result-bttn, .faction-tournament .sixth-week .left-bttns .result-bttn {
-    margin-top: 244px;
+    margin-top: 160px;
 }
 .faction-tournament .fifth-week .left-bttns .result-bttn {
-    margin-top: 182px;
+    margin-top: 98px;
+}
+.faction-tournament .second-tour .first-week .left-bttns a {
+    margin-bottom: 25px;
+}
+.faction-tournament .second-tour .first-week .left-bttns .result-bttn {
+    margin-top: 22px;
+}
+.faction-tournament .second-tour .third-week .left-bttns a, .faction-tournament .second-tour .fourth-week .left-bttns a {
+    margin-bottom: 15px;
+}
+.faction-tournament .second-tour .third-week .left-bttns .result-bttn, .faction-tournament .second-tour .fourth-week .left-bttns .result-bttn {
+    margin-top: 36px;
+}
+.faction-tournament .second-tour .fifth-week .left-bttns a {
+    margin-bottom: 10px;
+}
+.faction-tournament .second-tour .fifth-week .left-bttns .result-bttn {
+    margin-top: 9px;
+}
+.faction-tournament .second-tour .sixth-week .left-bttns a {
+    margin-bottom: 30px;
+}
+.faction-tournament .second-tour .sixth-week .left-bttns a:last-child {
+    margin-top: 22px;
+    margin-bottom: 0;
+}
+.faction-tournament .fourth-tour img {
+    width: 500px;
+    margin-bottom: 25px;
+}
+.faction-tournament .fourth-tour img:last-child {
+    margin-bottom: 0;
+}
+.faction-tournament .fourth-tour h3 {
+    margin-bottom: 15px;
+}
+.faction-tournament .fourth-tour h3:last-child {
+    margin-bottom: 0;
+}
+.faction-tournament .fourth-tour ul li {
+    display: flex;
+    align-items: center;
+}
+.faction-tournament .fourth-tour ul li img {
+    width: 30px;
+    margin: 0 2px;
 }
 .faction-tournament .main-content>div {
     display: none;
@@ -862,13 +932,11 @@ height: 72px;
 .faction-tournament .main-content>div.active {
     display: block;
 }
-.faction-tournament .second-tour .first-week .left-bttns .result-bttn {
-    margin-top: 46px;
-}
 
 @media (min-width: 320px) and (max-width: 768px) {
     .header {
-        background-position: -250px;
+        background-image: url('../imgs/header-bg-mobile-2.png');
+        background-position: -200px;
     }
     .container {
         width: 100%;
@@ -924,18 +992,19 @@ height: 72px;
         margin-right: 0;
     }
     .header .account .login a {
-        padding: 7px 8px 8px 9px;
+        padding: 0.4375rem 0.5rem 0.5rem 0.5625rem;
         background: #C34375;
         border-radius: 9px;
         font-size: 1.125rem;
         line-height: 1.27777777778;
     }
     .header h1 {
+        display: none;
         margin-left: 0;
         margin-bottom: 0;
         font-size: 3.75rem;
         line-height: 95.5%;
-        -webkit-text-stroke: 2px #DEDEDE
+        -webkit-text-stroke: 1px #DEDEDE
     }
     .header-menu {
         flex-direction: column;
@@ -953,5 +1022,30 @@ height: 72px;
     }
     .header-menu a.header-arrow {
         display: none;
+    }
+    .rating .desktop-rating-desc {
+        display: none;
+    }
+    .rating .mobile-rating-desc {
+        display: block;
+    }
+    .rating h2 {
+        font-size: 1.875rem;
+        line-height: 1.26666666667;
+        margin-bottom: 18px;
+    }
+    .rating p {
+        font-size: 0.9375rem;
+        line-height: 1.26666666667rem;
+    }
+    .rating p.criteria {
+        font-size: 0.75rem;
+        line-height: 1.25;
+    }
+    .rating .desktop-table.rating-table {
+        display: none;
+    }
+    .rating .mobile-table.rating-table {
+        display: block;
     }
 }

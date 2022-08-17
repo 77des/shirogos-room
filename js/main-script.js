@@ -14,9 +14,9 @@ let secondButton = document.querySelector(
 );
 let thirdButton = document.querySelector(".formats .third-button .dan-button");
 
-let firstActiveIndex = getRandomInt(0, 6);
-let secondActiveIndex = getRandomInt(0, 6);
-let thirdActiveIndex = getRandomInt(0, 6);
+let firstActiveIndex = getRandomInt(0, 7);
+let secondActiveIndex = getRandomInt(0, 7);
+let thirdActiveIndex = getRandomInt(0, 7);
 
 firstButtonFormats[firstActiveIndex].style.opacity = 1;
 secondButtonFormats[secondActiveIndex].style.opacity = 1;
@@ -25,21 +25,21 @@ thirdButtonFormats[thirdActiveIndex].style.opacity = 1;
 firstButton.addEventListener("click", function () {
   let newIndex =  firstActiveIndex;
   while (newIndex == firstActiveIndex) {
-    newIndex = getRandomInt(0, 6);
+    newIndex = getRandomInt(0, 7);
   }
   firstSwitchFormats(firstButtonFormats, firstActiveIndex, newIndex);
 });
 secondButton.addEventListener("click", function () {
   let newIndex =  secondActiveIndex;
   while (newIndex == secondActiveIndex) {
-    newIndex = getRandomInt(0, 6);
+    newIndex = getRandomInt(0, 7);
   }
   secondSwitchFormats(secondButtonFormats, secondActiveIndex, newIndex);
 });
 thirdButton.addEventListener("click", function () {
   let newIndex =  thirdActiveIndex;
   while (newIndex == thirdActiveIndex) {
-    newIndex = getRandomInt(0, 6);
+    newIndex = getRandomInt(0, 7);
   }
   thirdSwitchFormats(thirdButtonFormats, thirdActiveIndex, newIndex);
 });
@@ -175,133 +175,173 @@ for (let i = 0; i < contentInfo.length; i++) {
   });
 }
 
-contentSwitch();
+//faction-tournament modal
 
-//faction-tournament modal left-bttns
-function contentSwitch() {
-  let currentTour = document.querySelector(
-    ".faction-tournament .main-content>div.active"
-  );
-  let currentWeek = document.querySelector(
-    ".faction-tournament ." + currentTour.classList[0] + ">div.active"
-  );
-  let leftBttns = document.querySelectorAll(
-    "." +
-      currentTour.classList[0] +
-      " ." +
-      currentWeek.classList[0] +
-      " .left-bttns a"
-  );
-  let rightContent = document.querySelectorAll(
-    "." +
-      currentTour.classList[0] +
-      " ." +
-      currentWeek.classList[0] +
-      " .right-content"
-  );
+//category buttons
+let categoryBttns = document.querySelectorAll('.faction-tournament .main-content .left-bttns a');
+let categoryContent = document.querySelectorAll('.faction-tournament .main-content .right-content');
 
-  for (let i = 0; i < rightContent.length; i++) {
-    if (rightContent[i].classList.contains("active")) {
-      var prevContent = rightContent[i];
-    }
-    if (leftBttns[i].classList.contains("active")) {
-      var prevLeftBttn = leftBttns[i];
-    }
-    leftBttns[i].addEventListener("click", function (event) {
-      event.preventDefault();
-      prevContent.classList.remove("active");
-      rightContent[i].classList.add("active");
-      prevContent = rightContent[i];
-      prevLeftBttn.classList.remove("active");
-      leftBttns[i].classList.add("active");
-      prevLeftBttn = leftBttns[i];
-    });
-  }
+for (let i = 0; i < categoryBttns.length; i++) {
+  categoryBttns[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    let activeCategoryBttn = document.querySelector('.faction-tournament .main-content .left-bttns a.active');
+    let activeCategoryContent = document.querySelector('.faction-tournament .main-content .right-content.active');
+
+    activeCategoryBttn.classList.remove('active');
+    categoryBttns[i].classList.add('active');
+    activeCategoryContent.classList.remove('active');
+    categoryContent[i].classList.add('active');
+  })
 }
 
-//faction-tournament week-drowdown
-let currentTour = document.querySelector(
-  ".faction-tournament .main-content>div.active"
-);
-let currentWeek = document.querySelector(
-  ".faction-tournament ." + currentTour.classList[0] + ">div.active"
-);
-let weekSelectBttn = document.querySelector(
-  ".faction-tournament .select-bttns .week-select"
-);
-let weekDropdown = document.querySelector(".faction-tournament .week-dropdown");
-let weekDropdownBttns = document.querySelectorAll(
-  ".faction-tournament .week-dropdown a"
-);
-let allWeeks = document.querySelectorAll(
-  ".faction-tournament ." + currentTour.classList[0] + ".first-tour>div"
-);
+//weeks buttons
+let weeksContent = document.querySelectorAll('.faction-tournament .main-content > div > div');
+let weekBttns = document.querySelectorAll('.faction-tournament .week-dropdown a');
+let weekDropdown = document.querySelector('.faction-tournament .week-dropdown');
+let weekSelectBttn = document.querySelector('.faction-tournament .week-select');
+let weekSelectBttnText = weekSelectBttn.querySelector('p');
 
-weekSelectBttn.addEventListener("click", function () {
-  if (weekDropdown.classList.contains("active")) {
-    weekDropdown.classList.remove("active");
-  } else {
-    weekDropdown.classList.add("active");
-  }
-});
+weekSelectBttn.addEventListener('click', function() {
+  weekDropdown.classList.toggle('active');
+  tourDropdown.classList.remove('active');
+})
 
-for (let i = 0; i < weekDropdownBttns.length; i++) {
-  if (weekDropdownBttns[i].classList.contains("active")) {
-    var activeWeek = weekDropdownBttns[i];
-  }
-  weekDropdownBttns[i].addEventListener("click", function (event) {
+
+for (let i = 0; i < weekBttns.length; i++) {
+  weekBttns[i].addEventListener('click', function(event) {
     event.preventDefault();
-    console.log(allWeeks);
-    currentWeek.classList.remove("active");
-    allWeeks[i].classList.add("active");
-    currentWeek = allWeeks[i];
-    activeWeek.classList.remove("active");
-    weekDropdownBttns[i].classList.add("active");
-    activeWeek = weekDropdownBttns[i];
-    weekSelectBttn.innerHTML =
-      weekDropdownBttns[i].innerHTML + '<div class="arrow-bottom"></div>';
-    weekDropdown.classList.remove("active");
-  });
+    let activeWeekBttn = document.querySelector('.faction-tournament .week-dropdown a.active');
+    let activeWeekContent = document.querySelector('.faction-tournament .main-content > div > div.active');
+
+    activeWeekBttn.classList.remove('active');
+    weekBttns[i].classList.add('active');
+    activeWeekContent.classList.remove('active');
+    if (toursContent[0].classList.contains('active')) {
+      weeksContent[i].classList.add('active');
+      switchCategory(weeksContent[i]);
+    } else if (toursContent[1].classList.contains('active')) {
+      weeksContent[i+7].classList.add('active');
+      switchCategory(weeksContent[i+7]);
+    } else if (toursContent[2].classList.contains('active')) {
+      weeksContent[i+14].classList.add('active');
+      switchCategory(weeksContent[i+14]);
+    } else if (toursContent[3].classList.contains('active')) {
+      weeksContent[i+19].classList.add('active');
+      switchCategory(weeksContent[i+19]);
+    }
+    weekDropdown.classList.remove('active');
+    weekSelectBttnText.innerHTML = weekBttns[i].innerHTML;
+  })
 }
 
-let tourSelectBttn = document.querySelector(
-  ".faction-tournament .select-bttns .tournament-select"
-);
-let tourDropdown = document.querySelector(
-  ".faction-tournament .tournament-dropdown"
-);
-let tourDropdownBttns = document.querySelectorAll(
-  ".faction-tournament .tournament-dropdown a"
-);
-let allTours = document.querySelectorAll(
-  ".faction-tournament .main-content>div"
-);
+let toursContent = document.querySelectorAll('.faction-tournament .main-content > div');
+let tourBttns = document.querySelectorAll('.faction-tournament .tournament-dropdown a');
+let tourDropdown = document.querySelector('.faction-tournament .tournament-dropdown');
+let tourSelectBttn = document.querySelector('.faction-tournament .tournament-select');
+let tourSelectBttnText = tourSelectBttn.querySelector('p');
+let prevActiveTour = 1;
 
-tourSelectBttn.addEventListener("click", function () {
-  if (tourDropdown.classList.contains("active")) {
-    tourDropdown.classList.remove("active");
-  } else {
-    tourDropdown.classList.add("active");
-  }
-});
+tourSelectBttn.addEventListener('click', function() {
+  tourDropdown.classList.toggle('active');
+  weekDropdown.classList.remove('active');
+})
 
-for (let i = 0; i < tourDropdownBttns.length; i++) {
-  if (tourDropdownBttns[i].classList.contains("active")) {
-    var activeTour = tourDropdownBttns[i];
-  }
-  tourDropdownBttns[i].addEventListener("click", function (event) {
+weekBttns[6].style.borderBottom = "3px solid #181818";
+
+for (let i = 0; i < tourBttns.length; i++) {
+  tourBttns[i].addEventListener('click', function(event) {
     event.preventDefault();
-    currentTour.classList.remove("active");
-    allTours[i].classList.add("active");
-    currentTour = allTours[i];
-    activeTour.classList.remove("active");
-    tourDropdownBttns[i].classList.add("active");
-    activeTour = tourDropdownBttns[i];
-    tourSelectBttn.innerHTML =
-      tourDropdownBttns[i].innerHTML + '<div class="arrow-bottom"></div>';
-    tourDropdown.classList.remove("active");
-    contentSwitch();
-  });
+    let activeTourBttn = document.querySelector('.faction-tournament .tournament-dropdown a.active');
+    let activeTourContent = document.querySelector('.faction-tournament .main-content > div.active');
+
+    activeTourBttn.classList.remove('active');
+    tourBttns[i].classList.add('active');
+    activeTourContent.classList.remove('active');
+    toursContent[i].classList.add('active');
+    tourDropdown.classList.remove('active');
+    tourSelectBttnText.innerHTML = tourBttns[i].innerHTML;
+
+    let prevActiveWeekBttn = document.querySelector('.faction-tournament .week-dropdown a.active');
+    let prevActiveWeekContent = document.querySelector('.faction-tournament .main-content > div > div.active');
+    let newActiveWeekBttn = document.querySelector('.faction-tournament .week-dropdown a:first-child')
+    let newActiveWeekContent = toursContent[i].querySelector('div:first-child');
+
+    prevActiveWeekBttn.classList.remove('active');
+    newActiveWeekBttn.classList.add('active');
+    prevActiveWeekContent.classList.remove('active');
+    newActiveWeekContent.classList.add('active');
+    weekSelectBttnText.innerHTML = weekBttns[0].innerHTML;
+
+    switchCategory(newActiveWeekContent);
+
+    if (tourBttns[2].classList.contains('active')) {
+      if (prevActiveTour == 4) {
+        for (let i = 5; i <= 15; i++) {
+          weekBttns[i].style.display = 'none';
+        }
+        for (let i = 1; i <= 4; i++) {
+          weekBttns[i-1].innerHTML = 'Неделя ' + i;
+        }
+      } else if (prevActiveTour == 1 || prevActiveTour == 2) {
+        weekBttns[5].style.display = 'none';
+        weekBttns[6].style.display = 'none';
+      }
+      weekBttns[4].innerHTML = 'Результаты';
+      weekBttns[4].style.borderBottom = "3px solid #181818";
+      prevActiveTour = 3;
+      weekSelectBttnText.innerHTML = 'Неделя 1';
+    } else if (tourBttns[0].classList.contains('active') || tourBttns[1].classList.contains('active')) {
+      if (prevActiveTour == 3) {
+        weekBttns[5].style.display = 'block';
+        weekBttns[6].style.display = 'block';
+        weekBttns[4].innerHTML = 'Неделя 5';
+        weekBttns[5].innerHTML = 'Неделя 6';
+        weekBttns[6].innerHTML = 'Результаты';
+        weekBttns[4].style.borderBottom = "none";
+      } else if (prevActiveTour == 4) {
+        for (let i = 7; i <= 15; i++) {
+          weekBttns[i].style.display = 'none';
+        }
+        for (let i = 1; i <= 6; i++) {
+          weekBttns[i-1].innerHTML = 'Неделя ' + i;
+        }
+        weekBttns[6].innerHTML = 'Результаты';
+      }
+      weekBttns[6].style.borderBottom = "3px solid #181818";
+      prevActiveTour = 1;
+      weekSelectBttnText.innerHTML = 'Неделя 1';
+    } else if (tourBttns[3].classList.contains('active')) {
+      if (prevActiveTour == 1 || prevActiveTour == 2) {
+        for (let i = 7; i <= 15; i++) {
+          weekBttns[i].style.display = 'block';
+        }
+        weekBttns[6].style.borderBottom = "none";
+      } else if (prevActiveTour == 3) {
+        for (let i = 5; i <= 15; i++) {
+          weekBttns[i].style.display = 'block';
+        }
+        weekBttns[4].style.borderBottom = "none";
+      }
+      for (let i = 1; i <= 7; i++) {
+        weekBttns[i-1].innerHTML = 'День ' + i;
+      }
+      weekBttns[15].style.borderBottom = "3px solid #181818";
+      weekSelectBttnText.innerHTML = 'День 1';
+      prevActiveTour = 4;
+    }
+  })
+}
+
+function switchCategory(newWeekContent) {
+  let prevActiveCategoryBttn = document.querySelector('.faction-tournament .main-content .left-bttns a.active');
+  let prevActiveCategoryContent = document.querySelector('.faction-tournament .main-content .right-content.active');
+  let newActiveLeftBttns = newWeekContent.querySelectorAll('.left-bttns a');
+  let newActiveCategoryContent = newWeekContent.querySelectorAll('.faction-tournament .right-content');
+
+  prevActiveCategoryBttn.classList.remove('active');
+  newActiveLeftBttns[0].classList.add('active');
+  prevActiveCategoryContent.classList.remove('active');
+  newActiveCategoryContent[0].classList.add('active');
 }
 
 //dango-rating table
