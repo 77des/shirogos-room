@@ -22,8 +22,6 @@ chapterSelect.addEventListener('click', function() {
     }
 })
 
-//chapter dropdown effect 
-
 
 //pages nav
 let pagesText = document.querySelectorAll('.pages-text');
@@ -166,6 +164,10 @@ function toNextPage(smthPages) {
     for (let i = 0; i < smthPages.length; i++) {
         if (smthPages[i].classList.contains('active')) {
             let activePage = smthPages[i];
+            if (pages.classList.contains('forlowers') && i == 17) {
+                window.location.href = "./forlowers2.html";
+                mangaPages[17].classList.add('active');
+            }
             if (i != smthPages.length-1) {
                 for (let text of pagesText) {
                     if (pages.classList.contains('forlowers') || pages.classList.contains('forlowers2')) {
@@ -195,6 +197,10 @@ function toPrevPage(smthPages) {
     for (let i = 0; i < smthPages.length; i++) {
         if (smthPages[i].classList.contains('active')) {
             let activePage = smthPages[i];
+            if (pages.classList.contains('forlowers2') && i == 0) {
+                window.location.href = "./forlowers.html";
+                
+            }
             if (i != 0) {
                 for (let text of pagesText) {
                     if (pages.classList.contains('forlowers') || pages.classList.contains('forlowers2')) {

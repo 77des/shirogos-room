@@ -241,6 +241,7 @@ for (let i = 0; i < weekBttns.length; i++) {
       weeksContent[i+14].classList.add('active');
       switchCategory(weeksContent[i+14]);
     } else if (toursContent[3].classList.contains('active')) {
+      weekBttns[14].style.borderBottom = "none";
       weeksContent[i+19].classList.add('active');
       switchCategory(weeksContent[i+19]);
     }
@@ -250,6 +251,9 @@ for (let i = 0; i < weekBttns.length; i++) {
     weekSelectBttnText.innerHTML = weekBttns[i].innerHTML;
     if (weekSelectBttnText.innerHTML == 'Результаты') {
       weekSelectBttnText.classList.add('result-text');
+      if (toursContent[3].classList.contains('active')) {
+        weekBttns[14].style.borderBottom = "3px solid #181818";
+      }
     } else if (weekSelectBttnText.classList.contains('result-text')) {
       weekSelectBttnText.classList.remove('result-text');
     }
@@ -343,6 +347,7 @@ for (let i = 0; i < tourBttns.length; i++) {
       prevActiveTour = 3;
       weekSelectBttnText.innerHTML = 'Неделя 1';
     } else if (tourBttns[0].classList.contains('active') || tourBttns[1].classList.contains('active')) {
+      tourBttns[2].style.borderBottom = 'none';
       if (prevActiveTour == 3) {
         weekBttns[5].style.display = 'block';
         weekBttns[6].style.display = 'block';
@@ -363,6 +368,7 @@ for (let i = 0; i < tourBttns.length; i++) {
       prevActiveTour = 1;
       weekSelectBttnText.innerHTML = 'Неделя 1';
     } else if (tourBttns[3].classList.contains('active')) {
+      tourBttns[2].style.borderBottom = "3px solid #181818";
       if (prevActiveTour == 1 || prevActiveTour == 2) {
         for (let i = 7; i <= 15; i++) {
           weekBttns[i].style.display = 'block';
