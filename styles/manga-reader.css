@@ -221,6 +221,15 @@ header {
     width: 1110px;
     height: 1628px;
 }
+.pages.forlowers2 {
+    height: 1776px;
+    display: flex;
+    justify-content: center;
+}
+.pages.forlowers2 img {
+    width: 1110px;
+    height: 1776px;
+}
 .pages.dandeathside {
     height: 1480px;
     display: flex;
@@ -250,6 +259,9 @@ header {
 }
 .pages.forlowers .manga-page {
     height: 1628px;
+}
+.pages.forlowers2 .manga-page {
+    height: 1776px;
 }
 .pages.dandeathside .manga-page {
     height: 1480px;
@@ -300,13 +312,15 @@ header {
 }
 .pages .img-flex img {
     margin-top: 37px;
+    width: 397px;
 }
 .pages.mutiny h2 {
-    margin-left: 10px;
+    margin-left: 16px;
 }
 .pages .story-page .img-flex p {
-    width: 736px;
-    margin-left: 27px;
+    width: 685px;
+    margin-left: 28px;
+    margin-top: 8px;
 }
 .pages .story-page span {
     color: #C34375;

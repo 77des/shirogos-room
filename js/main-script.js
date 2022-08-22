@@ -108,19 +108,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }); // end foreach
 
   /* закрытие по ESC */
-  document.body.addEventListener(
-    "keyup",
-    function (e) {
-      var key = e.keyCode;
+  // document.body.addEventListener(
+  //   "keyup",
+  //   function (e) {
+  //     var key = e.keyCode;
 
-      if (key == 27) {
-        document.querySelector(".modal.active").classList.remove("active");
-        document.querySelector(".overlay.active").classList.remove("active");
-        document.body.classList.remove("disabled-onepage-scroll");
-      }
-    },
-    false
-  );
+  //     if (key == 27) {
+  //       document.querySelector(".modal.active").classList.remove("active");
+  //       document.querySelector(".overlay.active").classList.remove("active");
+  //       document.body.classList.remove("disabled-onepage-scroll");
+  //     }
+  //   },
+  //   false
+  // );
 
   /* скрытие окна при клике на подложку */
   overlay.addEventListener("click", function () {
@@ -200,10 +200,25 @@ let weekBttns = document.querySelectorAll('.faction-tournament .week-dropdown a'
 let weekDropdown = document.querySelector('.faction-tournament .week-dropdown');
 let weekSelectBttn = document.querySelector('.faction-tournament .week-select');
 let weekSelectBttnText = weekSelectBttn.querySelector('p');
+let weekSelectArrow = weekSelectBttn.querySelector('div');
 
 weekSelectBttn.addEventListener('click', function() {
   weekDropdown.classList.toggle('active');
   tourDropdown.classList.remove('active');
+  if (weekDropdown.classList.contains('active')) {
+    weekSelectArrow.classList.remove('arrow-bottom');
+    weekSelectArrow.classList.add('arrow-left');
+  } else {
+    weekSelectArrow.classList.remove('arrow-left');
+    weekSelectArrow.classList.add('arrow-bottom');
+  }
+  if (tourDropdown.classList.contains('active')) {
+    tourSelectArrow.classList.remove('arrow-bottom');
+    tourSelectArrow.classList.add('arrow-left');
+  } else {
+    tourSelectArrow.classList.remove('arrow-left');
+    tourSelectArrow.classList.add('arrow-bottom');
+  }
 })
 
 
@@ -230,7 +245,19 @@ for (let i = 0; i < weekBttns.length; i++) {
       switchCategory(weeksContent[i+19]);
     }
     weekDropdown.classList.remove('active');
+    weekSelectArrow.classList.remove('arrow-left');
+    weekSelectArrow.classList.add('arrow-bottom');
     weekSelectBttnText.innerHTML = weekBttns[i].innerHTML;
+    if (weekSelectBttnText.innerHTML == 'Результаты') {
+      weekSelectBttnText.classList.add('result-text');
+    } else if (weekSelectBttnText.classList.contains('result-text')) {
+      weekSelectBttnText.classList.remove('result-text');
+    }
+    if (weekSelectBttnText.innerHTML.includes('День')) {
+      weekSelectBttnText.classList.add('day-text');
+    } else if (weekSelectBttnText.classList.contains('day-text')) {
+      weekSelectBttnText.classList.remove('day-text');
+    }
   })
 }
 
@@ -238,12 +265,27 @@ let toursContent = document.querySelectorAll('.faction-tournament .main-content 
 let tourBttns = document.querySelectorAll('.faction-tournament .tournament-dropdown a');
 let tourDropdown = document.querySelector('.faction-tournament .tournament-dropdown');
 let tourSelectBttn = document.querySelector('.faction-tournament .tournament-select');
+let tourSelectArrow = tourSelectBttn.querySelector('div');
 let tourSelectBttnText = tourSelectBttn.querySelector('p');
 let prevActiveTour = 1;
 
 tourSelectBttn.addEventListener('click', function() {
   tourDropdown.classList.toggle('active');
   weekDropdown.classList.remove('active');
+  if (weekDropdown.classList.contains('active')) {
+    weekSelectArrow.classList.remove('arrow-bottom');
+    weekSelectArrow.classList.add('arrow-left');
+  } else {
+    weekSelectArrow.classList.remove('arrow-left');
+    weekSelectArrow.classList.add('arrow-bottom');
+  }
+  if (tourDropdown.classList.contains('active')) {
+    tourSelectArrow.classList.remove('arrow-bottom');
+    tourSelectArrow.classList.add('arrow-left');
+  } else {
+    tourSelectArrow.classList.remove('arrow-left');
+    tourSelectArrow.classList.add('arrow-bottom');
+  }
 })
 
 weekBttns[6].style.borderBottom = "3px solid #181818";
@@ -259,6 +301,8 @@ for (let i = 0; i < tourBttns.length; i++) {
     activeTourContent.classList.remove('active');
     toursContent[i].classList.add('active');
     tourDropdown.classList.remove('active');
+    tourSelectArrow.classList.remove('arrow-left');
+    tourSelectArrow.classList.add('arrow-bottom');
     tourSelectBttnText.innerHTML = tourBttns[i].innerHTML;
 
     let prevActiveWeekBttn = document.querySelector('.faction-tournament .week-dropdown a.active');
@@ -271,6 +315,14 @@ for (let i = 0; i < tourBttns.length; i++) {
     prevActiveWeekContent.classList.remove('active');
     newActiveWeekContent.classList.add('active');
     weekSelectBttnText.innerHTML = weekBttns[0].innerHTML;
+    if (weekSelectBttnText.classList.contains('result-text')) {
+      weekSelectBttnText.classList.remove('result-text');
+    }
+    if (i == 3) {
+      weekSelectBttnText.classList.add('day-text');
+    } else if (weekSelectBttnText.classList.contains('day-text')) {
+      weekSelectBttnText.classList.remove('day-text');
+    }
 
     switchCategory(newActiveWeekContent);
 
@@ -344,6 +396,45 @@ function switchCategory(newWeekContent) {
   newActiveCategoryContent[0].classList.add('active');
 }
 
+//facttour img zoom-in
+let allImgs = document.querySelectorAll('.faction-tournament .right-content img');
+let zoomedImg = document.querySelector('#zoomed-img');
+let overlayImg = document.querySelector('#overlay-img');
+
+for (let img of allImgs) {
+  img.addEventListener('click', function() {
+    zoomedImg.src = img.src;
+    zoomedImg.classList.add('active');
+    overlayImg.classList.add('active');
+  })
+}
+
+zoomedImg.addEventListener('click', function() {
+  zoomedImg.classList.remove('active');
+  overlayImg.classList.remove('active');
+})
+
+document.body.addEventListener(
+  "keyup",
+  function (e) {
+    var key = e.keyCode;
+
+    if (zoomedImg.classList.contains('active')) {
+      if (key == 27) {
+        zoomedImg.classList.remove("active");
+        overlayImg.classList.remove("active");
+      }
+    } else {
+      if (key == 27) {
+        document.querySelector(".modal.active").classList.remove("active");
+        document.querySelector(".overlay.active").classList.remove("active");
+        document.body.classList.remove("disabled-onepage-scroll");
+      }
+    }
+  },
+  false
+);
+
 //dango-rating table
 let topArrow = document.querySelector(".rating .rating-table .top-arrow img");
 let bottomArrow = document.querySelector(
@@ -387,3 +478,4 @@ topArrow.addEventListener("click", function () {
     }
   }, 1100);
 });
+

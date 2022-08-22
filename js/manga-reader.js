@@ -168,7 +168,7 @@ function toNextPage(smthPages) {
             let activePage = smthPages[i];
             if (i != smthPages.length-1) {
                 for (let text of pagesText) {
-                    if (pages.classList.contains('forlowers')) {
+                    if (pages.classList.contains('forlowers') || pages.classList.contains('forlowers2')) {
                         text.innerHTML = smthPages[i+1].dataset.p + "/18"
                     } else if (pages.classList.contains('dandeathside')) {
                         text.innerHTML = smthPages[i+1].dataset.p + "/23"
@@ -197,7 +197,7 @@ function toPrevPage(smthPages) {
             let activePage = smthPages[i];
             if (i != 0) {
                 for (let text of pagesText) {
-                    if (pages.classList.contains('forlowers')) {
+                    if (pages.classList.contains('forlowers') || pages.classList.contains('forlowers2')) {
                         text.innerHTML = smthPages[i-1].dataset.p + "/18"
                     } else if (pages.classList.contains('dandeathside')) {
                         text.innerHTML = smthPages[i-1].dataset.p + "/23"
