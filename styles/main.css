@@ -794,14 +794,17 @@ height: 72px;
     font-size: 20px;
     line-height: 25px;
 }
-.faction-tournament .third-tour .right-content.result li, .faction-tournament .second-tour .right-content.result li {
+.faction-tournament .third-tour .right-content.result li, .faction-tournament .second-tour .right-content.result li, .faction-tournament .first-tour .right-content.result li {
     font-size: 16px;
     margin-bottom: 10px;
 }
 .faction-tournament .third-tour .right-content.result h2 {
     font-size: 16px;
 }
-.faction-tournament .third-tour .right-content.result span, .faction-tournament .second-tour .right-content.result span {
+.faction-tournament .third-tour .right-content.result span, .faction-tournament .second-tour .right-content.result span, .faction-tournament .first-tour .right-content.result span {
+    font-size: 20px;
+}
+.faction-tournament .first-tour .right-content.result .other-tf li {
     font-size: 20px;
 }
 .faction-tournament .right-content p {
