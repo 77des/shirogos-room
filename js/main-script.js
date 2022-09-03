@@ -68,6 +68,19 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
 
+let mobileButtonFormats = document.querySelectorAll('.formats .mobile-format-buttons div');
+let mobileButton = document.querySelector('.formats .mobile-format-buttons .dan-button');
+
+mobileButtonFormats[firstActiveIndex].style.opacity = 1;
+
+mobileButton.addEventListener("click", function () {
+  let newIndex =  firstActiveIndex;
+  while (newIndex == firstActiveIndex) {
+    newIndex = getRandomInt(0, 7);
+  }
+  firstSwitchFormats(mobileButtonFormats, firstActiveIndex, newIndex);
+});
+
 //modal window
 document.addEventListener("DOMContentLoaded", function () {
   var modalButtons = document.querySelectorAll(".js-open-modal"),
@@ -87,6 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       modalElem.classList.add("active");
       overlay.classList.add("active");
+
+      if (item.classList.contains('faction-tournament-bttn') && (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768)) {
+        tourBttns[0].innerHTML = '1';
+        tourBttns[1].innerHTML = '2';
+        tourBttns[2].innerHTML = '3';
+        tourBttns[3].innerHTML = '4';
+        weekSelectBttn.style.background = 'none';
+      } 
     }); // end click
   }); // end foreach
 
@@ -253,6 +274,9 @@ for (let i = 0; i < weekBttns.length; i++) {
       weekSelectBttnText.classList.add('result-text');
       if (toursContent[3].classList.contains('active')) {
         weekBttns[14].style.borderBottom = "3px solid #181818";
+        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+          weekBttns[14].style.borderBottom = "3px solid #DEDEDE";
+        }
       }
     } else if (weekSelectBttnText.classList.contains('result-text')) {
       weekSelectBttnText.classList.remove('result-text');
@@ -293,6 +317,9 @@ tourSelectBttn.addEventListener('click', function() {
 })
 
 weekBttns[6].style.borderBottom = "3px solid #181818";
+if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+  weekBttns[6].style.borderBottom = "3px solid #DEDEDE";
+}
 
 for (let i = 0; i < tourBttns.length; i++) {
   tourBttns[i].addEventListener('click', function(event) {
@@ -344,6 +371,9 @@ for (let i = 0; i < tourBttns.length; i++) {
       }
       weekBttns[4].innerHTML = 'Результаты';
       weekBttns[4].style.borderBottom = "3px solid #181818";
+      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+        weekBttns[4].style.borderBottom = "3px solid #DEDEDE";
+      }
       prevActiveTour = 3;
       weekSelectBttnText.innerHTML = 'Неделя 1';
     } else if (tourBttns[0].classList.contains('active') || tourBttns[1].classList.contains('active')) {
@@ -365,6 +395,9 @@ for (let i = 0; i < tourBttns.length; i++) {
         weekBttns[6].innerHTML = 'Результаты';
       }
       weekBttns[6].style.borderBottom = "3px solid #181818";
+      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+        weekBttns[6].style.borderBottom = "3px solid #DEDEDE";
+      }
       prevActiveTour = 1;
       weekSelectBttnText.innerHTML = 'Неделя 1';
     } else if (tourBttns[3].classList.contains('active')) {
@@ -384,6 +417,9 @@ for (let i = 0; i < tourBttns.length; i++) {
         weekBttns[i-1].innerHTML = 'День ' + i;
       }
       weekBttns[15].style.borderBottom = "3px solid #181818";
+      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+        weekBttns[15].style.borderBottom = "3px solid #DEDEDE";
+      }
       weekSelectBttnText.innerHTML = 'День 1';
       prevActiveTour = 4;
     }
