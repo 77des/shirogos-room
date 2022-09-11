@@ -1056,6 +1056,12 @@ img.zoomed.active {
 .faction-tournament .third-tour .left-bttns .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
     width: 4px;
 }
+.faction-tournament .bottomBordered {
+    border-bottom: 3px solid #181818 !important;
+}
+.faction-tournament .bottomBordered.mobile {
+    border-bottom: 3px solid #DEDEDE !important;
+}
 @media (min-width: 320px) and (max-width: 768px) {
     .onepage-pagination {
         display: none;
@@ -1176,7 +1182,7 @@ img.zoomed.active {
     }
     .rating .mobile-table.rating-table {
         display: block;
-        width: 288px;
+        width: 90vw;
         height: 356px;
     }
     .rating .table-blocks {
@@ -1188,6 +1194,10 @@ img.zoomed.active {
     .rating .points-block, .rating .nick-block {
         display: flex;
         flex-direction: column;
+    }
+    .rating .point-nick-block {
+        width: 209px;
+        margin: 0 auto;
     }
     .rating .points-block .points, .rating .points-block .points-tag {
         border: 2px solid #DEDEDE;
@@ -1468,20 +1478,24 @@ img.zoomed.active {
         margin-left: 0;
     }
     .tournament-dropdown a {
-        padding: 7px 14px 8px 14px;
         border: 3px solid #DEDEDE !important;
         border-radius: 10px;
         font-size: 0.9375rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         box-sizing: border-box;
         margin-right: 15px;
         line-height: 1.26666666667;
     }
+    .faction-tournament .tournament-dropdown a.active {
+        border: 3px solid #C34375 !important;
+        display: flex !important;
+    }
     .tournament-dropdown a:last-child {
         margin-right: 0;
-    }
-    .faction-tournament .tournament-dropdown a.active {
-        display: block !important;
-        border: 3px solid #C34375 !important;
     }
     .faction-tournament .first-tour>div, .faction-tournament .second-tour>div, .faction-tournament .third-tour>div, .faction-tournament .fourth-tour>div {
         margin-top: 96px;
@@ -1492,6 +1506,8 @@ img.zoomed.active {
         justify-content: space-between;
         margin-left: 16px;
         width: 266px;
+        height: 36px;
+        overflow-y: auto;
     }
     body .main .faction-tournament .left-bttns a {
         font-size: 0.875rem;
@@ -1501,7 +1517,7 @@ img.zoomed.active {
     .faction-tournament .left-bttns a:first-child {
         margin-bottom: 10px;
     }
-    .faction-tournament .left-bttns .result-bttn {
+    .faction-tournament .main-content .left-bttns .result-bttn {
         margin-top: 0;
     }
     .faction-tournament .week-dropdown {
@@ -1517,5 +1533,55 @@ img.zoomed.active {
         border: 3px solid #DEDEDE;
         border-bottom: none;
         padding: 9px 0;
+    }
+    .faction-tournament .right-content.simplebar {
+        width: 258px;
+    }
+    .faction-tournament .right-content {
+        left: 0;
+        margin-top: 62px;
+        margin-left: 20px;
+        height: 226px;
+        width: 268px;
+    }
+    .faction-tournament .right-content h3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .faction-tournament .right-content ul {
+        margin-bottom: 15px;
+    }
+    .faction-tournament .right-content li {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .faction-tournament .simplebar-track.simplebar-vertical {
+        height: 235px;
+        right: -23px;
+    }
+    .faction-tournament .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+        top: 2px;
+        bottom: 2px;
+    }
+    .faction-tournament .right-content p {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .faction-tournament .right-content.result li {
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 520px) and (max-width: 768px) {
+    .rating .mobile-table.rating-table {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .rating .point-nick-block, .rating .points-list {
+        margin: 0;
+    }
+    .rating .point-nick-block {
+        margin-left: 30px;
     }
 }

@@ -107,6 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
         tourBttns[2].innerHTML = '3';
         tourBttns[3].innerHTML = '4';
         weekSelectBttn.style.background = 'none';
+      } else {
+        tourBttns[0].innerHTML = 'Турнир Фракций 1';
+        tourBttns[1].innerHTML = 'Турнир Фракций 2';
+        tourBttns[2].innerHTML = 'Турнир Фракций 3';
+        tourBttns[3].innerHTML = 'Турнир Фракций 4';
       } 
     }); // end click
   }); // end foreach
@@ -222,6 +227,7 @@ let weekDropdown = document.querySelector('.faction-tournament .week-dropdown');
 let weekSelectBttn = document.querySelector('.faction-tournament .week-select');
 let weekSelectBttnText = weekSelectBttn.querySelector('p');
 let weekSelectArrow = weekSelectBttn.querySelector('div');
+let tourBttn = document.querySelector('.modal.faction-tournament');
 
 weekSelectBttn.addEventListener('click', function() {
   weekDropdown.classList.toggle('active');
@@ -241,7 +247,6 @@ weekSelectBttn.addEventListener('click', function() {
     tourSelectArrow.classList.add('arrow-bottom');
   }
 })
-
 
 for (let i = 0; i < weekBttns.length; i++) {
   weekBttns[i].addEventListener('click', function(event) {
@@ -269,7 +274,7 @@ for (let i = 0; i < weekBttns.length; i++) {
     weekDropdown.classList.remove('active');
     weekSelectArrow.classList.remove('arrow-left');
     weekSelectArrow.classList.add('arrow-bottom');
-    weekSelectBttnText.innerHTML = weekBttns[i].innerHTML;
+    weekSelectBttnText.innerHTML = weekBttns[i].innerHTML; 
     if (weekSelectBttnText.innerHTML == 'Результаты') {
       weekSelectBttnText.classList.add('result-text');
       if (toursContent[3].classList.contains('active')) {
@@ -420,10 +425,49 @@ for (let i = 0; i < tourBttns.length; i++) {
       if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
         weekBttns[15].style.borderBottom = "3px solid #DEDEDE";
       }
+      weekBttns[6].style.borderBottom = "none";
       weekSelectBttnText.innerHTML = 'День 1';
       prevActiveTour = 4;
     }
+
+    weekBttns[3].style.borderBottom = "none";
+    weekBttns[5].style.borderBottom = "none";
   })
+
+  
+}
+
+for (let i = 0; i < weekBttns.length; i++) {
+  weekBttns[i].addEventListener('click', function() {
+    if (tourBttns[0].classList.contains('active') || tourBttns[1].classList.contains('active')) {
+      if (weekBttns[6].classList.contains('active')) {
+        weekBttns[5].style.borderBottom = "3px solid #181818";
+        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+          weekBttns[5].style.borderBottom = "3px solid #DEDEDE";
+        }
+      } else {
+        weekBttns[5].style.borderBottom = "none";
+      }
+    } else if (tourBttns[2].classList.contains('active')) {
+      if (weekBttns[4].classList.contains('active')) {
+        weekBttns[3].style.borderBottom = "3px solid #181818";
+        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+          weekBttns[3].style.borderBottom = "3px solid #DEDEDE";
+        }
+      } else {
+        weekBttns[3].style.borderBottom = "none";
+      }
+    }
+  })
+}
+
+let mobileScrollContents = [];
+mobileScrollContents.push(document.querySelector('.first-tour .second-week .right-content.sigame'), 
+document.querySelector('.first-tour .third-week .right-content.sigame'),
+document.querySelector('.first-tour .fifth-week .right-content.darksouls'));
+
+for (let elem of mobileScrollContents) {
+  new SimpleBar(elem);
 }
 
 function switchCategory(newWeekContent) {
@@ -437,6 +481,70 @@ function switchCategory(newWeekContent) {
   prevActiveCategoryContent.classList.remove('active');
   newActiveCategoryContent[0].classList.add('active');
 }
+
+window.addEventListener('resize', function(event) {
+  if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+    tourBttns[0].innerHTML = '1';
+    tourBttns[1].innerHTML = '2';
+    tourBttns[2].innerHTML = '3';
+    tourBttns[3].innerHTML = '4';
+    weekSelectBttn.style.background = 'none';
+    if (toursContent[3].classList.contains('active')) {
+        weekBttns[14].style.borderBottom = "3px solid #DEDEDE";
+    }
+    weekBttns[6].style.borderBottom = "3px solid #DEDEDE";
+    if (tourBttns[2].classList.contains('active')) {
+      weekBttns[4].style.borderBottom = "3px solid #DEDEDE";
+      weekBttns[6].style.borderBottom = "3px solid #DEDEDE";
+      weekBttns[15].style.borderBottom = "3px solid #DEDEDE";
+    }
+    if (tourBttns[0].classList.contains('active') || tourBttns[1].classList.contains('active')) {
+      if (weekBttns[6].classList.contains('active')) {
+        weekBttns[5].style.borderBottom = "3px solid #DEDEDE";
+      }
+    } else if (tourBttns[2].classList.contains('active')) {
+      if (weekBttns[4].classList.contains('active')) {
+        weekBttns[3].style.borderBottom = "3px solid #DEDEDE";
+      }
+    }
+    for (let elem of mobileScrollContents) {
+      new SimpleBar(elem);
+    }
+  } else if (document.documentElement.scrollWidth > 768) {
+    tourBttns[0].innerHTML = 'Турнир Фракций 1';
+    tourBttns[1].innerHTML = 'Турнир Фракций 2';
+    tourBttns[2].innerHTML = 'Турнир Фракций 3';
+    tourBttns[3].innerHTML = 'Турнир Фракций 4';
+    weekSelectBttn.style.background = "url('./imgs/week-menu.png')";
+    if (toursContent[3].classList.contains('active')) {
+      weekBttns[14].style.borderBottom = "3px solid #181818";
+    }
+    weekBttns[6].style.borderBottom = "3px solid #181818";
+    if (tourBttns[2].classList.contains('active')) {
+      weekBttns[4].style.borderBottom = "3px solid #181818";
+      weekBttns[6].style.borderBottom = "3px solid #181818";
+      weekBttns[15].style.borderBottom = "3px solid #181818";
+    }
+    if (tourBttns[0].classList.contains('active') || tourBttns[1].classList.contains('active')) {
+      if (weekBttns[6].classList.contains('active')) {
+        weekBttns[5].style.borderBottom = "3px solid #181818";
+      }
+    } else if (tourBttns[2].classList.contains('active')) {
+      if (weekBttns[4].classList.contains('active')) {
+        weekBttns[3].style.borderBottom = "3px solid #181818";
+      }
+    }
+    for (let i = 0; i < tourBttns.length; i++) {
+      if (tourBttns[i].classList.contains('active')) {
+        tourSelectBttnText.innerHTML = tourBttns[i].innerHTML;
+      }
+    }
+    for (let elem of mobileScrollContents) {
+      const simpleBar = new SimpleBar(elem);
+      simpleBar.unMount()
+    }
+  } 
+})
 
 //facttour img zoom-in
 let allImgs = document.querySelectorAll('.faction-tournament .right-content img');
@@ -521,3 +629,53 @@ topArrow.addEventListener("click", function () {
   }, 1100);
 });
 
+let topArrowMobile = document.querySelector('.rating-table.mobile-table .top-arrow img');
+let bottomArrowMobile = document.querySelector('.rating-table.mobile-table .bottom-arrow img');
+let tablePointsArr = document.querySelectorAll('.rating-table.desktop-table table tr td:first-child')
+let tableNicknamesArr = document.querySelectorAll('.rating-table.desktop-table table tr td:nth-child(2)');
+let pointsList = document.querySelectorAll('.rating-table.mobile-table .points-list > div > div:last-child');
+let tablePoints = document.querySelector('.rating-table.mobile-table .table-blocks .points-block .points');
+let tableNickname = document.querySelector('.rating-table.mobile-table .table-blocks .nick-block .nickname');
+let usersPointsArr = document.querySelectorAll('.rating-table.desktop-table table tr td:not(:first-child):not(:nth-child(2))');
+let currentUser = 0;
+let currentUserPointsIndex = 0;
+
+tablePoints.innerHTML = tablePointsArr[currentUser].innerHTML;
+tableNickname.innerHTML = tableNicknamesArr[currentUser].innerHTML; 
+for (let i = 0; i < pointsList.length; i++) {
+  pointsList[i].innerHTML = usersPointsArr[i + currentUserPointsIndex].innerHTML;
+}
+
+bottomArrowMobile.addEventListener("click", function () {
+  if (!(currentUser == tableNicknamesArr.length-1)) {
+    currentUser++;
+    tablePoints.innerHTML = tablePointsArr[currentUser].innerHTML;
+    tableNickname.innerHTML = tableNicknamesArr[currentUser].innerHTML;
+    currentUserPointsIndex += 8; 
+    for (let i = 0; i < pointsList.length; i++) {
+      pointsList[i].innerHTML = usersPointsArr[i + currentUserPointsIndex].innerHTML;
+    }
+    if (currentUser == tableNicknamesArr.length-1) {
+      bottomArrowMobile.src = "./imgs/bottom-table-arrow-disabled.svg"
+      bottomArrowMobile.classList.add("disabled");
+    }
+    topArrowMobile.src = "./imgs/top-table-arrow.svg";
+  }
+});
+
+topArrowMobile.addEventListener("click", function () {
+  if (!(currentUser == 0)) {
+    currentUser--;
+    tablePoints.innerHTML = tablePointsArr[currentUser].innerHTML;
+    tableNickname.innerHTML = tableNicknamesArr[currentUser].innerHTML;
+    currentUserPointsIndex -= 8;
+    for (let i = 0; i < pointsList.length; i++) {
+      pointsList[i].innerHTML = usersPointsArr[i + currentUserPointsIndex].innerHTML;
+    }
+    if (currentUser == 0) {
+      topArrowMobile.src = "./imgs/top-table-arrow-disabled.svg"
+      topArrowMobile.classList.add("disabled");
+    }
+    bottomArrowMobile.src = "./imgs/bottom-table-arrow.svg";
+  }
+});
