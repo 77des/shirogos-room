@@ -566,9 +566,12 @@ a {
     margin-bottom: 12px;
 }
 .first-donaters .slider-flex {
-    display: flex;
+    display: none;
     justify-content: space-between;
     width: 1000px;
+}
+.first-donaters.active .slider-flex {
+    display: flex;
 }
 .first-donaters .donaters-imgs {
     max-width: 575px;
@@ -578,11 +581,13 @@ a {
 .first-donaters .donaters-imgs img {
     border-radius: 32px;
     opacity: 0;
+    visibility: hidden;
     position: absolute;
-    transition: opacity 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 .first-donaters .donaters-imgs img.active {
     opacity: 1;
+    visibility: visible;
 }
 .first-donaters .donaters-imgs .first-type {
     width: 575px;
@@ -721,7 +726,7 @@ a {
     margin-left: 80px;
 }
 .faction-tournament .select-bttns .week-select p.day-text {
-    margin-left: 107px;
+    margin-left: 110px;
 }
 .faction-tournament .select-bttns button:first-child {
     box-sizing: border-box;
@@ -1001,7 +1006,7 @@ a {
 .faction-tournament .fourth-tour .result-day ul li {
     display: block;
 }
-.faction-tournament .right-content img {
+.faction-tournament .right-content img, .first-donaters .donaters-imgs img {
     cursor: zoom-in;
 }
 img.zoomed {
@@ -1181,9 +1186,10 @@ img.zoomed.active {
         display: none;
     }
     .rating .mobile-table.rating-table {
-        display: block;
+        display: flex;
+        justify-content: space-evenly;
         width: 90vw;
-        height: 356px;
+        height: 69.53125vh;
     }
     .rating .table-blocks {
         display: flex;
@@ -1196,7 +1202,7 @@ img.zoomed.active {
         flex-direction: column;
     }
     .rating .point-nick-block {
-        width: 209px;
+        width: 65.3125vw;
         margin: 0 auto;
     }
     .rating .points-block .points, .rating .points-block .points-tag {
@@ -1221,36 +1227,36 @@ img.zoomed.active {
         border-top: 0;
     }
     .rating .points-block {
-        width: 44px;
+        width: 13.75vw;
     }
     .rating .nick-block {
-        width: 164px;
+        width: 51.25vw;
     }
     .rating .points-block .points-tag, .rating .nick-block .nick-tag {
         font-size: 1rem;
-        height: 31px;
+        height: 6.0546875vh;
     }
     .rating .points-block .points {
         font-size: 0.625rem;
-        height: 29px;
+        height: 5.6640625vh;
     }
     .rating .nick-block .nick-tag {
         color: #C34375;
     }
     .rating .nick-block .nickname {
         font-size: 0.75rem;
-        height: 29px;
+        height: 5.6640625vh;
     }
     .rating .points-list {
-        width: 209px;
+        width: 65.3125vw;
         margin: 0 auto;
     }
     .rating .points-list > div {
         display: flex;
     }
     .rating .points-list > div > div:first-child {
-        width: 166px;
-        height: 23px;
+        width: 51.875vw;
+        height: 4.4921875vh;
         border: 2px solid #DEDEDE;
         border-bottom: 0;
         font-size: 0.6875rem;
@@ -1263,8 +1269,8 @@ img.zoomed.active {
         border-bottom: 2px solid #DEDEDE;
     }
     .rating .points-list > div > div:last-child {
-        width: 43px;
-        height: 23px;
+        width: 13.4375vw;
+        height: 4.4921875vh;
         border: 2px solid #DEDEDE;
         border-bottom: 0;
         border-left: 0;
@@ -1310,9 +1316,9 @@ img.zoomed.active {
         top: 346px;
     }
     .lists button {
-        margin-bottom: 12px;
-        width: 16.375rem;
-        height: 6rem;
+        margin-bottom: 2.34375vh;
+        width: 81.875vw;
+        height: 18.75vh;
     }
     .top-donaters-bttn p, .first-donaters-bttn p {
         font-size: 1.5625rem;;
@@ -1321,8 +1327,8 @@ img.zoomed.active {
         font-size: 1.5625rem;
     }
     .modal {
-        width: 308px;
-        height: 470px;
+        width: 96.25vw;
+        height: 91.796875vh;
     }
     .modal__title {
         font-size: 1.5625rem;
@@ -1330,25 +1336,25 @@ img.zoomed.active {
         margin: 9px 0;
     }
     .top-donaters ol {
-        width: 275px;
-        height: 405px;
+        width: 85.9375vw;
+        height: 79.1015625vh;
         padding: 10px 0;
-        margin-left: 6px;
+        margin-left: calc((96.25vw - (85.9375vw + 21px)) / 2);
     }
     .top-donaters li {
         font-size: 0.875rem;
         line-height: 1.28571428571;
         padding-left: 12px;
         margin-left: 39px;
-        width: 210px;
+        width: 65.625vw;
     }
     .top-donaters .simplebar-track.simplebar-vertical {
-        width: 15px;
-        height: 405px;
-        right: -26px;
+        width: 14px;
+        height: 79.1015625vh;
+        right: -25px;
     }
     .top-donaters .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
-        width: 11px;
+        width: 10px;
         top: 2px;
         left: 2px;
         bottom: 4px;
@@ -1357,7 +1363,7 @@ img.zoomed.active {
         margin-bottom: 8px;
     }
     .first-donaters .slider-flex {
-        width: 308px;
+        width: 96.25vw;
     }
     .first-donaters .slider-imgs {
         width: 291px;
@@ -1398,35 +1404,35 @@ img.zoomed.active {
         margin-bottom: 13px;
     }
     .content-chronicles .content-bttns {
-        width: 291px;
+        width: 90.9375vw;
         margin: 0 auto;
         margin-top: 0;
-        margin-bottom: 12px;
+        margin-bottom: 2.34375vh;
     }
     .content-chronicles .content-bttns button {
         font-size: 0.75rem;
         line-height: 1.25;
     }
     .content-chronicles .content-bttns .films-bttn {
-        width: 5.875rem;
+        width: 29.375vw;
         border: 3px solid #DEDEDE;
         border-right: none;
     }
     .content-chronicles .content-bttns .serials-bttn {
-        width: 6.875rem;
+        width: 34.375vw;
         border-top: 3px solid #DEDEDE;
         border-bottom: 3px solid #DEDEDE;
     }
     .content-chronicles .content-bttns .games-bttn {
-        width: 5.4375rem;
+        width: 27.1875vw;
         border: 3px solid #DEDEDE;
         border-left: none;
     }
     .content-chronicles .films-info, .content-chronicles .serials-info, .content-chronicles .games-info {
-        width: 272px;
-        height: 353px;
+        width: 85vw;
+        height: 68.9453125vh;
         border: 3px solid #DEDEDE;
-        margin-left: 7px;
+        margin-left: calc((96.25vw - (85vw + 21px)) / 2);
     }
     .content-chronicles .films-info h3, .content-chronicles .serials-info h3, .content-chronicles .games-info h3 {
         font-size: 0.9375rem;
@@ -1446,7 +1452,7 @@ img.zoomed.active {
         padding-bottom: 7px;
     }
     .content-chronicles .simplebar-track.simplebar-vertical {
-        height: 353px;
+        height: 68.9453125vh;
         right: -24px;
     }
     .faction-tournament .modal__title {
@@ -1466,10 +1472,33 @@ img.zoomed.active {
         z-index: 100;
     }
     .faction-tournament .select-bttns .week-select p {
-        font-size: 1.25rem;
-        margin-left: 10px;
-        margin-right: 10px;
+        font-size: 1.125rem;
+        margin-left: 15px;
         width: 107px;
+    }
+    .faction-tournament .select-bttns .week-select p.result-text {
+        margin-left: 8px;
+    }
+    .faction-tournament .select-bttns .week-select p.day-text {
+        margin-left: 20px;
+    }
+    .faction-tournament .select-bttns button .arrow-bottom {
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 12px solid #C34375;
+        margin-right: 10px;
+    }
+    .faction-tournament .select-bttns button:last-child .arrow-bottom {
+        border-top: 12px solid #C34375;
+    }
+    .faction-tournament .select-bttns button .arrow-left {
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-right: 12px solid #C34375;
+        margin-right: 10px;
+    }
+    .faction-tournament .select-bttns button:last-child .arrow-left {
+        border-right: 12px solid #C34375;
     }
     .faction-tournament .tournament-dropdown {
         display: flex;
@@ -1500,7 +1529,7 @@ img.zoomed.active {
     .faction-tournament .first-tour>div, .faction-tournament .second-tour>div, .faction-tournament .third-tour>div, .faction-tournament .fourth-tour>div {
         margin-top: 96px;
     }
-    .faction-tournament .left-bttns {
+    .faction-tournament .main-content .left-bttns {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -1512,7 +1541,10 @@ img.zoomed.active {
     body .main .faction-tournament .left-bttns a {
         font-size: 0.875rem;
         line-height: 1.28571428571;
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
+    }
+    .faction-tournament .left-bttns .result-bttn, .faction-tournament .second-tour .sixth-week .left-bttns a:last-child {
+        margin-top: 0 !important;
     }
     .faction-tournament .left-bttns a:first-child {
         margin-bottom: 10px;
@@ -1534,7 +1566,7 @@ img.zoomed.active {
         border-bottom: none;
         padding: 9px 0;
     }
-    .faction-tournament .right-content.simplebar {
+    body .modal.faction-tournament .right-content.simplebar {
         width: 258px;
     }
     .faction-tournament .right-content {
@@ -1570,6 +1602,23 @@ img.zoomed.active {
     .faction-tournament .right-content.result li {
         margin-bottom: 10px;
     }
+    .faction-tournament .sixth-week .right-content.result img {
+        width: 250px !important;
+        margin-bottom: 15px;
+    }
+    .faction-tournament .third-tour .result-week .right-content.result span, .faction-tournament .second-tour .result-week .right-content.result span, .faction-tournament .first-tour .result-week .right-content.result span {
+        font-size: 12px;
+    }
+    .faction-tournament .third-tour .result-week .right-content.result li, .faction-tournament .second-tour .result-week .right-content.result li, .faction-tournament .first-tour .result-week .right-content.result li {
+        font-size: 10px;
+    }
+    .faction-tournament .first-tour .result-week .right-content.result .other-tf li {
+        font-size: 12px;
+    }
+    .faction-tournament .right-content span {
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
 @media (min-width: 520px) and (max-width: 768px) {
     .rating .mobile-table.rating-table {
@@ -1583,5 +1632,21 @@ img.zoomed.active {
     }
     .rating .point-nick-block {
         margin-left: 30px;
+        width: 209px;
+    }
+    .rating .points-block {
+        width: 44px;
+    }
+    .rating .points-block .points-tag, .rating .nick-block .nick-tag {
+        height: 31px;
+    }
+    .rating .points-block .points, .rating .nick-block .nickname {
+        height: 29px;
+    }
+    .rating .nick-block {
+        width: 164px;
+    }
+    .rating .points-list {
+        width: 209px;
     }
 }

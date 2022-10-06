@@ -235,3 +235,149 @@ header .header-content {
 .others-list .character:last-child {
     margin-bottom: 0;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .content {
+        overflow-x: hidden;
+    }
+    .container {
+        width: 100%;
+    }
+    .content {
+        padding: 0;
+    }
+    header .header-content {
+        flex-direction: column-reverse;
+        justify-content: start;
+        background: linear-gradient(180deg, #181818 39.58%, #323232 96.35%);
+        height: 229px;
+    }
+    .header-content .back-bttn {
+        width: 96px;
+        margin: 0 auto;
+        margin-top: 12px;
+    }
+    .header-content.unknown-header .back-bttn {
+        margin-top: 12px;
+    }
+    .header-content>p {
+        font-size: 25px;
+        line-height: 32px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 23px;
+    }
+    .hladberin-header .title {
+        padding: 0;
+        margin-top: 23px;
+    }
+    .header-content.unknown-header>p {
+        padding: 0;
+        margin-top: 55px;
+    }
+    .hladberin-header .title p {
+        font-size: 25px !important;
+        line-height: 32px !important;
+        text-align: center;
+    }
+    .characters-content {
+        padding-top: 0;
+    }
+    .characters-content>div {
+        padding-bottom: 41px !important;
+    }
+    .characters-content>div:last-child {
+        padding-bottom: 0 !important;
+    }
+    .list-title {
+        width: 100vw;
+        height: 40px;
+        margin-bottom: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-title h2 {
+        font-size: 20px;
+        line-height: 25px;
+        padding-top: 0;
+    }
+    .valvs-content .list-title {
+        position: relative;
+    }
+    .valvs-content .list-title h2 {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .valvs-content .list-title p {
+        font-size: 10px;
+        line-height: 13px;
+        position: absolute;
+        top: 23px;
+        width: 133px;
+    }
+    .dangers-content .list-title h2 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .list {
+        width: 100%;
+        margin-left: 0.625vw;
+    }
+    .list .character {
+        margin-right: 1.5625vw;
+        width: 31.875vw;
+        height: 42.5vw;
+    }
+    .list .character a:first-child {
+        width: 31.875vw;
+        height: 42.5vw;
+    }
+    .list .character a:first-child img {
+        width: 31.875vw;
+        height: 42.5vw;
+    }
+    .list .character a:last-child {
+        font-size: 10px;
+        line-height: 13px;
+        margin-top: 3px;
+        top: 42.5vw;
+    }
+    .list .character a:last-child {
+        left: 0 !important;
+        width: 31.875vw !important;
+    }
+    .list .character:nth-child(3n + 3) {
+        margin-right: 0;
+        margin-bottom: 33px;
+    }
+    .list .character:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    .shpil-list {
+        justify-content: start;
+        margin-left: 2px;
+    }
+    .shpil-list, .others-list, .events-list, .members-list {
+        padding-bottom: 33px;
+    }
+    .footer-content {
+        background: #181818;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    .footer-content .prev-bttn {
+        margin-left: 5px;
+    }
+    .footer-content .next-bttn {
+        margin-right: 5px;
+    }
+    .footer-content .prev-bttn a, .footer-content .next-bttn a {
+        font-size: 12px;
+    }
+}
