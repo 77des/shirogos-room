@@ -24,3 +24,18 @@ nextBttn.addEventListener('mouseout', function() {
 prevBttn.addEventListener('mouseout', function() {
     prevBttnImg.src = "../../imgs/wiki-list/prev-bttn.svg";
 })
+
+if (window.matchMedia('(max-width: 768px)').matches) {
+    if (document.location.pathname == '/shirogos-room/wiki/wiki-list/hladberin.html') {
+        let hladberinTitle = document.querySelector('.hladberin-header .title');
+        hladberinTitle.innerHTML = '<p>ПРАЗДНИЧНЫЙ<br> ОСТРОВ<br> ХЛАДБЕРИН</p>';
+    }
+    if (document.location.pathname == '/shirogos-room/wiki/wiki-list/unknown-lands.html') {
+        let membersListTitle = document.querySelector('.members-content .list-title h2');
+        membersListTitle.innerHTML = 'Участники Мятежа';
+    }
+    if (document.location.pathname == '/shirogos-room/wiki/wiki-list/d-island-2.html') {
+        let valvsListTitle = document.querySelector('.valvs-content .list-title h2');
+        valvsListTitle.innerHTML = 'Валвы <br><p>(эст., valvur - стражник)</p>';
+    }
+}

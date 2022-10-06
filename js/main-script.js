@@ -464,10 +464,17 @@ for (let i = 0; i < weekBttns.length; i++) {
 let mobileScrollContents = [];
 mobileScrollContents.push(document.querySelector('.first-tour .second-week .right-content.sigame'), 
 document.querySelector('.first-tour .third-week .right-content.sigame'),
-document.querySelector('.first-tour .fifth-week .right-content.darksouls'));
+document.querySelector('.first-tour .fifth-week .right-content.darksouls'),
+document.querySelector('.second-tour .third-week .right-content.jackbox'),
+document.querySelector('.second-tour .fifth-week .right-content.jackbox'),
+document.querySelector('.second-tour .sixth-week .right-content.jackbox'),
+);
 
-for (let elem of mobileScrollContents) {
-  new SimpleBar(elem);
+if (window.matchMedia('(max-width: 768px)').matches) {
+  for (let content of mobileScrollContents) {
+    new SimpleBar(content);
+    content.classList.add('simplebar');
+  }
 }
 
 function switchCategory(newWeekContent) {
@@ -509,6 +516,7 @@ window.addEventListener('resize', function(event) {
     }
     for (let elem of mobileScrollContents) {
       new SimpleBar(elem);
+      elem.classList.add('simplebar');
     }
   } else if (document.documentElement.scrollWidth > 768) {
     tourBttns[0].innerHTML = 'Турнир Фракций 1';
@@ -539,15 +547,11 @@ window.addEventListener('resize', function(event) {
         tourSelectBttnText.innerHTML = tourBttns[i].innerHTML;
       }
     }
-    for (let elem of mobileScrollContents) {
-      const simpleBar = new SimpleBar(elem);
-      simpleBar.unMount()
-    }
   } 
 })
 
 //facttour img zoom-in
-let allImgs = document.querySelectorAll('.faction-tournament .right-content img');
+let allImgs = document.querySelectorAll('.lists .modal img:not(.modal__cross)');
 let zoomedImg = document.querySelector('#zoomed-img');
 let overlayImg = document.querySelector('#overlay-img');
 

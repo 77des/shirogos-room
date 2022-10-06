@@ -191,12 +191,13 @@ header .login a:hover {
 .spoiler {
     cursor: pointer;
     background: #181818;
+    border: 3px solid #C34375;
     color:#C34375;
     text-align: center;
-    font-size: 18px;
-    line-height: 21px;
-    box-sizing: border-box;
-    padding-top: 2px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     height: 26px;
 }
@@ -217,8 +218,8 @@ header .login a:hover {
         opacity: 0;
     }
 }
-.chronicles-info-content .dates-list {
-    padding: 0 42.5px;
+.chronicles-info-content {
+    padding-bottom: 20px;
 }
 .chronicles-info .info-title {
     box-sizing: border-box;
@@ -240,83 +241,234 @@ header .login a:hover {
     text-align: center;
     margin-top: -3px;
 }
-.chronicles-info .event {
+.chronicles-info .events-list {
+    width: 1025px;
+    margin: 0 auto;
     display: flex;
-    margin-bottom: 34px;
+    flex-wrap: wrap;
 }
-.chronicles-info .dates-column .event:last-child {
-    margin-bottom: 0;
-}
-.chronicles-info .event.one-line-event {
-    align-items: center;
-}
-.chronicles-info .event .date {
-    box-sizing: border-box;
-    width: 144px;
-    height: 32px;
-    margin-right: 18px;
+.chronicles-info .events-list .date {
+    width: 201px;
     background: #181818;
+    margin-right: 5px;
+}
+.chronicles-info .events-list .date:nth-child(5n + 5) {
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+.events-list .date:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+.date .event-date {
+    width: 191px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px auto 10px auto;
 }
-.chronicles-info .event .date.green-date {
-    border: 2px solid #68FFA4;
+.date .event-date.green-date {
+    background: #44B86B;
 }
-.chronicles-info .event .date.red-date {
-    border: 2px solid #FF6363;
+.date .event-date.pink-date {
+    background: #C34375;
 }
-.chronicles-info .event .date.purple-date {
-    border: 2px solid #B468FF;
+.date .event-date.yellow-date {
+    background: #AC9933
 }
-.chronicles-info .event .date.white-date {
-    border: 2px solid #FFFFFF;
-}
-.chronicles-info .event .date.yellow-date {
-    border: 2px solid #FCFF63;
-}
-.chronicles-info .event .date p {
-    font-size: 20px;
-    line-height: 23px;
-}
-.chronicles-info .event .event-info {
+.date .event {
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
+    margin-left: 5px;
 }
-.chronicles-info .event .event-info p, .chronicles-info .event .event-info span, .chronicles-info .event .event-info li {
-    font-size: 22px;
-    line-height: 25px;
-    margin-right: 6px;
-    font-weight: 400;
+.date .event:last-child {
+    margin-bottom: 0;
 }
-li::marker {
-    font-size: 17px;
+.date.first-row {
+    height: 191px;
 }
-.chronicles-info .event .event-info span, .chronicles-info .event .event-info li {
-    margin-right: 0;
+.date.second-row {
+    height: 509px;
 }
-.chronicles-info .event .event-info h4 {
-    font-size: 22px;
-    line-height: 25px;
+.date.third-row {
+    height: 309px;
+}
+.date.fourth-row {
+    height: 241px;
+}
+.date.fifth-row {
+    height: 896px;
+}
+.date.sixth-row {
+    height: 249px;
+}
+.date.seventh-row {
+    height: 616px;
+}
+.date.eighth-row {
+    height: 292px;
+}
+.date.ninth-row {
+    height: 374px;
+}
+.event .event-day {
+    width: 52.55px;
+    height: 27px;
+    background:#323232;
     font-weight: 700;
-}
-.chronicles-info .event .event-info ol {
-    list-style-type: square;
-    list-style-position: inside;
-    margin-left: 15px;
-}
-.chronicles-info .dates-flex {
+    font-size: 20px;
+    line-height: 23px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
 }
-.dates-list > img {
-    margin-bottom: 34px;
+.event .event-day.little-day {
+    font-size: 15px;
+    line-height: 17px;
 }
-.dates-list > .event {
-    margin-bottom: 13px;
+.event img {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
 }
-.chronicles-info .event-info img {
-    margin-right: 6px;
-}
-.chronicles-info .event-info img:last-child {
+.event img:last-child {
     margin-right: 0;
+}
+.event p {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+}
+.event p span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+}
+.event p span.brackets-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+}
+.event p span.nick {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+}
+.event p.one-line-event {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+}
+.date .event-screen {
+    width: 191px;
+    height: 114px;
+    margin: -10px 5px 15px 5px;
+}
+.event .emotes-group {
+    width: 75px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.event .emotes-group img:nth-child(even) {
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+.event .emotes-group img:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .content {
+        overflow-x: hidden;
+    }
+    .container {
+        width: 100%;
+    }
+    .content {
+        padding: 0;
+    }
+    header .header-content {
+        background: #181818;
+    }
+    header .back-bttn {
+        margin-left: 5px;
+        margin: 12px 0 12px 5px;
+    }
+    header .right-side {
+        margin-right: 5px;
+        padding-right: 0;
+    }
+    header .login {
+        margin-right: 0;
+    }
+    .info-content {
+        margin: 0;
+        flex-direction: column;
+        padding-bottom: 21px;
+    }
+    .character-card {
+        width: calc(87.68125vw + 5px + 8px + 8px + 8px);
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .character-card .card-title {
+        width: calc(87.68125vw + 5px + 8px + 8px + 8px);
+        height: 60px;    
+    }
+    .character-card .card-title p {
+        bottom: 2px;
+        left: calc(50% - 47.96875vw);
+    }
+    .character-card .card-pic {
+        width: calc(87.68125vw + 5px + 8px + 8px + 8px);
+        height: 248px;
+    }
+    .character-card .card-pic img {
+        width: calc(87.68125vw + 5px + 8px + 8px + 8px);    
+    }
+    .character-card .card-about .gender p {
+        border-top: 7px solid #181818;
+    }
+    .character-card .card-about>div p:first-child {
+        width: 44.621875vw;
+        height: 30px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .character-card .card-about>div p:last-child {
+        width: 43.059375vw;
+        height: 30px;
+        font-size: 13px;
+        line-height: 15px;
+        padding-left: 5px;
+    }
+    .info .character-card .card-about .all-appears p {
+        height: 57px;
+    }
+    .info .character-card .card-about .all-appears-right {
+        width: 43.059375vw;
+        height: 57px;
+        font-size: 13px;
+        line-height: 15px;
+        padding-left: 5px;
+    }
+    .general-info {
+        width: 100vw;
+        margin: 0 auto;
+        margin-top: 21px;
+    }
+    .general-info .info-text {
+        width: 93.75vw;
+        margin: 0 auto;
+        margin-bottom: 21px;
+        margin-top: 6px;
+        font-size: 15px;
+        line-height: 17px;
+    }
 }
