@@ -75,8 +75,17 @@ a {
 header {
     flex: 0 0 auto;
 }
+.content.mobile {
+    display: none;
+}
+footer {
+    display: none;
+}
 .content {
     flex: 1 0 auto;
+}
+.header-content.mobile {
+    display: none;
 }
 .header-content {
     box-sizing: border-box;
@@ -337,4 +346,207 @@ header .login a:hover {
 }
 .wiki-content .taytan-island:hover+.taytan-text {
     display: block;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    body {
+        width: 100%;
+        background: #111111;
+        min-height: 0;
+    }
+    .container {
+        width: 100%;
+    }
+    .preloader {
+        display: none;
+    }
+    .header-content.desktop, .content.desktop {
+        display: none;
+    }
+    .header-content.mobile {
+        display: flex;
+    }
+    .content.mobile {
+        display: block;
+        flex: 1 0 auto;
+    }
+    .header-content {
+        width: 100%;
+        background: #323232;
+        border: none;
+    }
+    header .logo-link {
+        width: 55px;
+        height: 43.78px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    header .logo-link img {
+        width: 55px;
+        height: 43.78px;
+    }
+    header .menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        font-size: 16px;
+        width: calc((100vw - 55px - 100px) / 3);
+        text-transform: none;
+        height: 54px;
+        font-family: 'Jost', sans-serif;
+    }
+    header .menu a:last-child {
+        line-height: 12px;
+        padding: 15px 0;
+    }
+    header .menu .current {
+        font-size: 16px;
+        background: #181818;
+    }
+    .line {
+        display: none;
+    }
+    header .menu a:hover {
+        border: none;
+    }
+    header .login {
+        width: 100px;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    header .login p {
+        display: none;
+    }
+    header .login a {
+        font-size: 18px;
+        line-height: 23px;
+        text-transform: uppercase;
+        padding: 15.5px 20.5px;
+        background: #C34375;
+    }
+    header .login a:hover {
+        color: white;
+    }
+    .island-list>div {
+        cursor: pointer;
+        width: 100vw;
+        height: 31.5625vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .island-list>div>h2 {
+        font-size: 20px;
+        line-height: 28px;
+        color:#C34375;
+        text-align: center;
+    }
+    .island-list>div.active>h2 {
+        color:#FF75AB;
+    }
+    .island-list>div>p {
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+    }
+    .content .dango-island-list {
+        cursor: initial;
+        display: none;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 45vw;
+    }
+    .content .dango-island-list.active {
+        display: flex;
+    }
+    .dango-island-list > div {
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 33.125vw;
+        height: 22.5vw;
+        background: #181818;
+        border: 2px solid #111111;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .dango-island-list > div > h3 {
+        font-size: 11px;
+        line-height: 15px;
+        color: #EBE984;
+        text-align: center;
+    }
+    .dango-island-list > div > p {
+        font-size: 5px;
+        line-height: 7px;
+        text-align: center;
+    }
+    .dango-island-list > div > p.break {
+        font-size: 8px;
+        line-height: 11px;
+        text-align: center;
+    }
+    .dango-island {
+        background: url('../imgs/wiki-map/dango-island-preview.png') center no-repeat;
+    }
+    .hladberin-island {
+        background: url('../imgs/wiki-map/hladberin-island-preview.png') center no-repeat;
+    }
+    .undefined-island {
+        background: url('../imgs/wiki-map/undefined-island-preview.png') center no-repeat;
+    }
+    .dango-island, .hladberin-island, .undefined-island {
+        box-sizing: border-box;
+        background-size: cover;
+        border: 2px solid #111111;
+    }
+    footer {
+        display: block;
+    }
+    .footer-content {
+        height: 41px;
+        background: #323232;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .entert {
+        font-family: 'Cabin';
+        font-size: 18px;
+        line-height: 22px;
+        margin-right: 29px;
+    }
+    footer .desktop-copyright-date, footer .desktop-copyright {
+        display: none;
+    }
+    footer .mobile-copyright-date {
+        display: block;
+        font-family: 'Press Start 2P';
+        font-size: 5px;
+        line-height: 5px;
+        text-align: center;
+    }
+    footer .mobile-copyright {
+        display: block;
+    }
+    footer .mobile-copyright p {
+        font-family: 'Press Start 2P';
+        font-size: 5px;
+        color:#C4C4C4;
+        text-align: center;
+    }
+    footer .mobile-copyright a {
+        font-family: 'Press Start 2P';
+        font-size: 10px;
+        text-align: center;
+        margin-left: 2.5px;
+    }
+    footer .copyright {
+        font-size: 5px;
+        line-height: 5px;
+    }
 }

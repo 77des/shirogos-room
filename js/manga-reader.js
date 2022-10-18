@@ -1,9 +1,9 @@
-//chapter dropdown
-let chapterSelect = document.querySelector('.chapter-menu .chapter-select');
-let chapterDropdown = document.querySelector('.chapter-menu .chapter-dropdown');
-let chapterMenu = document.querySelector('.chapter-menu');
-let bottomArrow = document.querySelector('.chapter-menu .bottom-arrow');
-let leftArrow = document.querySelector('.chapter-menu .left-arrow');
+//chapter dropdown desktop
+let chapterSelect = document.querySelector('.header-content.desktop .chapter-menu .chapter-select');
+let chapterDropdown = document.querySelector('.header-content.desktop .chapter-menu .chapter-dropdown');
+let chapterMenu = document.querySelector('.header-content.desktop .chapter-menu');
+let bottomArrow = document.querySelector('.header-content.desktop .chapter-menu .bottom-arrow');
+let leftArrow = document.querySelector('.header-content.desktop .chapter-menu .left-arrow');
 
 
 chapterSelect.addEventListener('click', function() {
@@ -23,6 +23,49 @@ chapterSelect.addEventListener('click', function() {
 })
 
 
+//chapter | pages dropdown mobile
+let chapterSelectMobile = document.querySelector('.header-content.mobile .chapter-menu .chapter-select');
+let chapterDropdownMobile = document.querySelector('.header-content.mobile .chapter-menu .chapter-dropdown');
+let pagesSelectMobile = document.querySelector('.header-content.mobile .pages-menu .pages-select');
+let pagesDropdownMobile = document.querySelector('.header-content.mobile .pages-menu .pages-dropdown');
+let closeDropdownBttn = document.querySelector('.header-content.mobile .chapter-menu .chapter-dropdown .close-dropdown');
+let pagesDropdownLinks = document.querySelectorAll('.header-content.mobile .pages-menu .pages-dropdown a');
+let pages = document.querySelector('.pages');
+let activeLink;
+
+if (chapterSelectMobile) {
+    chapterSelectMobile.addEventListener('click', function() {
+        chapterDropdownMobile.classList.toggle('active');
+        chapterSelectMobile.classList.toggle('active');
+    })
+}
+
+if (pagesSelectMobile) {
+    pagesSelectMobile.addEventListener('click', function() {
+        pagesDropdownMobile.classList.toggle('active');
+        pagesSelectMobile.classList.toggle('active');
+    })
+    for (let link of pagesDropdownLinks) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            updateURL(storyPages[Number(link.innerHTML)-1]);
+            choosePageByURL();
+            activeLink.classList.remove('active');
+            activeLink = link;
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        })
+    }
+    makeActiveLinkMobile();
+}
+
+if (closeDropdownBttn) {
+    closeDropdownBttn.addEventListener('click', function(event) {
+        event.preventDefault();
+        chapterDropdownMobile.classList.remove('active');
+        chapterSelectMobile.classList.remove('active');
+    })
+}
+
 //pages nav
 let pagesText = document.querySelectorAll('.pages-text');
 let prevMangaBttn = document.querySelectorAll('.prev-bttn.manga-bttn');
@@ -31,7 +74,6 @@ let prevStoryBttn = document.querySelectorAll('.prev-bttn.story-bttn');
 let nextStoryBttn = document.querySelectorAll('.next-bttn.story-bttn');
 let mangaPages = document.querySelectorAll('.manga-page');
 let storyPages = document.querySelectorAll('.story-page');
-let pages = document.querySelector('.pages');
 let soonChapters = document.querySelectorAll('.chapter-dropdown a.soon');
 let prevBttnImgs = document.querySelectorAll('.prev-bttn img');
 let nextBttnImgs = document.querySelectorAll('.next-bttn img');
@@ -119,7 +161,8 @@ for (let bttn of nextStoryBttn) {
         if (mutinyPages) {
             switchPageHeight(mutinyPages, mutinyStoryPages);
         }
-    })
+        makeActiveLinkMobile();
+        })
 }
 
 for (let bttn of prevStoryBttn) {
@@ -132,7 +175,8 @@ for (let bttn of prevStoryBttn) {
         if (mutinyPages) {
             switchPageHeight(mutinyPages, mutinyStoryPages);
         }
-    })
+        makeActiveLinkMobile();
+        })
 }
 
 for (let page of mangaPages) {
@@ -198,7 +242,7 @@ function toPrevPage(smthPages) {
         if (smthPages[i].classList.contains('active')) {
             let activePage = smthPages[i];
             if (pages.classList.contains('forlowers2') && i == 0) {
-                window.location.href = "./forlowers.html";
+                window.location.href = "./forlowers.html?page=18";
                 
             }
             if (i != 0) {
@@ -266,6 +310,14 @@ let hiStoryImgs = document.querySelectorAll('.pages.hi-story .manga-page img');
 let hiStoryPages = document.querySelectorAll('.pages.hi-story .manga-page');
 let hiStoryPageHeight = document.querySelector('.pages.hi-story');
 
+if (window.matchMedia("(max-width: 768px)").matches) {
+    for (let i = 0; i < hiStoryImgs.length; i++) {
+        let calculatedHeightMobile = parseInt(hiStoryImgs[i].style.height) / 1110 * 100;
+        hiStoryImgs[i].style.height = `${calculatedHeightMobile}vw`;
+        console.log(`${calculatedHeightMobile}vw`);
+    }
+}
+
 if (hiStoryPages) {
     switchHistoryHeight();
 }
@@ -279,3 +331,68 @@ function switchHistoryHeight() {
         }
     }
 }
+
+function choosePageByURL() {
+    let params = document.location.search;
+    let pageNumber = parseInt(params.match(/\d+/));
+    if (isNaN(pageNumber)) {
+        pageNumber = 1;
+    } else if (pageNumber > pages.children.length) {
+        pageNumber = pages.children.length;
+    }
+    if (pages.classList.contains('iceflame') || pages.classList.contains('mutiny')) {
+        for (let i = 0; i < storyPages.length; i++) {
+            if (storyPages[i].classList.contains('active')) {
+                storyPages[i].classList.remove('active');
+            }
+        }
+        storyPages[pageNumber-1].classList.add('active');
+        pagesDropdownLinks[pageNumber-1].classList.add('active');
+    } else {
+        for (let i = 0; i < mangaPages.length; i++) {
+            if (mangaPages[i].classList.contains('active')) {
+                mangaPages[i].classList.remove('active');
+            }
+        }
+        mangaPages[pageNumber-1].classList.add('active');
+    }
+
+    if (pages.classList.contains('hi-story')) {
+        switchHistoryHeight();
+    } else if (pages.classList.contains('mutiny')) {
+        switchPageHeight(mutinyPages, mutinyStoryPages);
+    } else if (pages.classList.contains('iceflame')) {
+        switchPageHeight(iceflamePages, iceflameStoryPages);
+    }
+    
+    for (let text of pagesText) {
+        if (pages.classList.contains('forlowers') || pages.classList.contains('forlowers2')) {
+            text.innerHTML = pageNumber + "/18"
+        } else if (pages.classList.contains('dandeathside')) {
+            text.innerHTML = pageNumber + "/23"
+        } else if (pages.classList.contains('iceflame')) {
+            text.innerHTML = pageNumber + "/26";
+        } else if (pages.classList.contains('hi-story')) {
+            text.innerHTML = pageNumber + "/10";
+        } else if (pages.classList.contains('mutiny')) {
+            text.innerHTML = pageNumber + "/22";
+        }
+    }
+}
+
+function makeActiveLinkMobile() {
+    let params = document.location.search;
+    let pageNumber = parseInt(params.match(/\d+/));
+    if (isNaN(pageNumber)) {
+        pageNumber = 1;
+    } else if (pageNumber > pages.children.length) {
+        pageNumber = pages.children.length;
+    }
+    if (activeLink) {
+        activeLink.classList.remove('active');
+    }
+    pagesDropdownLinks[pageNumber-1].classList.add('active');
+    activeLink = pagesDropdownLinks[pageNumber-1];
+}
+
+choosePageByURL();

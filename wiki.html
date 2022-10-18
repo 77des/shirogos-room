@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cabin&family=Cuprum&family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cabin&family=Cuprum&family=Jost&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <script src="./js/preloader.js" defer></script>
@@ -27,7 +27,7 @@
     <div id="page-preloader" class="preloader"></div>
     <header>
       <div class="container">
-        <div class="header-content">
+        <div class="header-content desktop">
           <a href="index.html" class="logo-link"
             ><img src="./imgs/logo.svg"
           /></a>
@@ -44,9 +44,102 @@
             <a href="#">Вход</a>
           </div>
         </div>
+        <div class="header-content mobile">
+          <a href="index.html" class="logo-link"
+            ><img src="./imgs/logo.svg"
+          /></a>
+          <nav class="menu">
+            <a href="butik.html"
+              ><div class="line"></div>
+              Бутик</a
+            >
+            <a href="wiki.html" class="current wiki">Вики</a>
+            <a href="dangoteka.html">Данго<wbr />тека</a>
+          </nav>
+          <div class="login">
+            <p>Комната</p>
+            <a href="#">Вход</a>
+          </div>
+        </div>
       </div>
     </header>
-    <div class="content">
+    <div class="content mobile">
+      <div class="island-list">
+        <div class="dango-island">
+          <h2>Данго Остров</h2>
+          <p>
+            Самый большой остров Измерения D. События лора<br />
+            так или иначе начинаются на этих землях.
+          </p>
+        </div>
+        <div class="dango-island-list">
+          <div class="di-town">
+            <h3>Ди-Таун</h3>
+            <p class="break">-</p>
+            <p>
+              Условная столица Данго<br> Острова. Вся жизнь течет<br> через это место.
+            </p>
+          </div>
+          <div class="avantcity">
+            <h3>Город <br>Авантюристов</h3>
+            <p class="break">-</p>
+            <p>Место пересечения всех<br> авантюристских путей.</p>
+          </div>
+          <div class="valvurion">
+            <h3>Валвурион</h3>
+            <p class="break">-</p>
+            <p>
+              Город-крепость стражников<br> валвов. Именно они<br> охраняют Вандерленд.
+            </p>
+          </div>
+          <div class="vanderland">
+            <h3>Вандерленд</h3>
+            <p class="break">-</p>
+            <p>
+              Легендарная тюрьма.<br> Обитель самых опасных<br> существ со всего Света.
+            </p>
+          </div>
+          <div class="shpil">
+            <h3>Шпиль</h3>
+            <p class="break">-</p>
+            <p>Город, в центре которого<br> возвышается огромный<br> каменный шпиль.</p>
+          </div>
+          <div class="taytan-note">
+            <h3>Тайтан Нотэ</h3>
+            <p class="break">-</p>
+            <p>Руины древней столицы<br> титанов.</p>
+          </div>
+        </div>
+        <div class="hladberin-island">
+          <h2>Хладберин</h2>
+          <p>
+            Остров, некогда бывший частью земель Данго<br />
+            Острова. Его жители неустанно готовятся к<br />
+            Снежневину.
+          </p>
+        </div>
+        <div class="undefined-island">
+          <h2>???</h2>
+          <p>Неизвестные земли. Какие загадки они таят?</p>
+        </div>
+        <div class="d-island">
+          <h2>Измерение D</h2>
+          <p>
+            Реальность под номером “ноль-ноль-ди”.<br />
+            Не входит в Общий Перечень Измерений Всемирья.<br />
+            Никем не контролируется.
+          </p>
+        </div>
+        <div class="grand-escape">
+          <h2>Гранд Эскейп</h2>
+          <p>
+            Великие воды, разделяющие Данго Остров<br />
+            и другие объекты суши.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="content desktop">
       <section class="wiki">
         <div class="container">
           <div class="wiki-content">
@@ -104,5 +197,26 @@
         </div>
       </section>
     </div>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="entert">
+            <p>DANGO ENTERTAINMENT</p>
+            <p class="mobile-copyright-date">© 2020-2022</p>
+          </div>
+          <div class="desktop-copyright">
+            <p>
+              Разработчик:
+              <a href="https://t.me/d3syan" target="_blank">des77</a>
+            </p>
+            <p class="desktop-copyright-date">© 2020-2022</p>
+          </div>
+          <div class="mobile-copyright">
+            <p>Разработчик</p>
+            <a href="https://t.me/d3syan" target="_blank">des77</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

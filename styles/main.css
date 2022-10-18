@@ -760,11 +760,11 @@ a {
 .faction-tournament .select-bttns button:last-child .arrow-left {
     border-right: 15px solid #D9D9D9;
 }
-.faction-tournament .first-tour>div, .faction-tournament .second-tour>div, .faction-tournament .third-tour>div, .faction-tournament .fourth-tour>div {
+.faction-tournament .main-content > div > div {
     margin-top: 28px;
     display: none;
 }
-.faction-tournament .first-tour>div.active, .faction-tournament .second-tour>div.active, .faction-tournament .third-tour>div.active, .faction-tournament .fourth-tour>div.active {
+.faction-tournament .main-content > div > div.active {
     display: flex;
 }
 .faction-tournament .left-bttns {
@@ -1320,6 +1320,12 @@ img.zoomed.active {
         width: 81.875vw;
         height: 18.75vh;
     }
+    .lists .faction-tournament-bttn {
+        display: none;
+    }
+    .lists .content-chronicles-bttn {
+        margin-bottom: 0;
+    }
     .top-donaters-bttn p, .first-donaters-bttn p {
         font-size: 1.5625rem;;
     }
@@ -1503,7 +1509,7 @@ img.zoomed.active {
     .faction-tournament .tournament-dropdown {
         display: flex;
         justify-content: center;
-        width: 308px;
+        width: 96.25vw;
         margin-left: 0;
     }
     .tournament-dropdown a {
@@ -1526,14 +1532,17 @@ img.zoomed.active {
     .tournament-dropdown a:last-child {
         margin-right: 0;
     }
-    .faction-tournament .first-tour>div, .faction-tournament .second-tour>div, .faction-tournament .third-tour>div, .faction-tournament .fourth-tour>div {
+    .faction-tournament .main-content > div > div {
         margin-top: 96px;
+    }
+    .faction-tournament .main-content > div > div.active {
+        justify-content: center;
     }
     .faction-tournament .main-content .left-bttns {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-left: 16px;
+        margin-left: 0;
         width: 266px;
         height: 36px;
         overflow-y: auto;

@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/DaysOne-Regular.ttf")
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -31,7 +38,10 @@ header {
     align-items: center;
     position: relative;
 }
-.chapter-select {
+.header-content.mobile {
+    display: none;
+}
+.chapter-select, .pages-select {
     box-sizing: border-box;
     font-family: 'Cuprum';
     height: 28px;
@@ -48,7 +58,7 @@ header {
     padding-right: 10px;
     padding-left: 18px;
 }
-.chapter-dropdown {
+.chapter-dropdown, .pages-dropdown {
     box-sizing: border-box;
     display: none;
     position: absolute;
@@ -57,10 +67,10 @@ header {
     width: 270px;
     z-index: 1;
 }
-.chapter-dropdown.active {
+.chapter-dropdown.active, .pages-dropdown.active {
     display: block;
 }
-.chapter-dropdown a {
+.chapter-dropdown a, .pages-dropdown a {
     font-family: 'Cuprum';
     color: #FFFFFF;
     text-align: center;
@@ -91,7 +101,7 @@ header {
         background: none;
     }
 }
-.chapter-dropdown a:last-child{
+.chapter-dropdown a:last-child, .pages-dropdown a:last-child{
     border-bottom: 3px solid #181818;
 }
 .chapter-dropdown a:hover {
@@ -324,4 +334,156 @@ header {
 }
 .pages .story-page span {
     color: #C34375;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .header-content.desktop {
+        display: none;
+    }
+    .header-content.mobile {
+        display: flex;
+        justify-content: start;
+        height: 54px;
+    }
+    .header-content .manga-title, .header-content .story-title {
+        width: 81.25vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-content .manga-title p, .header-content .story-title p {
+        font-family: 'Cuprum';
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .header-content .chapter-menu, .header-content .pages-menu {
+        padding: 0;
+    }
+    .header-content .chapter-select, .header-content .pages-select {
+        display: block; 
+        width: 18.75vw;
+        height: 54px;
+        font-size: 12px;
+        line-height: 14px;
+        background: #181818;
+        padding: 0;
+    }
+    .header-content .pages-select {
+        background: #C34375;
+    }
+    .header-content .chapter-select.active {
+        border: 3px solid #C34375;
+        border-bottom: none;
+    }
+    .header-content .pages-select.active {
+        border: 3px solid #FFFFFF;
+        border-bottom: none;
+    }
+    .header-content .chapter-dropdown, .header-content .pages-dropdown {
+        width: 18.75vw;
+        max-height: 339px;
+        overflow-y: scroll;
+        top: 54px;
+    }
+    .header-content .chapter-dropdown a, .header-content .pages-dropdown a {
+        font-family: 'Days One';
+        font-size: 35px;
+        line-height: 45px;
+        padding: 0;
+        border: 3px solid #C34375;
+        border-bottom: none;
+    }
+    .header-content .pages-dropdown a {
+        border: 3px solid #FFFFFF;
+        border-bottom: none;
+    }
+    .header-content .pages-dropdown a.active {
+        color: #C34375;
+    }
+    .header-content .chapter-dropdown a:last-child {
+        border-bottom: 3px solid #C34375;
+    }
+    .header-content .pages-dropdown a:last-child {
+        border-bottom: 3px solid #FFFFFF;
+    }
+    .pages {
+        padding-top: 54px;
+    }
+    .pages .manga-page {
+        top: 54px;
+    }
+    .pages.forlowers {
+        height: 146.5625vw;
+    }
+    .pages.forlowers2 {
+        height: 160vw;
+    }
+    .pages.dandeathside {
+        height: 133.333333333vw;
+    }
+    .pages.forlowers .manga-page {
+        height: 146.5625vw;
+    }
+    .pages.forlowers2 .manga-page {
+        height: 160vw;
+    }
+    .pages.dandeathside .manga-page {
+        height: 133.333333333vw;
+    }
+    .manga-list .pages img {
+        width: 100vw;   
+    }
+    .pages.forlowers img {
+        height: 146.5625vw;
+    }
+    .pages.forlowers2 img {
+        height: 160vw;
+    }
+    .pages.dandeathside img {
+        height: 133.333333333vw;
+    }
+    .pages.iceflame p, .pages.mutiny p {
+        width: 97.1875vw;
+        margin-top: 15px;
+        font-size: 1.25rem;
+        line-height: 1.15;
+    }
+    .pages.iceflame h2, .pages.mutiny h2 {
+        width: 97.1875vw;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    .pages.iceflame h3, .pages.mutiny h3 {
+        width: 97.1875vw;
+        margin-top: 15px;
+        font-size: 1.25rem;
+        line-height: 1.15;
+        padding-bottom: 0;
+    }
+    .story-list {
+        padding-bottom: 126px;
+    }
+    .pages .img-flex {
+        flex-direction: column-reverse;
+    }
+    .pages .img-flex img {
+        width: 97.1875vw;
+        margin-top: 15px;
+    }
+    .pages .story-page .img-flex p {
+        width: 97.1875vw;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    .bottom-nav-bttns {
+        margin-left: calc((100vw - 186px) / 2);
+        padding-top: 13px;
+    }
 }
