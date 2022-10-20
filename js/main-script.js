@@ -1,3 +1,10 @@
+let loginLink = document.querySelector('.header-content .login a');
+
+loginLink.addEventListener('click', function(event) {
+  event.preventDefault();
+})
+
+
 //format buttons
 const firstButtonFormats = document.querySelectorAll(
   ".formats .first-button div"
@@ -154,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     this.classList.remove("active");
   });
 }); // end ready
+
 
 //First-donaters modal window slider
 let donSliderBttns = document.querySelectorAll(

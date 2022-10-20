@@ -1339,7 +1339,7 @@ img.zoomed.active {
     .modal__title {
         font-size: 1.5625rem;
         line-height: 1.28;
-        margin: 9px 0;
+        margin: 1.7578125vh 0;
     }
     .top-donaters ol {
         width: 85.9375vw;
@@ -1375,7 +1375,9 @@ img.zoomed.active {
         width: 291px;
         height: 39px;
         margin: 0 auto;
-        margin-top: 374px;
+        margin-top: 73.046875vh;
+        margin-right: 2.5vw;
+        padding: 0 5px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1393,18 +1395,25 @@ img.zoomed.active {
         margin-bottom: 0;
         margin-right: 0;
     }
+    .first-donaters .donaters-imgs {
+        width: 96.25vw;
+    }
     .first-donaters .donaters-imgs .first-type {
         width: 358px;
         height: 269px;
-        margin-top: 44px;
-        margin-left: -25px;
+        max-width: 516px;
+        max-height: 387px;
+        margin-top: calc(73.046875vh - 1.7578125vh - 8px - 358px);
+        margin-left: -37px;
         transform: rotate(90deg);
     }
     .first-donaters .donaters-imgs .second-type {
         width: 269px;
         height: 358px;
-        margin-left: 20px;
-        margin-top: 0;
+        max-width: 387px;
+        max-height: 516px;
+        margin-left: 7px;
+        margin-top: calc(73.046875vh - 1.7578125vh - 8px - 402px);
     }
     .content-chronicles .modal__title {
         margin-bottom: 13px;

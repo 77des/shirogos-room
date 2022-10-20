@@ -1,3 +1,10 @@
+let loginLink = document.querySelector('.header-content .login a');
+
+loginLink.addEventListener('click', function(event) {
+  event.preventDefault();
+})
+
+
 //logo hover effect
 let logoLink = document.querySelector("header .logo-link");
 let logoImg = document.querySelector("header .logo-link img");
@@ -53,15 +60,15 @@ for (let i = 0; i < priceBttns.length; i++) {
 if (document.location.pathname == "/shirogos-room/butik.html") {
   let profileInfo = document.querySelector(".services .profile-info");
   let orderBttnDiv = document.querySelector(".services .order-bttn");
-  let typesTopMargins = ["359px", "359px", "359px", "350px", "255px", "274px"];
+  let typesTopMargins = ["454px", "288px", "241px", "274px", "350px", "482px"];
   let accountInfoTopMargins = [
-    "355px",
-    "452px",
-    "549px",
-    "637px",
-    "639px",
-    "755px",
-  ];
+    "450px",
+    "381px",
+    "431px",
+    "561px",
+    "734px",
+    "963px",
+  ];  
   let prevActiveServiceType;
 
   if (window.matchMedia("(max-width: 768px)").matches) {
@@ -93,8 +100,8 @@ if (document.location.pathname == "/shirogos-room/butik.html") {
         if (
           servicesTypes[servicesTypes.length - 1].classList.contains("active")
         ) {
-          profileInfo.style.top = "971px";
-          orderBttnDiv.style.top = "971px";
+          profileInfo.style.top = "876px";
+          orderBttnDiv.style.top = "876px";
           profileInfo.classList.add("active");
           orderBttnDiv.classList.add("active");
           prevActiveServiceType = servicesTypes[servicesTypes.length - 1];
@@ -108,10 +115,13 @@ if (document.location.pathname == "/shirogos-room/butik.html") {
 }
 
 
-//dangoteka text styles
-// if (document.location.pathname == "/shirogos-room/dangoteka.html") {
-//     if (window.matchMedia("(max-width: 768px)").matches) {
-//         let forlowersTitle = document.querySelector('.manga-list .forlowers>h3');
-//         forlowersTitle.innerHTML = 'FOR:LOWERS /<br> Для низших уровней';
-//     }
-// }
+//butik mobile links
+if (window.matchMedia('(max-width: 768px)').matches) {
+  let butikDangoImgs = document.querySelectorAll('.butik-content > div > img');
+
+  for (let img of butikDangoImgs) {
+    img.addEventListener('click', function() {
+      window.open('https://imgur.com/a/CXpDWTO');
+    })
+  }
+}

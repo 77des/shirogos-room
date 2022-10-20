@@ -380,6 +380,18 @@ h1, h2 {
     font-size: 1rem;
     line-height: 1.25;
 }
+.services .services-info>div p.types {
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 0;
+}
+.services .services-info>div span.types-title {
+    font-size: 1.25rem;
+}
+.services .services-info>div span.event-types {
+    font-size: 16px;
+    line-height: 20px;
+}
 .services .services-info>div ol {
     list-style: decimal;
     margin-left: 23px;
@@ -606,6 +618,18 @@ footer .copyright p:first-child {
         font-size: 14px;
         line-height: 18px;
     }
+    .services .services-info>div p.types {
+        font-size: 9px;
+        line-height: 12px;
+        margin-top: 0;
+    }
+    .services .services-info>div span.types-title {
+        font-size: 15px;
+    }
+    .services .services-info>div span.event-types {
+        font-size: 12px;
+        line-height: 15px;
+    }
     .services .order-bttn {
         margin-left: 133px;
         margin-top: 10px;
@@ -638,29 +662,29 @@ footer .copyright p:first-child {
         font-size: 11px;
         line-height: 14px;
     }
-    .services .services-info .game-1h-info {
+    .services .services-info .game-slot-info {
         top: 97px;
     }
-    .services .services-info .game-1-5h-info {
+    .services .services-info .signa-info {
         top: 194px;
     }
-    .services .services-info .game-2h-info {
+    .services .services-info .stickers-info {
         top: 291px;
     }
-    .services .services-info .letsplay-info {
+    .services .services-info .dango-sub-info {
         top: 388px;
     }
-    .services .services-info .stickers-info {
+    .services .services-info .letsplay-info {
         top: 485px;
     }
-    .services .services-info .dango-sub-info {
+    .services .services-info .ds-role-info {
         top: 582px;
     }
-    .services .services-info .anime-cover-info {
+    .services .services-info .avrorus-op-info {
         top: 679px;
     }
-    .services .services-types .anime-cover.active {
-        margin-bottom: 400px;
+    .services .services-types .avrorus-op.active {
+        margin-bottom: 311px;
     }
     .footer-content {
         height: 41px;

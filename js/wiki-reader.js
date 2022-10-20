@@ -1,3 +1,11 @@
+let loginLinks = document.querySelectorAll('.header-content .login a');
+
+for (let link of loginLinks) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+    })
+}
+
 //logo hover effect
 let logoLink = document.querySelector('header .logo-link');
 let logoImg = document.querySelector('header .logo-link img');
