@@ -358,6 +358,12 @@ h1, h2 {
     top: 0;
     width: 23.8125rem;
 }
+.services .services-info .avrorus-op-info {
+    width: 392px;
+}
+.services .services-info .avrorus-op-info hr {
+    width: 381px;
+}
 .services .services-info>div h3 {
     text-align: center;
     font-size: 1.5rem;
@@ -380,6 +386,9 @@ h1, h2 {
     font-size: 1rem;
     line-height: 1.25;
 }
+.services .services-info .avrorus-op-info p {
+    margin-left: 6px;
+}
 .services .services-info>div p.types {
     font-size: 13px;
     line-height: 17px;
@@ -397,6 +406,9 @@ h1, h2 {
     margin-left: 23px;
     font-size: 1rem;
     line-height: 1.25;
+}
+.services .services-info .avrorus-op-info ol {
+    margin-left: 29px;
 }
 .services .services-types>div.active .price {
     width: 11.375rem;
@@ -647,8 +659,11 @@ footer .copyright p:first-child {
         line-height: 25px;
     }
     .services .services-info>div {
-        width: 290px;
+        width: 290px; 
         margin-left: 11px;
+    }
+    .services .services-info .avrorus-op-info {
+        width: 290px;
     }
     .services .services-info > div h3, .services .services-info > div hr {
         display: none;
@@ -658,9 +673,15 @@ footer .copyright p:first-child {
         font-size: 15px;
         line-height: 19px;
     }
+    .services .services-info .avrorus-op-info p {
+        margin-left: 0;
+    }
     .services .services-info>div p.rules, .services .services-info>div ol {
         font-size: 11px;
         line-height: 14px;
+    }
+    .services .services-info .avrorus-op-info ol {
+        margin-left: 23px;
     }
     .services .services-info .game-slot-info {
         top: 97px;

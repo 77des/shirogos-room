@@ -57,63 +57,62 @@ for (let i = 0; i < priceBttns.length; i++) {
 }
 
 //services buttons set margins
-if (document.location.pathname == "/shirogos-room/butik.html") {
+
+if (window.location.pathname.includes('butik')) {
   let profileInfo = document.querySelector(".services .profile-info");
-  let orderBttnDiv = document.querySelector(".services .order-bttn");
-  let typesTopMargins = ["454px", "288px", "241px", "274px", "350px", "482px"];
-  let accountInfoTopMargins = [
-    "450px",
-    "381px",
-    "431px",
-    "561px",
-    "734px",
-    "963px",
-  ];  
-  let prevActiveServiceType;
-
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    for (let i = 0; i < servicesTypes.length - 1; i++) {
-      servicesTypes[i].addEventListener("click", function () {
-        if (prevActiveServiceType) {
-          prevActiveServiceType.style.marginTop = "0";
-        }
-        if (servicesTypes[i].classList.contains("active")) {
-          servicesTypes[i + 1].style.marginTop = typesTopMargins[i];
-          profileInfo.style.top = accountInfoTopMargins[i];
-          orderBttnDiv.style.top = accountInfoTopMargins[i];
-          profileInfo.classList.add("active");
-          orderBttnDiv.classList.add("active");
-          prevActiveServiceType = servicesTypes[i + 1];
-        } else {
-          servicesTypes[i + 1].style.marginTop = "0";
-          profileInfo.classList.remove("active");
-          orderBttnDiv.classList.remove("active");
-        }
-      });
-    }
-    servicesTypes[servicesTypes.length - 1].addEventListener(
-      "click",
-      function () {
-        if (prevActiveServiceType) {
-          prevActiveServiceType.style.marginTop = "0";
-        }
-        if (
-          servicesTypes[servicesTypes.length - 1].classList.contains("active")
-        ) {
-          profileInfo.style.top = "876px";
-          orderBttnDiv.style.top = "876px";
-          profileInfo.classList.add("active");
-          orderBttnDiv.classList.add("active");
-          prevActiveServiceType = servicesTypes[servicesTypes.length - 1];
-        } else {
-          profileInfo.classList.remove("active");
-          orderBttnDiv.classList.remove("active");
-        }
+let orderBttnDiv = document.querySelector(".services .order-bttn");
+let typesTopMargins = ["454px", "288px", "241px", "274px", "350px", "482px"];
+let accountInfoTopMargins = [
+  "450px",
+  "381px",
+  "431px",
+  "561px",
+  "734px",
+  "963px",
+];  
+let prevActiveServiceType;
+if (window.matchMedia("(max-width: 768px)").matches) {
+  for (let i = 0; i < servicesTypes.length - 1; i++) {
+    servicesTypes[i].addEventListener("click", function () {
+      if (prevActiveServiceType) {
+        prevActiveServiceType.style.marginTop = "0";
       }
-    );
+      if (servicesTypes[i].classList.contains("active")) {
+        servicesTypes[i + 1].style.marginTop = typesTopMargins[i];
+        profileInfo.style.top = accountInfoTopMargins[i];
+        orderBttnDiv.style.top = accountInfoTopMargins[i];
+        profileInfo.classList.add("active");
+        orderBttnDiv.classList.add("active");
+        prevActiveServiceType = servicesTypes[i + 1];
+      } else {
+        servicesTypes[i + 1].style.marginTop = "0";
+        profileInfo.classList.remove("active");
+        orderBttnDiv.classList.remove("active");
+      }
+    });
   }
+  servicesTypes[servicesTypes.length - 1].addEventListener(
+    "click",
+    function () {
+      if (prevActiveServiceType) {
+        prevActiveServiceType.style.marginTop = "0";
+      }
+      if (
+        servicesTypes[servicesTypes.length - 1].classList.contains("active")
+      ) {
+        profileInfo.style.top = "876px";
+        orderBttnDiv.style.top = "876px";
+        profileInfo.classList.add("active");
+        orderBttnDiv.classList.add("active");
+        prevActiveServiceType = servicesTypes[servicesTypes.length - 1];
+      } else {
+        profileInfo.classList.remove("active");
+        orderBttnDiv.classList.remove("active");
+      }
+    }
+  );
 }
-
+}
 
 //butik mobile links
 if (window.matchMedia('(max-width: 768px)').matches) {

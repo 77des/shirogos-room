@@ -1068,9 +1068,6 @@ img.zoomed.active {
     border-bottom: 3px solid #DEDEDE !important;
 }
 @media (min-width: 320px) and (max-width: 768px) {
-    .onepage-pagination {
-        display: none;
-    }
     .header {
         background-image: url('../imgs/header-bg-mobile-2.png');
         background-position: -200px;

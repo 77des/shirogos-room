@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
   modalButtons.forEach(function (item) {
     item.addEventListener("click", function (e) {
       e.preventDefault();
-      document.body.classList.add("disabled-onepage-scroll");
 
       var modalId = this.getAttribute("data-modal"),
         modalElem = document.querySelector(
@@ -130,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       parentModal.classList.remove("active");
       overlay.classList.remove("active");
-      document.body.classList.remove("disabled-onepage-scroll");
     });
     item.addEventListener("mouseover", function () {
       item.src = "./imgs/close-hover.svg";
@@ -479,6 +477,7 @@ document.querySelector('.second-tour .sixth-week .right-content.jackbox'),
 );
 
 if (window.matchMedia('(max-width: 768px)').matches) {
+  document.body.classList.add('disabled-onepage-scroll');
   for (let content of mobileScrollContents) {
     new SimpleBar(content);
     content.classList.add('simplebar');
@@ -590,7 +589,6 @@ document.body.addEventListener(
       if (key == 27) {
         document.querySelector(".modal.active").classList.remove("active");
         document.querySelector(".overlay.active").classList.remove("active");
-        document.body.classList.remove("disabled-onepage-scroll");
       }
     }
   },

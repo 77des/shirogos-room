@@ -70,10 +70,10 @@ body, .onepage-wrapper, html {
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
-  overflow: hidden;
+  overflow: auto;
 }
 
-/* .disabled-onepage-scroll .onepage-wrapper .ops-section {
+.disabled-onepage-scroll .onepage-wrapper .ops-section {
   position: relative !important;
   top: auto !important;
 }
@@ -83,7 +83,7 @@ body, .onepage-wrapper, html {
   transform: none !important;
   -ms-transform: none !important;
   min-height: 100%;
-} */
+}
 
 .disabled-onepage-scroll .onepage-pagination {
   display: none;
