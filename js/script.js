@@ -71,7 +71,7 @@ let accountInfoTopMargins = [
   "963px",
 ];  
 let prevActiveServiceType;
-if (window.matchMedia("(max-width: 768px)").matches) {
+if (window.matchMedia("(max-width: 1109px)").matches) {
   for (let i = 0; i < servicesTypes.length - 1; i++) {
     servicesTypes[i].addEventListener("click", function () {
       if (prevActiveServiceType) {
@@ -115,7 +115,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 }
 
 //butik mobile links
-if (window.matchMedia('(max-width: 768px)').matches) {
+if (window.matchMedia('(max-width: 1109px)').matches) {
   let butikDangoImgs = document.querySelectorAll('.butik-content > div > img');
 
   for (let img of butikDangoImgs) {

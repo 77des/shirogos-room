@@ -18,7 +18,7 @@ logoLink.addEventListener('mouseout', function() {
 })
 
 //island hover effects
-if (!window.matchMedia("(max-width: 768px)").matches) {
+if (!window.matchMedia("(max-width: 1109px)").matches) {
     let islandImgs = document.querySelectorAll('.wiki-content img');
     let islandLinks = document.querySelectorAll('.wiki-content a');
     let islandNames = document.querySelectorAll('.wiki-content p');
@@ -112,7 +112,7 @@ if (!window.matchMedia("(max-width: 768px)").matches) {
 }
 
 
-if (window.matchMedia("(max-width: 768px)").matches) {
+if (window.matchMedia("(max-width: 1109px)").matches) {
     let islandsButtons = document.querySelectorAll('.island-list > div');
     let dangoIslandList = document.querySelector('.dango-island-list');
     let dangoIslandLinks = document.querySelectorAll('.dango-island-list > div');

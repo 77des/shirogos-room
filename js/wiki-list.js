@@ -25,7 +25,7 @@ prevBttn.addEventListener('mouseout', function() {
     prevBttnImg.src = "../../imgs/wiki-list/prev-bttn.svg";
 })
 
-if (window.matchMedia('(max-width: 768px)').matches) {
+if (window.matchMedia('(max-width: 1109px)').matches) {
     if (document.location.pathname.includes('hladberin')) {
         let hladberinTitle = document.querySelector('.hladberin-header .title');
         hladberinTitle.innerHTML = '<p>ПРАЗДНИЧНЫЙ<br> ОСТРОВ<br> ХЛАДБЕРИН</p>';

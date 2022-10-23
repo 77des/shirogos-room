@@ -310,7 +310,7 @@ let hiStoryImgs = document.querySelectorAll('.pages.hi-story .manga-page img');
 let hiStoryPages = document.querySelectorAll('.pages.hi-story .manga-page');
 let hiStoryPageHeight = document.querySelector('.pages.hi-story');
 
-if (window.matchMedia("(max-width: 768px)").matches) {
+if (window.matchMedia("(max-width: 1109px)").matches) {
     for (let i = 0; i < hiStoryImgs.length; i++) {
         let calculatedHeightMobile = parseInt(hiStoryImgs[i].style.height) / 1110 * 100;
         hiStoryImgs[i].style.height = `${calculatedHeightMobile}vw`;

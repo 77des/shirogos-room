@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalElem.classList.add("active");
       overlay.classList.add("active");
 
-      if (item.classList.contains('faction-tournament-bttn') && (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768)) {
+      if (item.classList.contains('faction-tournament-bttn') && (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109)) {
         tourBttns[0].innerHTML = '1';
         tourBttns[1].innerHTML = '2';
         tourBttns[2].innerHTML = '3';
@@ -285,7 +285,7 @@ for (let i = 0; i < weekBttns.length; i++) {
       weekSelectBttnText.classList.add('result-text');
       if (toursContent[3].classList.contains('active')) {
         weekBttns[14].style.borderBottom = "3px solid #181818";
-        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
           weekBttns[14].style.borderBottom = "3px solid #DEDEDE";
         }
       }
@@ -328,7 +328,7 @@ tourSelectBttn.addEventListener('click', function() {
 })
 
 weekBttns[6].style.borderBottom = "3px solid #181818";
-if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
   weekBttns[6].style.borderBottom = "3px solid #DEDEDE";
 }
 
@@ -382,7 +382,7 @@ for (let i = 0; i < tourBttns.length; i++) {
       }
       weekBttns[4].innerHTML = 'Результаты';
       weekBttns[4].style.borderBottom = "3px solid #181818";
-      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
         weekBttns[4].style.borderBottom = "3px solid #DEDEDE";
       }
       prevActiveTour = 3;
@@ -406,7 +406,7 @@ for (let i = 0; i < tourBttns.length; i++) {
         weekBttns[6].innerHTML = 'Результаты';
       }
       weekBttns[6].style.borderBottom = "3px solid #181818";
-      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
         weekBttns[6].style.borderBottom = "3px solid #DEDEDE";
       }
       prevActiveTour = 1;
@@ -428,7 +428,7 @@ for (let i = 0; i < tourBttns.length; i++) {
         weekBttns[i-1].innerHTML = 'День ' + i;
       }
       weekBttns[15].style.borderBottom = "3px solid #181818";
-      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+      if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
         weekBttns[15].style.borderBottom = "3px solid #DEDEDE";
       }
       weekBttns[6].style.borderBottom = "none";
@@ -448,7 +448,7 @@ for (let i = 0; i < weekBttns.length; i++) {
     if (tourBttns[0].classList.contains('active') || tourBttns[1].classList.contains('active')) {
       if (weekBttns[6].classList.contains('active')) {
         weekBttns[5].style.borderBottom = "3px solid #181818";
-        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
           weekBttns[5].style.borderBottom = "3px solid #DEDEDE";
         }
       } else {
@@ -457,7 +457,7 @@ for (let i = 0; i < weekBttns.length; i++) {
     } else if (tourBttns[2].classList.contains('active')) {
       if (weekBttns[4].classList.contains('active')) {
         weekBttns[3].style.borderBottom = "3px solid #181818";
-        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+        if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
           weekBttns[3].style.borderBottom = "3px solid #DEDEDE";
         }
       } else {
@@ -476,8 +476,7 @@ document.querySelector('.second-tour .fifth-week .right-content.jackbox'),
 document.querySelector('.second-tour .sixth-week .right-content.jackbox'),
 );
 
-if (window.matchMedia('(max-width: 768px)').matches) {
-  // document.body.classList.add('disabled-onepage-scroll');
+if (window.matchMedia('(max-width: 1109px)').matches) {
   for (let content of mobileScrollContents) {
     new SimpleBar(content);
     content.classList.add('simplebar');
@@ -497,7 +496,7 @@ function switchCategory(newWeekContent) {
 }
 
 window.addEventListener('resize', function(event) {
-  if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 768) {
+  if (document.documentElement.scrollWidth >= 320 && document.documentElement.scrollWidth <= 1109) {
     tourBttns[0].innerHTML = '1';
     tourBttns[1].innerHTML = '2';
     tourBttns[2].innerHTML = '3';
@@ -525,7 +524,7 @@ window.addEventListener('resize', function(event) {
       new SimpleBar(elem);
       elem.classList.add('simplebar');
     }
-  } else if (document.documentElement.scrollWidth > 768) {
+  } else if (document.documentElement.scrollWidth > 1109) {
     tourBttns[0].innerHTML = 'Турнир Фракций 1';
     tourBttns[1].innerHTML = 'Турнир Фракций 2';
     tourBttns[2].innerHTML = 'Турнир Фракций 3';

@@ -1,4 +1,4 @@
-if (!window.matchMedia("(max-width: 768px)").matches) {
+if (!window.matchMedia("(max-width: 1109px)").matches) {
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(function() {
             document.body.classList.add('bg-hovered');

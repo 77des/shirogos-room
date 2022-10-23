@@ -1071,7 +1071,7 @@ img.zoomed.active {
 .faction-tournament .bottomBordered.mobile {
     border-bottom: 3px solid #DEDEDE !important;
 }
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1109px) {
     body {
         overflow-y: auto;
     }
@@ -1648,7 +1648,7 @@ img.zoomed.active {
         line-height: 15px;
     }
 }
-@media (min-width: 520px) and (max-width: 768px) {
+@media (min-width: 520px) and (max-width: 1109px) {
     .rating .mobile-table.rating-table {
         display: flex;
         flex-direction: row-reverse;
