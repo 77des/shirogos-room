@@ -477,7 +477,7 @@ document.querySelector('.second-tour .sixth-week .right-content.jackbox'),
 );
 
 if (window.matchMedia('(max-width: 768px)').matches) {
-  document.body.classList.add('disabled-onepage-scroll');
+  // document.body.classList.add('disabled-onepage-scroll');
   for (let content of mobileScrollContents) {
     new SimpleBar(content);
     content.classList.add('simplebar');

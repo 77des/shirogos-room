@@ -43,6 +43,9 @@ a {
     width: 1110px;
     margin: 0 auto;
 }
+section {
+    height: 100vh;
+}
 .header {
     background: url('../imgs/header-bg.png') no-repeat center center;
     background-size: cover; 
@@ -50,6 +53,7 @@ a {
     width: 100%;
 }
 .header .socials-account {
+    position: relative;
     display: flex;
     margin-bottom: 30px;
 }
@@ -1068,6 +1072,9 @@ img.zoomed.active {
     border-bottom: 3px solid #DEDEDE !important;
 }
 @media (min-width: 320px) and (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
     .header {
         background-image: url('../imgs/header-bg-mobile-2.png');
         background-position: -200px;
@@ -1293,6 +1300,12 @@ img.zoomed.active {
     .format-buttons {
         display: none;
     }
+    .lists-content {
+        position: relative;
+    }
+    .modal {
+        position: absolute;
+    }
     .mobile-format-buttons {
         display: block;
     }
@@ -1317,7 +1330,7 @@ img.zoomed.active {
         width: 81.875vw;
         height: 18.75vh;
     }
-    .lists .faction-tournament-bttn {
+    .lists .faction-tournament-bttn, .lists .first-donaters-bttn {
         display: none;
     }
     .lists .content-chronicles-bttn {
