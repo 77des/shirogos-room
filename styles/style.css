@@ -438,12 +438,15 @@ footer {
 footer .mobile-copyright-date, footer .mobile-copyright {
     display: none;
 }
+footer .desktop-copyright a:hover, footer .mobile-copyright a:hover {
+    color: #C34375;
+}
 footer .entert {
     font-size: 36px;
     font-family: 'Cabin';
     margin-right: 76px;
 }
-footer .copyright {
+footer .desktop-copyright {
     color: #C4C4C4;
     font-family: 'Press Start 2P';
     font-size: 12px;
