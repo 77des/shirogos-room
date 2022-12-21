@@ -4,6 +4,126 @@ loginLink.addEventListener('click', function(event) {
   event.preventDefault();
 })
 
+//birthdays
+const olenyashaImg = document.querySelector('.birthdays .chronicles-block img');
+const chroniclesBlock = document.querySelector('.birthdays .chronicles-block');
+
+chroniclesBlock.addEventListener('click', () => {
+  window.location.href = "./wiki/wiki-reader/chronicles.html";
+})
+chroniclesBlock.addEventListener('mouseover', () => {
+  olenyashaImg.src = './imgs/olenyasha-hover.png';
+})
+chroniclesBlock.addEventListener('mouseout', () => {
+  olenyashaImg.src = './imgs/olenyasha.png';
+})
+
+const shortMonths = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+const birthdays = {
+  '5.0': 'owleren',
+  '27.0': 'WaterYay',
+  '5.1': 'YungAaalik',
+  '12.1': 'TheMaxCrashE',
+  '10.2': 'TUSKASTEL',
+  '1.3': 'scyerman',
+  '3.3': 'mikasa_di',
+  '12.3': 'rrasher',
+  '16.4': 'jevil_3310',
+  '19.4': 'dieformm',
+  '3.5': 'EgoistManiac',
+  '22.5': 'prprKella',
+  '24.5': 'fayzeel',
+  '6.6': 'NatCupcake',
+  '14.6': 'des77',
+  '21.6': 'AsterAc',
+  '28.6': 'ikoogi',
+  '2.7': 'Xellronin',
+  '9.7': 'yaleretayaeryl',
+  '28.7': 'hellishfire21',
+  '3.9': 'KiriDa2_0',
+  '20.9': 'slohhh',
+  '25.9': 'chusui_',
+  '3.10': 'mercenaryJulian',
+  '4.10': '970710hex',
+  '2.11': 'shizuka4an',
+  '15.11': 'StronaKC',
+  '16.11': 'NENS0_0',
+  '30.11': 'Je3z',
+};
+const birthdayText = document.querySelector('.birthdays .birthday-text p');
+const cakeBlock = document.querySelector('.birthdays .cake-block');
+const prevDay = document.querySelector('.birthdays .days-bttns .prev-day');
+const currentDay = document.querySelector('.birthdays .days-bttns .current-day');
+const nextDay = document.querySelector('.birthdays .days-bttns .next-day');
+
+function checkBirthdays(date) {
+  let actualDay = date.getDate();
+  let actualMonth = date.getMonth();
+  let nicknames = '';
+
+  for (let key in birthdays) {
+    let dateArr = key.split('.');
+    if (Number(dateArr[0]) == actualDay && Number(dateArr[1]) == actualMonth) {
+      nicknames = birthdays[key];
+    }
+  }
+
+  if (nicknames == '') {
+    birthdayText.innerHTML = 'Сегодня нет <span class="yellow-text">Дней Рождений</span>...';
+    cakeBlock.classList.add('no-birthday');
+  } else {
+    birthdayText.innerHTML = `<span class="yellow-text">С Днем Рождения</span>,<br>${nicknames}!`;
+    cakeBlock.classList.remove('no-birthday');
+  }
+}
+
+function updateDate(date) {
+  let prevDate = new Date(date.getFullYear(), date.getMonth(), date.getDate()-1);
+  let nextDate = new Date(date.getFullYear(), date.getMonth(), date.getDate()+1);
+  prevDay.innerHTML = `${prevDate.getDate()} ${shortMonths[prevDate.getMonth()]}`;
+  currentDay.innerHTML = `${date.getDate()} ${months[date.getMonth()]}`;
+  nextDay.innerHTML = `${nextDate.getDate()} ${shortMonths[nextDate.getMonth()]}`;
+}
+
+function checkActualDay() {
+  let currentDate = new Date();
+  let currentDateText = `${currentDate.getDate()} ${months[currentDate.getMonth()]}`;
+  let shortCurrentDateText = `${currentDate.getDate()} ${shortMonths[currentDate.getMonth()]}`;
+
+  prevDay.classList.remove('actual-day');
+  currentDay.classList.remove('actual-day');
+  nextDay.classList.remove('actual-day');
+
+  if (prevDay.innerHTML == shortCurrentDateText) {
+    prevDay.classList.add('actual-day');
+  } else if (nextDay.innerHTML == shortCurrentDateText) {
+    nextDay.classList.add('actual-day');
+  } else if (currentDay.innerHTML == currentDateText) {
+    currentDay.classList.add('actual-day');
+  }
+}
+
+prevDay.addEventListener('click', () => {
+  let currentDayArr = currentDay.innerHTML.split(' ');
+  let currentMonth = months.indexOf(currentDayArr[1]);
+  let newDate = new Date(new Date().getFullYear(), currentMonth, Number(currentDayArr[0])-1);
+  updateDate(newDate);
+  checkBirthdays(newDate);
+  checkActualDay();
+})
+
+nextDay.addEventListener('click', () => {
+  let currentDayArr = currentDay.innerHTML.split(' ');
+  let currentMonth = months.indexOf(currentDayArr[1]);
+  let newDate = new Date(new Date().getFullYear(), currentMonth, Number(currentDayArr[0])+1);
+  updateDate(newDate);
+  checkBirthdays(newDate);
+  checkActualDay();
+})
+
+checkBirthdays(new Date());
+updateDate(new Date());
 
 //format buttons
 const firstButtonFormats = document.querySelectorAll(

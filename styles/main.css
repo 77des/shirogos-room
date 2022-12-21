@@ -51,6 +51,11 @@ section {
     background-size: cover; 
     height: 100vh;
     width: 100%;
+    position: relative;
+}
+.header .transition-first {
+    position: absolute;
+    bottom: -21px;
 }
 .header .socials-account {
     position: relative;
@@ -186,8 +191,131 @@ section {
     flex-direction: column;
     justify-content: center;
 }
+.birthdays {
+    background: #C34375;
+    position: relative;
+}
+.birthdays-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: 1050px;
+}
+.birthdays .days-bttns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.birthdays .days-bttns div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #181818;
+    font-size: 24px;
+    line-height: 31px;
+}
+.birthdays .prev-day, .birthdays .next-day {
+    width: 120px;
+    height: 41px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.birthdays .prev-day:hover, .birthdays .next-day:hover {
+    background: #242424;
+}
+.birthdays .current-day {
+    width: 350px;
+    height: 52px;
+    background: #181818;
+    border-radius: 37px;
+}
+.birthdays .days-bttns > div.actual-day {
+    color: #EBE984;
+}
+.birthdays .birthday-block {
+    width: 1050px;
+    height: 689px;
+    background: #181818;
+    border-bottom-left-radius: 37px;
+    border-bottom-right-radius: 37px;
+}
+.birthdays .cake-block {
+    width: 243px;
+    height: 244px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 26px;
+}
+.birthdays .cake-block img {
+    position: absolute;
+}
+.birthdays .cake-block .cake-cross {
+    display: none;
+    top: 46px;
+    left: 23px;
+}
+.birthdays .cake-block.no-birthday .cake-cross {
+    display: block;
+}
+.birthdays .cake-block.no-birthday .cake-img {
+    filter: grayscale(100%); 
+}
+.birthdays .birthday-text {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    line-height: 31px;
+}
+.birthdays .birthday-text .yellow-text {
+    color:#EBE984;
+}
+.birthdays .chronicles-block {
+    position: relative;
+    width: 1005px;
+    height: 236px;
+    background: #242424;
+    border-radius: 37px;
+    margin: 0 auto;
+    margin-top: 73px;
+    cursor: pointer;
+}
+.birthdays .chronicles-block:hover {
+    background: #323232
+}
+.birthdays .chronicles-block:hover h3 {
+    color: #FF75AB;
+}
+.birthdays .chronicles-block img {
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+}
+.birthdays .chronicles-block h3 {
+    font-size: 54px;
+    color: #C34375;
+    -webkit-text-stroke: 1px #000000;
+    padding-left: 524px;
+    padding-top: 68px;
+}
+.birthdays .chronicles-block p {
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 15px;
+    margin-left: 340px;
+}
 .rating {
     background: #181818;
+    position: relative;
 }
 .rating-content {
     display: flex;
@@ -352,6 +480,7 @@ section {
 }
 .formats {
     background: #DEDEDE;
+    position: relative;
 }
 .formats-content {
     display: flex;
@@ -1070,6 +1199,10 @@ img.zoomed.active {
 }
 .faction-tournament .bottomBordered.mobile {
     border-bottom: 3px solid #DEDEDE !important;
+}
+.transition {
+    position: absolute;
+    bottom: -21px;
 }
 @media (min-width: 320px) and (max-width: 1109px) {
     body {
