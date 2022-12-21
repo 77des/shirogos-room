@@ -11,10 +11,18 @@ let logoLink = document.querySelector('header .logo-link');
 let logoImg = document.querySelector('header .logo-link img');
 
 logoLink.addEventListener('mouseover', function() {
-    logoImg.src = "../../imgs/logohover.svg";
+    if (window.location.pathname.includes('chronicles')) {
+        logoImg.src = "./imgs/logohover.svg";
+    } else {
+        logoImg.src = "../../imgs/logohover.svg";
+    }
 })
 logoLink.addEventListener('mouseout', function() {
-    logoImg.src = "../../imgs/logo.svg";
+    if (window.location.pathname.includes('chronicles')) {
+        logoImg.src = "./imgs/logo.svg";
+    } else {
+        logoImg.src = "../../imgs/logo.svg";
+    }
 })
 
 //backbttn hover effect
@@ -22,10 +30,18 @@ let backBttn = document.querySelector('.back-bttn');
 let backBttnImg = document.querySelector('.back-bttn img');
 
 backBttn.addEventListener('mouseover', function() {
-    backBttnImg.src = "../../imgs/wiki-reader/back-bttn-hover.svg";
+    if (window.location.pathname.includes('chronicles')) {
+        backBttnImg.src = "./imgs/wiki-reader/back-bttn-hover.svg";
+    } else {
+        backBttnImg.src = "../../imgs/wiki-reader/back-bttn-hover.svg";
+    }
 })
 backBttn.addEventListener('mouseout', function() {
-    backBttnImg.src = "../../imgs/wiki-reader/back-bttn.svg";
+    if (window.location.pathname.includes('chronicles')) {
+        backBttnImg.src = "./imgs/wiki-reader/back-bttn.svg";
+    } else {
+        backBttnImg.src = "../../imgs/wiki-reader/back-bttn.svg";
+    }
 })
 
 //appears calc indent

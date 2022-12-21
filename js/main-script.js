@@ -9,7 +9,7 @@ const olenyashaImg = document.querySelector('.birthdays .chronicles-block img');
 const chroniclesBlock = document.querySelector('.birthdays .chronicles-block');
 
 chroniclesBlock.addEventListener('click', () => {
-  window.location.href = "./wiki/wiki-reader/chronicles.html";
+  window.location.href = "./chronicles.html";
 })
 chroniclesBlock.addEventListener('mouseover', () => {
   olenyashaImg.src = './imgs/olenyasha-hover.png';
