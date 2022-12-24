@@ -25,6 +25,23 @@ prevBttn.addEventListener('mouseout', function() {
     prevBttnImg.src = "../../imgs/wiki-list/prev-bttn.svg";
 })
 
+const topPrevBttnMobile = document.querySelector('.list-title .prev-bttn');
+const topNextBttnMobile = document.querySelector('.list-title .next-bttn');
+
+topPrevBttnMobile.addEventListener('mouseover', function() {
+    topPrevBttnMobile.src = "../../imgs/wiki-list/top-prev-bttn-hover.svg";
+})
+topNextBttnMobile.addEventListener('mouseover', function() {
+    topPrevBttnMobile.src = "../../imgs/wiki-list/top-next-bttn-hover.svg";
+})
+
+topPrevBttnMobile.addEventListener('mouseout', function() {
+    topPrevBttnMobile.src = "../../imgs/wiki-list/top-prev-bttn.svg";
+})
+topNextBttnMobile.addEventListener('mouseout', function() {
+    topPrevBttnMobile.src = "../../imgs/wiki-list/top-next-bttn.svg";
+})
+
 if (window.matchMedia('(max-width: 1109px)').matches) {
     if (document.location.pathname.includes('hladberin')) {
         let hladberinTitle = document.querySelector('.hladberin-header .title');

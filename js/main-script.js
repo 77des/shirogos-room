@@ -70,7 +70,11 @@ function checkBirthdays(date) {
   }
 
   if (nicknames == '') {
-    birthdayText.innerHTML = 'Сегодня нет <span class="yellow-text">Дней Рождений</span>...';
+    if (window.matchMedia('(max-width: 1109px)').matches) {
+      birthdayText.innerHTML = 'Сегодня нет<br> <span class="yellow-text">Дней Рождений</span>...';
+    } else {
+      birthdayText.innerHTML = 'Сегодня нет <span class="yellow-text">Дней Рождений</span>...';
+    }
     cakeBlock.classList.add('no-birthday');
   } else {
     birthdayText.innerHTML = `<span class="yellow-text">С Днем Рождения</span>,<br>${nicknames}!`;
@@ -124,6 +128,7 @@ nextDay.addEventListener('click', () => {
 
 checkBirthdays(new Date());
 updateDate(new Date());
+
 
 //format buttons
 const firstButtonFormats = document.querySelectorAll(

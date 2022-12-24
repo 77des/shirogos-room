@@ -30,11 +30,27 @@ header .header-content {
     display: flex;
     justify-content: space-between;
 }
-.header-content>p {
+.header-content .island-title > p {
     font-size: 2rem;
+    line-height: 1.28125;
+    margin: 0 15px;
+}
+.hladberin-header .title {
+    margin: 0 15px;
+}
+.header-content .island-title {
+    display: flex;
+    align-items: center;
     padding: 1.25rem 0;
     padding-left: 39px;
-    line-height: 1.28125;
+}
+.hladberin-header .island-title {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+}
+.header-content.unknown-header .island-title {
+    padding-top: 4.625rem;
+    padding-bottom: 4.625rem;
 }
 .header-content .back-bttn {
     margin-right: 34px;
@@ -52,6 +68,9 @@ header .header-content {
 }
 .header-content .back-bttn:hover p {
     color: #FFFFFF;
+}
+.header-content.unknown-header .back-bttn {
+    margin-top: 50px;
 }
 .characters-content {
     padding-top: 34px;
@@ -79,6 +98,9 @@ header .header-content {
 .list-title span {
     font-size: 1.25rem;
     line-height: 1.25;
+}
+.list-title .next-bttn, .list-title .prev-bttn {
+    display: none;
 }
 .list {
     width: 1020px;
@@ -176,10 +198,6 @@ header .header-content {
     padding-top: 83px;
     padding-bottom: 25px;
 }
-.hladberin-header .title {
-    padding: 50px 0;
-    padding-left: 40px;
-}
 .hladberin-header .title p:first-child {
     font-size: 2rem;
     line-height: 1.25;
@@ -200,13 +218,6 @@ header .header-content {
 }
 .characters-content .hladberins-content, .characters-content .sbornik-kurogo-content {
     padding-bottom: 72px;
-}
-.header-content.unknown-header>p {
-    padding: 74px 0;
-    padding-left: 40px;
-}
-.header-content.unknown-header .back-bttn {
-    margin-top: 50px;
 }
 .unknown-content {
     padding-top: 21px;
@@ -252,6 +263,9 @@ header .header-content {
         background: linear-gradient(180deg, #181818 39.58%, #323232 96.35%);
         height: 229px;
     }
+    .header-content .prev-bttn, .header-content .next-bttn {
+        display: none;
+    }
     .header-content .back-bttn {
         width: 96px;
         margin: 0 auto;
@@ -260,7 +274,7 @@ header .header-content {
     .header-content.unknown-header .back-bttn {
         margin-top: 12px;
     }
-    .header-content>p {
+    .header-content .island-title>p {
         font-size: 25px;
         line-height: 32px;
         padding: 0;
@@ -269,11 +283,18 @@ header .header-content {
         text-align: center;
         margin-top: 23px;
     }
+    .header-content .island-title {
+        padding: 0;
+        justify-content: center;
+    }
+    .header-content.unknown-header .island-title {
+        padding: 0;
+    }
     .hladberin-header .title {
         padding: 0;
         margin-top: 23px;
     }
-    .header-content.unknown-header>p {
+    .header-content.unknown-header .island-title>p {
         padding: 0;
         margin-top: 55px;
     }
@@ -304,6 +325,9 @@ header .header-content {
         line-height: 25px;
         padding-top: 0;
     }
+    .list-title .next-bttn, .list-title .prev-bttn {
+        display: block;
+    }
     .valvs-content .list-title {
         position: relative;
     }
@@ -323,6 +347,26 @@ header .header-content {
     .dangers-content .list-title h2 {
         font-size: 16px;
         line-height: 20px;
+    }
+    .characters-content > div:first-child > .list-title {
+        justify-content: space-between;
+    }
+    .characters .characters-content .valvs-content .list-title {
+        justify-content: center;
+    }
+    .valvs-content .list-title .prev-bttn {
+        position: absolute;
+        left: 0;
+    }
+    .valvs-content .list-title .next-bttn {
+        position: absolute;
+        right: 0;
+    }
+    .list-title .prev-bttn {
+        margin-left: 10px;
+    }
+    .list-title .next-bttn {
+        margin-right: 10px;
     }
     .list {
         width: 100%;

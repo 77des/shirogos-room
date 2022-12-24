@@ -57,10 +57,6 @@ section {
     width: 100%;
     position: relative;
 }
-.header .transition-first {
-    position: absolute;
-    bottom: -21px;
-}
 .header .socials-account {
     position: relative;
     display: flex;
@@ -1213,9 +1209,20 @@ img.zoomed.active {
     position: absolute;
     bottom: -21px;
 }
+.transition.mobile {
+    display: none;
+}
 @media (min-width: 320px) and (max-width: 1109px) {
     body {
         overflow-y: auto;
+    }
+    .transition {
+        display: none;
+    }
+    .transition.mobile {
+        width: 93.4375vw;
+        display: block;
+        bottom: -1px;
     }
     .header {
         background-image: url('../imgs/header-bg-mobile-2.png');
@@ -1307,6 +1314,98 @@ img.zoomed.active {
     }
     .header-menu a.header-arrow {
         display: none;
+    }
+    .birthdays .birthdays-content {
+        width: 92.1875vw;
+    }
+    .birthdays .days-bttns {
+        margin-bottom: 6.25vh;
+        position: relative;
+    }
+    .birthdays .days-bttns div {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .birthdays .prev-day, .birthdays .next-day {
+        width: 27.1875vw;
+        height: 4.1015625vh;
+    }
+    .birthdays .current-day {
+        position: absolute;
+        width: 92.1875vw;
+        height: 5.2734375vh;
+        top: 4.4921875vh;
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .birthdays .birthday-block {
+        width: 92.1875vw;
+        height: 84.43359375vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .birthdays .cake-block {
+        width: 33.4375vw;
+        height: 33.4375vw;
+        margin: 0;
+    }
+    .birthdays .cake-block img:first-child {
+        width: 33.4375vw;
+        height: 33.4375vw;
+    }
+    .birthdays .cake-block img:last-child {
+        width: 28.75vw;
+        height: 28.75vw;
+        top: 4.375vw;
+        left: 2.1875vw;
+    }
+    .birthdays .birthday-text {
+        font-size: 15px;
+        line-height: 19px;
+        margin-left: 5px;
+    }
+    .birthdays .cake-text-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .birthdays .birthday-text {
+        min-width: 158px;
+    }
+    .birthdays .chronicles-block {
+        width: 77.1875vw;
+        height: 52.1484375vh;
+        margin-top: 0;
+        z-index: 1;
+    }
+    .birthdays .chronicles-block img {
+        width: 59.375vw;
+        left: calc((77.1875vw - 59.375vw) / 2);
+        z-index: 1;
+    }
+    .birthdays .chronicles-block h3 {
+        font-size: 30px;
+        line-height: 38px;
+        -webkit-text-stroke: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+        position: relative;
+    }
+    .birthdays .chronicles-block p {
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0 auto;
+        text-align: center;
+        width: 185px;
+        z-index: 2;
+        position: relative;
+    }
+    .birthdays .chronicles-block-text {
+        margin-top: calc((52.1484375vh - 59.6875vw - 68px) / 2);
     }
     .rating .desktop-rating-desc {
         display: none;
