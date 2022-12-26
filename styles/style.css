@@ -452,6 +452,9 @@ footer .desktop-copyright {
     font-size: 12px;
     text-align: center;
 }
+footer .desktop-copyright .desktop-copyright-date {
+    margin-top: 5px;
+}
 footer .copyright a {
     color: #C4C4C4;
 }
