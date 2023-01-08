@@ -4,7 +4,6 @@ loginLink.addEventListener('click', function(event) {
   event.preventDefault();
 })
 
-
 //logo hover effect
 let logoLink = document.querySelector("header .logo-link");
 let logoImg = document.querySelector("header .logo-link img");
@@ -15,6 +14,35 @@ logoLink.addEventListener("mouseover", function () {
 logoLink.addEventListener("mouseout", function () {
   logoImg.src = "./imgs/logo.svg";
 });
+
+//backbttn hover effect
+let backBttn = document.querySelector('.back-bttn');
+let backBttnImg = document.querySelector('.back-bttn img');
+
+if (backBttn) {
+  backBttn.addEventListener('mouseover', function() {
+      backBttnImg.src = "./imgs/wiki-reader/back-bttn-hover.svg";
+  })
+  backBttn.addEventListener('mouseout', function() {
+      backBttnImg.src = "./imgs/wiki-reader/back-bttn.svg";
+  })
+}
+
+//yt hover effect
+let ytLinks = document.querySelectorAll('.yt-link');
+let ytIcons = document.querySelectorAll('.yt-link .yt-icon');
+
+if (ytLinks) {
+  for (let i = 0; i < ytLinks.length; i++) {
+    ytLinks[i].addEventListener('mouseover', function() {
+      ytIcons[i].src = "./imgs/youtube-img-hover.png";
+    })
+    ytLinks[i].addEventListener('mouseout', function() {
+      ytIcons[i].src = "./imgs/youtube-img.png";
+    })
+  }
+}
+
 
 //services buttons
 let servicesTypes = document.querySelectorAll(".services-types>div");

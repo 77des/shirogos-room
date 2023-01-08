@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "Days One";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/DaysOne-Regular.ttf")
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    color: #FFFFFF;
+    background: #181818;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    font-family: "Days One", sans-serif;
+    scroll-behavior: smooth;
+    min-height: 720px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+header {
+    margin: 0 auto;
+    background: #323232;
+    border-top-left-radius: 37px;
+    border-top-right-radius: 37px;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+}
+header .back-bttn {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+header .back-bttn p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #DEDEDE;
+}
+header .back-bttn:hover p {
+    color: #FFFFFF;
+}
+header .right-side {
+    display: flex;
+    align-items: center;
+    padding-right: 45px;
+}
+header .login {
+    text-align: right;
+    margin-right: 30px;
+}
+header .login p{
+    font-size: 0.75rem;
+    line-height: 1.25;
+    font-family: "Days One";
+}
+header .login a {
+    font-size: 1rem;
+    line-height: 1.25;
+    font-family: "Days One";
+}
+header .login a:hover {
+    color: #C34375;
+}
+.youtubes {
+    margin-top: 15px;
+}
+.youtubes-content {
+    background: #323232;
+    border-bottom-left-radius: 37px;
+    border-bottom-right-radius: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+.mobile-header-text {
+    display: none;
+}
+.yt-link {
+    width: 872px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background: #A93232;
+    border-radius: 37px;
+    margin-bottom: 20px;
+}
+.yt-link:last-child {
+    margin-bottom: 0;
+}
+.yt-link:hover {
+    background: #CD5555;
+}
+.yt-link h2 {
+    font-size: 34px;
+    line-height: 43px;
+    color: #FFFFFF;
+    margin: 0 15px;
+    width: 340px;
+    text-align: center;
+}
+.yt-link p {
+    font-size: 22px;
+    line-height: 28px;
+    color: #DEDEDE;
+    margin-left: 20px;
+    width: 246px;
+}
+@media (min-width: 320px) and (max-width: 1109px) {
+    body {
+        width: 100%;
+        justify-content: start;
+        min-height: auto;
+        background: #323232;    
+    }
+    header {
+        background: #181818;
+        border-radius: unset;
+        margin: 0;
+    }
+    .container {
+        width: 100%;
+    }
+    .header-content {
+        height: 71px;
+    }
+    header .back-bttn {
+        margin-left: 5px;
+    }
+    header .right-side {
+        padding-right: 5px;
+    }
+    header .login {
+        margin-right: 0;
+    }
+    .youtubes {
+        margin-top: 0;
+    }
+    .youtubes-content {
+        border-radius: unset;
+        padding: 0;
+        padding-bottom: 25px;
+    }
+    .mobile-header-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 8px 0;
+    }
+    .mobile-header-text img {
+        width: 89px;
+        height: 70px;
+        margin-right: 13px;
+    }
+    .mobile-header-text h2 {
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .yt-link {
+        width: 96.875vw;
+        margin-bottom: 8px;
+        position: relative;
+    }
+    .yt-link .yt-icon {
+        display: none;
+    }
+    .yt-link h2 {
+        font-size: 28px;
+        line-height: 100%;
+        width: 169px;
+        margin: 0;
+        position: absolute;
+    }
+    .yt-link:nth-child(3) h2 {
+        font-size: 18px;
+        line-height: 23px;
+        width: 180px;
+    }
+    .yt-link img {
+        border-radius: 37px;
+        position: absolute;
+        right: 8px;
+    }
+    .yt-link p {
+        font-size: 13px;
+        line-height: 17px;
+        text-align: left;
+        margin: 0;
+        position: absolute;
+    }
+    .yt-link:nth-child(3) p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .yt-link:first-child h2 {
+        top: 7px;
+        left: 30px;
+        line-height: 36px;
+    }
+    .yt-link:first-child p {
+        top: 43px;
+        left: 30px;
+        width: 125px;
+    }
+    .yt-link:nth-child(2) h2 {
+        top: 14px;
+        left: 31px;
+    }
+    .yt-link:nth-child(2) p {
+        top: 70px;
+        left: 60px;
+        width: 111px;
+    }
+    .yt-link:nth-child(3) h2 {
+        top: 12px;
+        left: 27px;
+    }
+    .yt-link:nth-child(3) p {
+        top: 58px;
+        left: 37px;
+        width: 152px;
+    }
+    .yt-link:nth-child(4) h2 {
+        top: 15px;
+        left: 48px;
+        width: 132px;
+    }
+    .yt-link:nth-child(4) p {
+        top: 51px;
+        left: 58px;
+        width: 110px;
+    }
+    .yt-link:nth-child(5) h2 {
+        top: 14px;
+        left: 58px;
+        width: 113px;
+    }
+    .yt-link:nth-child(5) p {
+        top: 70px;
+        left: 46px;
+        width: 134px;
+    }
+}
